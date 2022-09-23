@@ -1,0 +1,111 @@
+.about {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 20px;
+  margin-top: 70px;
+}
+.texto-about{
+  order: 3;
+}
+.small {
+  font-family: var(--font-titulo);
+  font-size: 1.2rem;
+  color: var(--cor-detalhe);
+  
+}
+.titulos-about h2 {
+  position: relative;
+}
+
+.titulos-about h2::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: var(--cor-detalhe);
+  position: absolute;
+  top: 33px;
+}
+
+.subtitulo-about {
+  font-size: 1.5rem;
+  font-family: var(--font-subtitulos);
+  font-weight: bold;
+  color: var(--branco);
+}
+
+.foto-about {
+margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.34);
+ 
+}
+
+.descricao-about {
+  font-family:var(--font-texto);
+  color: var(--branco);
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.dentro{
+  display: none;
+}
+
+
+
+@media (min-width: 660px) {
+  .about{
+    flex-direction: row;
+  }
+  .foto-about{
+    width: 300px;
+  }
+  .titulos-about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    order: 2;
+  }
+  .fora{display: none;}
+  .dentro{display: initial;}
+
+  .titulos-about h2{
+    font-size: 2rem;
+  }
+  .titulos-about h2::before{
+    top: 36px;
+  }
+  .subtitulo-about{
+    font-size: 1.7rem;
+  }
+  .descricao-about{
+    padding: 0;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+}
+
+@media(min-width:1000px){
+ .foto-about{
+  width: 350px;
+ }
+ .titulos-about h2 {
+  font-size: 2.3rem;
+ }
+ .titulos-about h2::before{
+  top: 39px;
+ }
+
+ .subtitulo-about{
+  font-size: 1.8rem;
+ }
+
+ .descricao-about{
+  font-size: 1.4rem;
+ }
+
+}

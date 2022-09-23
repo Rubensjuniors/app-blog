@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+  background-color: var(--background-fundo-p);
+  font-family: var(--font-padrao);
+
+}
+
+p,h1,h2,h3{
+  margin: 0;
+  padding: 0;
+}
+
+input,textarea,button{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+
+
+img {
+  max-width: 100%;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulos-container{
+  font-family: var(--font-titulo);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--branco);
+}
+
+
+/* cores tamanhos e font */
+:root{
+ 
+  /* Fontes */
+  --font-titulo: "Righteous";
+  --font-texto:"Nunito";
+  --font-subtitulos: "Open sans";
+  --font-padrao: arial;
+
+    /* cores */
+    --background-fundo-p: #282538;
+    --background-fundo: #322f42;
+    --cor-detalhe:#e34c26;
+    --cinza-claro:#e5e5e5;
+    --branco:#FFFFFF;
+    --preto:#000;
+
+
+}

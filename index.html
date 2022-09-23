@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desenvolvedor Front end">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;700&family=Righteous&family=Roboto:wght@300;400;700&family=Rubik:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <!-- Titulo -->
+  <title>Rubens Junio</title>
+
+  <!-- links css e outros -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/icon/logo.svg" type="image/xml">
+
+</head>
+
+<body>
+
+  <!-- menu -->
+  <header id="header" class="container">
+    <div>
+      <a class="logo-menu" href=""><img src="./img/icon/logo.svg" alt="Logo" width="78" height="30"></a>
+    </div>
+    <nav id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li class="ops-menu detalhe-menu"><a href="./index.html">Home</a></li>
+        <li class="ops-menu detalhe-menu"><a href="#about">About</a></li>
+        <li class="ops-menu detalhe-menu"><a href="#Skills">Skills</a></li>
+        <li class="ops-menu"><a href="#contato" class="contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Fim menu -->
+
+  <main>
+
+    <!-- Perfil -->
+    <section class="background-perfil ">
+      <div class="perfil container">
+        <div><img src="./img/fotos/Rubens-foto-quadrada.jpg" alt="foto perfil" class="foto-perfil" width="170" height="170"></div>
+
+        <div class="perfil-titulos">
+          <h1 class="titulo-perfil">Rubens Junio</h1>
+          <p class="subtitulo-perfil">I Am <span>Front-End</span> Devoloper</p>
+        </div>
+      </div>
+    </section>
+    <!-- Fim perfil -->
+
+    <!-- About -->
+    <section class="about container" id="about">
+
+      <div class="titulos-about">
+        <div>
+          <p class="small">Discovery</p>
+          <h2 class="titulo-about titulos-container">About Me</h2>
+        </div>
+        <h3 class="subtitulo-about">Hello, I Am Rubens</h3>
+        <div class="texto-about dentro">
+          <p class="descricao-about">recentemente comecei a estudar programação com objetivo de me tornar um
+            desenvolvedor front-end ainda não sei muita coisas ainda mais vamo q vamo</p>
+        </div>
+      </div>
+
+      <div class="texto-about fora">
+        <p class="descricao-about">recentemente comecei a estudar programação com objetivo de me tornar um desenvolvedor
+          front-end ainda não sei muita coisas ainda mais vamo q vamo</p>
+      </div>
+
+      <img src="./img/fotos/rubens-foto-2-cortada.jpg" alt="foto-about" class="foto-about" width="250">
+
+    </section>
+    <!-- Fim About -->
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      
+        <div class="container skills" id="Skills">
+
+          <div class="titulo-skills">
+          <h2 class="titulos-container ">Skills</h2>
+          </div>
+
+          <div class="skills-descricao">
+
+            <div class="conteiner-skills">
+
+              <div class="skill-box skill1 html-skill">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-html.svg" alt="html-icon" />
+              </div>
+
+              <div class="skill-box skill2 css-skill">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-css.svg" alt="css-icon" />
+              </div>
+
+              <div class="skill-box skill3 js-skill">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-javascript.svg" alt="js-icon" />
+              </div>
+
+              <div class="skill-box skill4">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-react.svg" alt="react-icon" />
+              </div>
+
+              <div class="skill-box skill5 git-skill">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-git.svg" alt="git-icon" />
+              </div>
+
+              <div class="skill-box skill6 github-skill">
+                <img class="icones-habilidades" src="./img/icons-skilss/icons-github.svg" alt="github-icon" />
+              </div>
+
+            </div>
+            <div class="conteiner-descricao">
+              <p class="texto-descricao">
+                /* Passe o mouse por cima de alguma habilidade para ler a
+                descrição */
+              </p>
+            </div>
+          </div>
+        </div>
+    
+    </section>
+    <!-- Habilidades -->
+
+    <!-- Falta Projetos -->
+
+    <!-- Contato -->
+    <section class="contato container" id="contato">
+      <div class="contato-wrapper">
+
+        <div class="contato-left"></div>
+
+        <div class="contato-right">
+          <h1 class="titulos-container">Contato</h1>
+          <form>
+            <div class="campo">
+              <label for="nome" class="label-campo">Nome</label>
+              <input type="text" class="input-campo" id="nome">
+            </div>
+            <div class="campo">
+              <label for="email" class="label-campo">E-mail</label>
+              <input type="text" class="input-campo" id="email">
+            </div>
+            <div class="campo">
+              <label for="mensagem" class="label-campo">Mensagem</label>
+              <textarea class="input-campo" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- roda pe -->
+  <footer class="background-rodape">
+    <section class="rodape">
+
+      <section class="sociais-rodape">
+        <!-- instagram -->
+        <article class="background-sociais-rodape">
+          <a href="https://www.instagram.com/eorubis?r=nametag"><img
+            src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+            alt="icones"></a>
+        </article>
+        <!-- linkedin -->
+        <article class="background-sociais-rodape">
+          <a href="#"><img
+            src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+            alt="icones"></a>
+        </article>
+        <!-- Gitihub -->
+        <article class="background-sociais-rodape">
+          <a href="#"><img
+            src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+            alt="icones"></a>
+        </article>
+        <!-- email -->
+        <article class="background-sociais-rodape">
+          <a href="mailto:rubensjunio2110@gmail.com"><img
+            src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"
+            target="_blank"></a>
+        </article>
+
+      </section>
+
+      <p class="direitos-rodape">COPYRIGHT © 2022. ALL RIGHT RESERVED</p>
+
+    </section>
+  </footer>
+  <!--Fim roda pe -->
+
+  <script src="./js/menu-mobile.js"></script>
+  <script src="./js/habilidades.js"></script>
+</body>
+
+</html>

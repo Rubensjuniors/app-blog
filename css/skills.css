@@ -1,0 +1,249 @@
+#habilidades {
+  background-color: var(--background-fundo);
+  margin-top: 80px;
+}
+
+.skills {
+  padding-bottom: 100px;
+}
+.titulo-skills h2 {
+  font-size: 2.3rem;
+  text-align: left;
+  padding: 60px 0;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.titulo-skills h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--cor-detalhe);
+  position: absolute;
+  top: 105px;
+}
+
+.skills-descricao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 70px;
+}
+
+.conteiner-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px;
+  max-width: 700px;
+}
+
+.skill-box {
+  height: 106px;
+  width: 106px;
+  background-color: var(--background-fundo-p);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease 0.3s;
+}
+
+.skill-box:hover {
+
+  transform: scale(1.05);
+}
+
+.conteiner-descricao {
+  color: var(--branco);
+  font-family: var(--font-texto), var(--font-padrao);
+  font-size: 1.4rem;
+  width: 400px;
+}
+
+@media (max-width: 1015px) {
+  .conteiner-descricao {
+    height: 160px;
+    width: 500px;
+  }
+
+  .skills-descricao {
+    display: flex;
+    margin: 0 auto;
+    gap: 50px;
+    padding-bottom: 70px;
+    align-items: center;
+  }
+
+  .skills-descricao p {
+    text-align: center;
+  }
+
+  .titulo-skills h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 660px) {
+  .conteiner-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 37px;
+  }
+
+  .conteiner-descricao {
+    max-width: 300px;
+  }
+}
+
+/* Progress */
+
+/* html */
+
+.progress-bar {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar::before {
+  content: "";
+  width: 90%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+/* css */
+.progress-bar-css {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar-css {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar-css::before {
+  content: "";
+  width: 50%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+/* js */
+.progress-bar-js {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar-js {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar-js::before {
+  content: "";
+  width: 0%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+/* Reactjs */
+.progress-bar-rjs {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar-rjs {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar-rjs::before {
+  content: "";
+  width: 0%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+/* git */
+.progress-bar-git {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar-git {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar-git::before {
+  content: "";
+  width: 10%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+/* github */
+.progress-bar-hub {
+  height: 11px;
+  border-radius: 26px;
+  border: 3px solid var(--branco);
+}
+.progress-bar-hub {
+  height: 11px;
+  display: flex;
+}
+
+.progress-bar-hub::before {
+  content: "";
+  width: 30%;
+  border-radius: 26px;
+  background-color: var(--cor-detalhe);
+}
+
+.skill-box .icones-habilidades {
+  transition: ease-in-out 0.3s;
+}
+
+.skill-box:hover .icones-habilidades {
+  opacity: 0;
+}
+
+.skill1 {
+  background-image: url("../img/icons-skilss/icons-html.svg");
+}
+
+.skill2 {
+  background-image: url("../img/icons-skilss/icons-css.svg");
+}
+
+.skill3 {
+  background-image: url("../img/icons-skilss/icons-javascript.svg");
+}
+
+.skill4 {
+  background-image: url("../img/icons-skilss/icons-react.svg");
+}
+
+.skill5 {
+  background-image: url("../img/icons-skilss/icons-git.svg");
+}
+
+.skill6 {
+  background-image: url("../img/icons-skilss/icons-github.svg");
+}
+
+

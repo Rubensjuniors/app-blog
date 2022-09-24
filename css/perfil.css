@@ -5,7 +5,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("../img/axel-small.jpg") center;
+    url("../img/axel-small.webp") center;
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -58,7 +58,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("../img/axel-media.jpg") center;
+    url("../img/axel-media.webp") center;
   background-repeat: no-repeat;
   background-size: cover;
   }
@@ -85,7 +85,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("../img/axel-large.jpg") center;
+    url("../img/axel-large.webp") center;
   background-repeat: no-repeat;
   background-size: cover;
   }

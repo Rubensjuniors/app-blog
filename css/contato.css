@@ -12,7 +12,7 @@
 .contato-left {
   width: 500px;
   background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
-    url("https://raw.githubusercontent.com/Rubensjuniors/imagens-do-meu-portifolio/main/Rubens-foto-3-cortaaada.jpg?token=GHSAT0AAAAAABXHMBQL67IZ736CSQVCYUBEYZPRGIQ");
+    url("../img/fotos/Rubens-foto-3-cortaaada.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -5,7 +5,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("https://raw.githubusercontent.com/Rubensjuniors/imagens-do-meu-portifolio/main/axel-small.jpg?token=GHSAT0AAAAAABXHMBQKSMY24M3KF5GEONCWYZPRI7A") center;
+    url("../img/axel-small.jpg") center;
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
@@ -58,7 +58,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("https://raw.githubusercontent.com/Rubensjuniors/imagens-do-meu-portifolio/main/axel-media.jpg?token=GHSAT0AAAAAABXHMBQKP37MAA6HRLKVAP4QYZPRJQQ") center;
+    url("../img/axel-media.jpg") center;
   background-repeat: no-repeat;
   background-size: cover;
   }
@@ -85,7 +85,7 @@
       rgba(240, 240, 240, -0.144),
       rgba(38, 35, 53, 1.336)
     ),
-    url("https://raw.githubusercontent.com/Rubensjuniors/imagens-do-meu-portifolio/main/axel-large.jpg?token=GHSAT0AAAAAABXHMBQKA35RFOAH5ROLDOICYZPRJ5A") center;
+    url("../img/axel-large.jpg") center;
   background-repeat: no-repeat;
   background-size: cover;
   }

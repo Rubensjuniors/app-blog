@@ -90,6 +90,9 @@
 
 
 @media(min-width:1000px){
+  .container__midias{
+    padding:0;
+  }
   .card1,.card2,.card3,.card4 {
     width: 200px;
     height: 200px;

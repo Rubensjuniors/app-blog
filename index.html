@@ -23,24 +23,24 @@
     </div>
 
     <div class="introduction__icon">
-      <a href="#content"><img class="introduction__icon-arrow" src="./assets/img/icon/arrow_donw.svg" alt="arrow_donw"></a>
+      <a id="arrow-donw-js" href="#content"><img class="introduction__icon-arrow" src="./assets/img/icon/arrow_donw.svg" alt="arrow_donw"></a>
     </div>
   </section>
 
   <main class="container" id="content">
     <header >
         <ul class="container__links-externos">
-          <li><button data-button="about" class="link-externo ">Sobre</button></li>
+          <li><button data-button="about" class="link-externo ativo">Sobre</button></li>
           <li><button data-button="midias"  class="link-externo">Sociais</button></li>
         </ul>
     </header>
 
-    <section data-vible="about" class="container__about about-js">
-      <picture class="container__about-imagem" >
+    <section data-vible="about"  class="container__about about-js">
+      <picture class="container__about-imagem">
         <img class="about__photo"src="./assets/img/photos/Photo_three.jpg" alt="My Photo">
       </picture>
 
-      <div class="container__about-texts">
+      <div class="container__about-texts " >
         <p class="about__text">Olá, meu nome é Rubens e sou um jovem apaixonado por tecnologia e programação. Tenho 19 anos e recentemente decidi me dedicar ao estudo de programação com o objetivo de me tornar um desenvolvedor front-end. Eu acredito que essa área combina perfeitamente com meus interesses e talentos, e estou animado para aprender e crescer nessa area. Embora ainda esteja no começo de minha jornada como programador, já tenho conseguido realizar algumas coisas com o pouco conhecimento que tenho adquirido. Acredito que, com muito esforço e dedicação, vou evoluir a cada dia e alcançar meus objetivos como desenvolvedor front-end.</p>
       </div>
     </section>
@@ -75,8 +75,9 @@
   </main>
 
 
+  <script src="./assets/js/simple-anime.js"></script>
+  <script src="./assets/js/particles.min.js"></script>
 <script src="./assets/js/script.js"></script>
-<script src="./assets/js/particles.min.js"></script>
 <script>
   particlesJS(
     {

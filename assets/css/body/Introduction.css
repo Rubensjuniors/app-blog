@@ -1,0 +1,68 @@
+.container-introduction {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.particles-js-canvas-el{
+  position: absolute;
+}
+.introduction-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 1000;
+
+}
+
+.introduction__title {
+  font-family: "Righteous";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.introduction__title::after {
+  content: "";
+  width: 300px;
+  height: 4px;
+  display: block;
+  background: #FFD600;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: 0.3s;
+
+}
+.introduction__sub-title{
+  font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+transition: 0.3s;
+}
+
+.introduction__icon{
+  position: absolute;
+  z-index: 1000;
+    bottom: 30px;
+}
+@media(min-width:700px){
+  .introduction__title {
+    font-size: 4em;
+    transition: 0.3s;
+
+  }
+  .introduction__title::after {
+    width: 600px;
+    transition: 0.3s;
+  }
+  .introduction__sub-title{
+  font-size: 2.5rem;
+  transition: 0.3s;
+  }
+}

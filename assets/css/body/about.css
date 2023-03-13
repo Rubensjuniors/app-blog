@@ -1,68 +1,56 @@
 .container__about{
-  color: #ffffff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+  gap: 3rem;
+  padding: 1.5rem;
   max-width: 1300px;
 }
 .about__photo{
   max-width: 250px;
-  border-radius:50%;
+  border-radius:40px;
   box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.3);
 }
 
-.container__about-texts{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.texts__title{
-  font-family: "Righteous";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-align: center;
-}
 
-.texts__title::after{
-  content: "";
-  width: 200px;
-  height: 4px;
-  display: block;
-  background: #FFD600;
-  border-radius: 10px;
-  margin: 5px 0;
-}
 .about__text{
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
+  color: #ffffff;
 }
 
 @media(min-width:1000px){
   .container__about{
-    flex-direction: row-reverse;
-    gap: 3rem;
+    flex-direction: row;
+    gap: 5rem;
   }
   .about__photo{
     max-width: 350px;
+  }.container__about-imagem{
+    position: relative;
   }
-  .container__about-texts{
-    align-items: start;
+  .container__about-imagem::after{
+    content: "";
+    width: 4px;
+    height: 400px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: absolute;
+    top: -20px;
+    right: -40px;
+
+
   }
-  .texts__title, .about__text{
+ .about__text{
     text-align: start;
   }
-  .texts__title::after{
-    width: 150px;
+  .about__text{
+    line-height: 30px;
   }
 
 }

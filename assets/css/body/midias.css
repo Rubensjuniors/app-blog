@@ -1,27 +1,7 @@
 .container__midias{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-.midias__title{
-  font-family: "Righteous";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #ffffff;
+  padding: 100px 0 150px 0;
 }
 
-.midias__title::after{
-  content: "";
-  width: 200px;
-  height: 4px;
-  display: block;
-  background: #FFD600;
-  border-radius: 10px;
-  margin: 5px 0;
-}
 
 .midias {
   display: flex;
@@ -107,6 +87,14 @@
   fill: #8c9eff;
 }
 
+
+
+@media(min-width:1000px){
+  .card1,.card2,.card3,.card4 {
+    width: 200px;
+    height: 200px;
+  }
+  
 .card1:hover {
   cursor: pointer;
   scale: 1.1;
@@ -146,11 +134,5 @@
 .card4:hover .email {
   fill: white;
 }
-
-
-@media(min-width:1000px){
-  .card1,.card2,.card3,.card4 {
-    width: 200px;
-    height: 200px;
-  }
 }
+

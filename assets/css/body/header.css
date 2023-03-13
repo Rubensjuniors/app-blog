@@ -14,4 +14,24 @@
   box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.3);
   padding: 5px 10px;
   border-radius: 10px;
+  transition: .3s;
+}
+
+.link-externo.ativo{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.6);
+  color: #ffd600;
+  transition: .3s;
+}
+
+@media(min-width:700px){
+  .link-externo {
+    font-size: 2rem;
+  }
+  .link-externo:hover{
+    transform: scale(1.04);
+    box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.6);
+    color: #ffd600;
+    transition: .3s;
+  }
 }

@@ -12,8 +12,6 @@
   border-radius:40px;
   box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.3);
 }
-
-
 .about__text{
   font-family: "Nunito Sans";
   font-style: normal;
@@ -43,8 +41,6 @@
     position: absolute;
     top: -20px;
     right: -40px;
-
-
   }
  .about__text{
     text-align: start;
@@ -54,3 +50,4 @@
   }
 
 }
+

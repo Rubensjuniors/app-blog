@@ -16,9 +16,10 @@
   justify-content: center;
   color: #ffffff;
   z-index: 1000;
+  animation: opacity;
+  animation-duration: 3s;
 
 }
-
 .introduction__title {
   font-family: "Righteous";
   font-style: normal;
@@ -36,7 +37,8 @@
   border-radius: 10px;
   margin: 5px 0;
   transition: 0.3s;
-
+  animation: barMobile;
+  animation-duration: 3s;
 }
 .introduction__sub-title{
   font-family: 'Nunito Sans';
@@ -45,24 +47,76 @@ font-weight: 400;
 font-size: 1.5rem;
 transition: 0.3s;
 }
-
+.introduction__sub-title::after{
+  content: '|';
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 1.2s infinite;
+}
 .introduction__icon{
   position: absolute;
   z-index: 1000;
-    bottom: 30px;
+    bottom: 50px;
+    animation: move 3s infinite;
 }
 @media(min-width:700px){
   .introduction__title {
     font-size: 4em;
     transition: 0.3s;
-
   }
   .introduction__title::after {
     width: 600px;
     transition: 0.3s;
+    animation: bar;
+    animation-duration: 3s;
   }
   .introduction__sub-title{
   font-size: 2.5rem;
   transition: 0.3s;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bar{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 600px;
+  }
+}
+@keyframes barMobile{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 300px;
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 30px;
   }
 }

@@ -13,14 +13,12 @@ img{
 ul{
   list-style: none;
 }
-
 button{
   display: block;
   border-color: transparent;
   background: transparent;
   color: #ffffff;
 }
-
 .hidden{
   display: none !important;
 }

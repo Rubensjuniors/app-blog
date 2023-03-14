@@ -1,6 +1,4 @@
 @import './Global/General.css';
-@import './Global/Utilities.css';
-
 @import './body/Introduction.css';
 @import './body/container.css';
 @import './body/header.css';

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sobre_icon",
+    "title": "Sobre mim",
+    "path": "/sobre-mim"
+  },
+  {
+    "id": "artigos_icon",
+    "title": "Artigos",
+    "path": "/artigos"
+  },
+  {
+    "id": "pings_icon",
+    "title": "Pings",
+    "path": "/pings"
+  }
+]

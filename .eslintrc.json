@@ -22,7 +22,7 @@
     "no-unused-expressions": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "max-len": ["error", { "code": 80 }],
+    "max-len": ["error", { "code": 120 }],
     "object-curly-spacing": ["error", "always"],
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
     "@typescript-eslint/no-explicit-any": "warn",

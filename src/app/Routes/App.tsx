@@ -6,7 +6,7 @@ import useWindowSize from '../../hooks/useWindowSize/use-window-size'
 import MenuBottom from '../../components/structure/Sidemenu/MenuBottom-Mobile'
 
 const App = () => {
-  const { width } = useWindowSize()
+  const { width, height } = useWindowSize()
 
   const widthSize = width > 576
   const menuBottomClass = widthSize ? '' : 'flex-col-reverse'
@@ -20,40 +20,10 @@ const App = () => {
         }
         <main className="w-content min-h-screen z-1 border-x border-ultils">
           <Header title="Home" />
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
-          <h1>ola</h1>
+          {
+            !widthSize &&
+            <iframe src="https://martinfowler.com/articles/micro-frontends.html" width={width} height={height}></iframe>
+          }
           <Outlet />
         </main>
       </div>

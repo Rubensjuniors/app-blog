@@ -1,16 +1,19 @@
-import { Outlet } from 'react-router-dom'
-import Header from '../../components/structure/Header/Index'
-import Sidemenu from '../../components/structure/Sidemenu'
-import itemsMneu from '../../json/itemsMenu.json'
+import { ReactNode } from 'react'
 import useWindowSize from '../../hooks/useWindowSize/use-window-size'
-import MenuBottom from '../../components/structure/Sidemenu/MenuBottom-Mobile'
+import Header from './Header/Index'
+import Sidemenu from './Sidemenu'
+import MenuBottom from './Sidemenu/MenuBottom-Mobile'
+import itemsMneu from '../../json/itemsMenu.json'
 
-const App = () => {
-  const { width, height } = useWindowSize()
+interface StructorProps {
+  children: ReactNode 
+}
+
+const Structor = ({ children }: StructorProps) => {
+  const { width } = useWindowSize()
 
   const widthSize = width > 576
   const menuBottomClass = widthSize ? '' : 'flex-col-reverse'
-
   return (
     <>
       <div className={`${menuBottomClass} max-w-screen-xl min-h-screen flex justify-center m-0-auto`}>
@@ -20,15 +23,11 @@ const App = () => {
         }
         <main className="w-content min-h-screen z-1 border-x border-ultils">
           <Header title="Home" />
-          {
-            !widthSize &&
-            <iframe src="https://martinfowler.com/articles/micro-frontends.html" width={width} height={height}></iframe>
-          }
-          <Outlet />
+          {children}
         </main>
       </div>
     </>
   )
 }
 
-export default App
+export default Structor

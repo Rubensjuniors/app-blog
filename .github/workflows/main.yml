@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '*'     
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar Build
+        run: npm run build  
+
+      - name: Docker Login
+        uses: docker/login-actions@v2.1.0
+        with: 
+          username: ${{ secrets.USER_DOCKER }}
+          password: ${{ secrets.PASSWORD_DOCKER }}
+ 
+      - name: Build da Imagem Docker
+        run: docker build -t ${{ secrets.USER_DOCKER }}/app-node 
+
+      - name: Executar o Container
+        run: docker run -d -p 80:3000 ${{ secrets.USER_DOCKER }}/app-node
+
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18 
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Verificar Lint
+        run: npm run lint 
+
+      - name: Executar Testes
+        run: npm test  

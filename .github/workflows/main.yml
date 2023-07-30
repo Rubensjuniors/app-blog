@@ -25,13 +25,7 @@ jobs:
         run: npm install
 
       - name: Executar Build
-        run: npm run build  
-
-      - name: Docker Login
-        uses: docker/login-actions@v2.1.0
-        with: 
-          username: ${{ secrets.USER_DOCKER }}
-          password: ${{ secrets.PASSWORD_DOCKER }}
+        run: npm run build
  
       - name: Build da Imagem Docker
         run: docker build -t ${{ secrets.USER_DOCKER }}/app-node 

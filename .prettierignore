@@ -1,8 +1,0 @@
-node_modules
-package-lock.json
-public
-config
-*.md
-*.yaml
-coverage
-.github/workflows

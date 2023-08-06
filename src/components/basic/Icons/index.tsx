@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { iconProps } from './types'
 
 const BASE_SRC = '/assets/img/icon'
@@ -11,10 +13,11 @@ icons.set('artigos_icon', `${BASE_SRC}/artigos.svg`)
 icons.set('sobre_icon', `${BASE_SRC}/sobre-mim.svg`)
 icons.set('pings_icon', `${BASE_SRC}/pings.svg`)
 
-const getCorrespondingIcon = (id: string) => (icons.has(id) ? icons.get(id) : '')
+const getCorrespondingIcon = (id: string) =>
+  icons.has(id) ? icons.get(id) : ''
 
 const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => (
-  <img
+  <Image
     alt={id}
     width={iconSize}
     height={iconSize}

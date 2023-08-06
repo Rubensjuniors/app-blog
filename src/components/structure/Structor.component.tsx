@@ -1,12 +1,15 @@
+'use client'
 import { ReactNode } from 'react'
-import useWindowSize from '../../hooks/useWindowSize/use-window-size'
-import Header from './Header/Index'
-import Sidemenu from './Sidemenu'
-import MenuBottom from './Sidemenu/MenuBottom-Mobile'
-import itemsMneu from '../../json/itemsMenu.json'
+
+import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
+import itemsMenu from '@/json/itemsMenu.json'
+
+import Header from './menu/header'
+import Sidemenu from './menu/sidemenu'
+import SidemenuMobile from './menu/sidemenu/sidemenu-mobile'
 
 interface StructorProps {
-  children: ReactNode 
+  children: ReactNode
 }
 
 const Structor = ({ children }: StructorProps) => {
@@ -16,12 +19,15 @@ const Structor = ({ children }: StructorProps) => {
   const menuBottomClass = widthSize ? '' : 'flex-col-reverse'
   return (
     <>
-      <div className={`${menuBottomClass} max-w-screen-xl min-h-screen flex justify-center m-0-auto`}>
-        {
-          widthSize ? <Sidemenu sidemenuItems={itemsMneu} />
-            : <MenuBottom sidemenuItems={itemsMneu} />
-        }
-        <main className="w-content min-h-screen z-1 border-x border-ultils">
+      <div
+        className={`${menuBottomClass} m-0-auto flex min-h-screen max-w-screen-xl justify-center`}
+      >
+        {widthSize ? (
+          <Sidemenu sidemenuItems={itemsMenu} />
+        ) : (
+          <SidemenuMobile sidemenuItems={itemsMenu} />
+        )}
+        <main className="z-1 min-h-screen w-content border-x border-ultils">
           <Header title="Home" />
           {children}
         </main>

@@ -41,8 +41,3 @@ input {
   background: transparent;
 }
 
-.active {
-  color: #f25d1d;
-  fill: #f25d1d !importante;
-  stroke: #f25d1d !importante;
-}

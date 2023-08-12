@@ -1,6 +1,5 @@
-import Link from 'next/link'
-
 import Icon from '@/components/basic/Icons'
+import NavLink from '@/components/basic/NavLink'
 
 import { sidemenuProps } from '../types'
 
@@ -9,13 +8,14 @@ const SidemenuMobile = ({ sidemenuItems }: sidemenuProps) => (
     <nav className="sticky bottom-0 left-0 flex w-full items-center bg-segundary">
       {sidemenuItems &&
         sidemenuItems.map((itensMenu) => (
-          <Link
-            href={itensMenu.path}
+          <NavLink
+            path={itensMenu.path}
             key={itensMenu.id}
-            className="flex flex-1 items-center justify-center p-4"
+            classNames="flex flex-1 items-center justify-center p-4"
+            activeDefault={itensMenu.path === '/sobre-mim' ? true : false}
           >
             <Icon id={itensMenu.id} />
-          </Link>
+          </NavLink>
         ))}
     </nav>
   </>

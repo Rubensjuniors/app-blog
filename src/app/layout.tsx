@@ -1,12 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {
+  Roboto_Flex as Roboto,
+  Bai_Jamjuree as BaiJamjuree
+} from 'next/font/google'
 import { ReactNode } from 'react'
 
 import Structor from '@/components/structure/Structor.component'
 
-const inter = Inter({ subsets: ['latin'] })
-
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+const baiJamjuree = BaiJamjuree({
+  subsets: ['latin'],
+  weight: '700',
+  variable: '--font-bai-jamjuree'
+})
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'My name is Rubens this is my blog'
@@ -14,7 +21,7 @@ export const metadata: Metadata = {
 
 const Layout = ({ children }: { children: ReactNode }) => (
   <html lang="en">
-    <body className={inter.className}>
+    <body className={`${roboto.variable} ${baiJamjuree.variable}`}>
       <Structor>{children}</Structor>
     </body>
   </html>

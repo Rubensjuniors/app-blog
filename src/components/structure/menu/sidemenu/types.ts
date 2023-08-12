@@ -5,5 +5,6 @@ export interface itemsMenuProps {
 }
 
 export interface sidemenuProps {
-  sidemenuItems?: Array<itemsMenuProps>
+  sidemenuItems: Array<itemsMenuProps>
+  classNames?: string
 }

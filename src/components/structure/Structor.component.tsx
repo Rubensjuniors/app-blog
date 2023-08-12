@@ -16,7 +16,7 @@ const Structor = ({ children }: StructorProps) => {
   const { width } = useWindowSize()
 
   const widthSize = width > 576
-  const menuBottomClass = widthSize ? '' : 'flex-col-reverse'
+  const menuBottomClass = !widthSize && 'flex-col-reverse'
   return (
     <>
       <div

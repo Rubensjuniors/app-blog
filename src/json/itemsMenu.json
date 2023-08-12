@@ -1,16 +1,16 @@
 [
   {
-    "id": "sobre_icon",
+    "id": "sobre_icon-phosphor",
     "title": "Sobre mim",
     "path": "/sobre-mim"
   },
   {
-    "id": "artigos_icon",
+    "id": "artigos_icon-phosphor",
     "title": "Artigos",
     "path": "/artigos"
   },
   {
-    "id": "pings_icon",
+    "id": "pings_icon-phosphor",
     "title": "Pings",
     "path": "/pings"
   }

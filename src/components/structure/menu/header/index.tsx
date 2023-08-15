@@ -1,20 +1,37 @@
 'use client'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
+import itemsMenu from '@/json/itemsMenu.json'
 
 import Icon from '@/components/basic/Icons'
 import NavLink from '@/components/basic/NavLink'
 
-interface HeaderProps {
-  title: string
-}
-
 const headerClass =
   'p-4 border-b border-ultils flex justify-between items-center sticky top-0 left-0 backdrop-blur-sm'
 
-const Header = ({ title }: HeaderProps) => {
+const Header = () => {
+  const [title, setTitle] = useState('')
   const { width } = useWindowSize()
-
+  const pathname = usePathname()
   const widthSize = width > 768
+
+  useEffect(() => {
+    if (pathname === '/') {
+      return setTitle(itemsMenu[0].title)
+    }
+
+    const renderTitle = (path: string) => {
+      itemsMenu.some((items) => {
+        if (items.path === path) {
+          return setTitle(items.title)
+        }
+      })
+    }
+
+    renderTitle(pathname)
+  }, [pathname])
 
   return (
     <header className={headerClass}>
@@ -23,7 +40,7 @@ const Header = ({ title }: HeaderProps) => {
         <Icon id="gym" iconSize={28} />
       ) : (
         <NavLink path="/">
-          <Icon id="logo_desktop" iconSize={42} />
+          <Icon id="icon_logo" iconSize={42} />
         </NavLink>
       )}
     </header>

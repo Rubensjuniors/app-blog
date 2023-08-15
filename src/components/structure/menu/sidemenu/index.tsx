@@ -18,7 +18,7 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
       >
         {widthSize && (
           <NavLink path="/">
-            <Icon id="logo_desktop" iconSize={94} />
+            <Icon id="icon_logo" iconSize={94} />
           </NavLink>
         )}
 

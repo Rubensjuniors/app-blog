@@ -28,7 +28,7 @@ const Structor = ({ children }: StructorProps) => {
           <SidemenuMobile sidemenuItems={itemsMenu} />
         )}
         <main className="z-1 min-h-screen w-content border-x border-ultils">
-          <Header title="Home" />
+          <Header />
           {children}
         </main>
       </div>

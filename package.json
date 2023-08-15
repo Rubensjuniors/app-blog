@@ -1,8 +1,8 @@
 {
-  "name": "youtube-videos",
+  "name": "app-blog",
   "version": "0.1.0",
   "author": {
-    "name": "Junior Alves"
+    "name": "Rubens junio"
   },
   "private": true,
   "scripts": {
@@ -12,13 +12,6 @@
     "preview": "next build && next start",
     "lint": "eslint src --max-warnings=0",
     "test": "jest"
-  },
-  "lint-staged": {
-    "src/**/*": [
-      "yarn lint --fix",
-      "yarn typecheck",
-      "yarn test --findRelatedTests --passWithNoTests --bail"
-    ]
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",

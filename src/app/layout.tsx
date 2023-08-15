@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 }
 
 const Layout = ({ children }: { children: ReactNode }) => (
-  <html lang="en">
+  <html lang="pt-br" suppressHydrationWarning={true}>
     <body className={`${roboto.variable} ${baiJamjuree.variable}`}>
       <Structor>{children}</Structor>
     </body>

@@ -5,7 +5,7 @@ import { sidemenuProps } from '../types'
 
 const SidemenuMobile = ({ sidemenuItems }: sidemenuProps) => (
   <>
-    <nav className="sticky bottom-0 left-0 z-10 flex w-full items-center bg-segundary">
+    <nav className="sticky bottom-0 left-0 z-10 flex w-full items-center bg-segundary sm:hidden">
       {sidemenuItems &&
         sidemenuItems.map((itensMenu) => (
           <NavLink

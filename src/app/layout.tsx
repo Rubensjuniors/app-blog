@@ -4,9 +4,11 @@ import {
   Roboto_Flex as Roboto,
   Bai_Jamjuree as BaiJamjuree
 } from 'next/font/google'
-import { ReactNode } from 'react'
+import { ReactNode, Suspense } from 'react'
 
 import Structor from '@/components/structure/Structor.component'
+
+import LogoDesktop from '../../public/assets/img/icon/gym.svg'
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 const baiJamjuree = BaiJamjuree({
@@ -16,15 +18,18 @@ const baiJamjuree = BaiJamjuree({
 })
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'My name is Rubens this is my blog'
+  description: 'My name is Rubens this is my blog',
+  icons: [{ rel: 'icon', url: LogoDesktop.src }]
 }
 
-const Layout = ({ children }: { children: ReactNode }) => (
-  <html lang="pt-br" suppressHydrationWarning={true}>
+const RootLayout = ({ children }: { children: ReactNode }) => (
+  <html lang="pt-br" suppressHydrationWarning>
     <body className={`${roboto.variable} ${baiJamjuree.variable}`}>
-      <Structor>{children}</Structor>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Structor>{children}</Structor>
+      </Suspense>
     </body>
   </html>
 )
 
-export default Layout
+export default RootLayout

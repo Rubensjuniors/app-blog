@@ -9,10 +9,10 @@ import Icon from '@/components/basic/Icons'
 import NavLink from '@/components/basic/NavLink'
 
 const headerClass =
-  'z-10 p-4 flex justify-between items-center sticky top-0 left-0 backdrop-blur-lg'
+  'z-10 py-3 px-4 sm:px-8 flex justify-between items-center sticky top-0 left-0 backdrop-blur-lg'
 
 const Header = () => {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('Sobre mim')
   const { width } = useWindowSize()
   const pathname = usePathname()
   const widthSize = width > 768

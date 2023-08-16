@@ -9,7 +9,7 @@ import Icon from '@/components/basic/Icons'
 import NavLink from '@/components/basic/NavLink'
 
 const headerClass =
-  'p-4 border-b border-ultils flex justify-between items-center sticky top-0 left-0 backdrop-blur-sm'
+  'z-10 p-4 flex justify-between items-center sticky top-0 left-0 backdrop-blur-lg'
 
 const Header = () => {
   const [title, setTitle] = useState('')

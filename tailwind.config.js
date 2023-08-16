@@ -13,13 +13,24 @@ export default {
         menuText: '#85898C',
         ultils: '#2F2F2F',
         default_text: '#E1E1E6',
-        oragen: '#f25d1d'
+        oragen: '#f25d1d',
+        card: '#404040'
       },
       spacing: {
         '0-auto': ['0px', 'auto']
       },
       width: {
         content: 'min(800px, 100%)'
+      },
+      screens: {
+        sm: '576px',
+        // => @media (min-width: 576px) { ... }
+
+        md: '960px',
+        // => @media (min-width: 960px) { ... }
+
+        lg: '1440px'
+        // => @media (min-width: 1440px) { ... }
       }
     }
   },

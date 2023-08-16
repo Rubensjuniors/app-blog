@@ -7,7 +7,9 @@ type CardProps = {
 }
 
 const Card = ({ children, classNames, title }: CardProps) => (
-  <div className={`max-w-[748px] bg-card sm:rounded-lg ${classNames}`}>
+  <div
+    className={`max-w-[748px] bg-card drop-shadow-lg sm:rounded-lg ${classNames}`}
+  >
     {title && <h1 className="text-xl font-bold sm:text-2xl">{title}</h1>}
     {children}
   </div>

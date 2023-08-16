@@ -5,8 +5,8 @@ import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
 import itemsMenu from '@/json/itemsMenu.json'
 
 import Header from './menu/header'
-import Sidemenu from './menu/sidemenu'
-import SidemenuMobile from './menu/sidemenu/sidemenu-mobile'
+import SidemenuMobile from './menu/sidemenu/sidemenu-mobile/sidemenu.component.mob'
+import Sidemenu from './menu/sidemenu/sidemenu.component'
 
 interface StructorProps {
   children: ReactNode

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Card from '@/components/basic/Card'
+import Card from '@/components/basic/Cards/profile'
 import Icon from '@/components/basic/Icons'
 
 import bannerProfile from '../../public/assets/img/photos/banner.jpeg'
@@ -8,8 +8,8 @@ import photoProfile from '../../public/assets/img/photos/Photo_three.jpg'
 
 const About = () => (
   <>
-    <section className="mt-3 flex flex-col items-center gap-4 sm:px-4">
-      <Card classNames="drop-shadow-lg">
+    <section className="-mt-5 flex flex-col items-center gap-4 sm:mt-3 sm:px-4">
+      <Card>
         <div className="relative flex w-full justify-start">
           <Image
             className="h-32 w-[748px] object-cover sm:h-36 sm:rounded-t-lg"
@@ -26,7 +26,7 @@ const About = () => (
         </div>
         <nav className="flex items-center justify-between px-4 pb-1 pt-4">
           <div></div>
-          <ul className="flex items-center gap-2 sm:mr-6 sm:gap-3">
+          <ul className="flex items-center gap-3 sm:mr-6 sm:gap-4">
             <li>
               <a href="https://www.instagram.com/eorubis">
                 <Icon id="instagram_icon-phosphor" iconSize={36} />
@@ -44,7 +44,7 @@ const About = () => (
             </li>
           </ul>
         </nav>
-        <div className="flex flex-col gap-1 px-4 pb-4 sm:px-8 sm:pt-6">
+        <div className="flex flex-col gap-1 px-4 pb-4 sm:px-4 sm:pt-6">
           <h1 className="text-2xl font-bold sm:text-4xl">Rubens junio</h1>
           <span className="text-sm sm:text-lg">
             Front End @Hotmart - HTML | CSS E SASS | JAVASCRIPT | TYPESCRIPT |

@@ -14,7 +14,7 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
   return (
     <>
       <nav
-        className={`${widthClassRender} sticky  left-0 top-0 flex max-h-screen flex-col items-center gap-4`}
+        className={`${widthClassRender} sticky left-0 top-0 flex max-h-screen flex-col items-center justify-center gap-4 md:justify-start`}
       >
         {widthSize && (
           <NavLink path="/">

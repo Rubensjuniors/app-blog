@@ -14,11 +14,11 @@ const regex = /phosphor/
 const getCorrespondingIcon = (id: string) =>
   icons.has(id) ? icons.get(id) : ''
 
-const Icon = ({ id, iconSize = 24, classIcon, color, wigth }: iconProps) => {
+const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => {
   const iconLib = regex.test(id)
 
   return iconLib ? (
-    <IconLib id={id} iconSize={iconSize} color={color} wigth={wigth} />
+    <IconLib id={id} iconSize={iconSize} />
   ) : (
     <Image
       alt={id}

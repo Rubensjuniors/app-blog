@@ -16,6 +16,7 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "next": "13.4.7",
     "next-compose-plugins": "^2.2.1",

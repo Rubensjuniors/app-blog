@@ -11,8 +11,7 @@ const SidemenuMobile = ({ sidemenuItems }: sidemenuProps) => (
           <NavLink
             path={itensMenu.path}
             key={itensMenu.id}
-            classNames="flex flex-1 items-center justify-center p-4"
-            activeDefault={itensMenu.path === '/sobre-mim' ? true : false}
+            classNames="icon-sidemenu flex flex-1 items-center justify-center p-4"
           >
             <Icon id={itensMenu.id} />
           </NavLink>

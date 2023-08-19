@@ -29,6 +29,7 @@ const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => {
       data-testid={id}
       priority={false}
       placeholder="empty"
+      id="icons"
     />
   )
 }

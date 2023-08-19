@@ -34,7 +34,7 @@ const Header = () => {
   }, [pathname])
 
   return (
-    <header className={headerClass}>
+    <header className={headerClass} data-testid="header">
       <span className="font-bold text-default_text">{title}</span>
       {widthSize ? (
         <Icon id="gym" iconSize={28} />

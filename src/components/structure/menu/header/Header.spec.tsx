@@ -8,7 +8,7 @@ describe('<Header />', () => {
 
     const headerElement = screen.getByTestId('header')
 
-    expect(headerElement).toBeInTheDocument()
+    expect(headerElement).toBeVisible()
   })
 
   it('should render the header with a title', async () => {
@@ -16,6 +16,6 @@ describe('<Header />', () => {
 
     const headerElement = screen.getByText('Sobre mim')
 
-    expect(headerElement).toBeInTheDocument()
+    expect(headerElement).toBeVisible()
   })
 })

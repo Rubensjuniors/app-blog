@@ -31,9 +31,9 @@ describe('<Sidemenu /', () => {
     const item2 = screen.getByText(MockItemsMenu[1].title)
     const item3 = screen.getByText(MockItemsMenu[2].title)
 
-    expect(item1).toBeInTheDocument()
-    expect(item2).toBeInTheDocument()
-    expect(item3).toBeInTheDocument()
+    expect(item1).toBeVisible()
+    expect(item2).toBeVisible()
+    expect(item3).toBeVisible()
   })
 
   it('should have links items correctly', async () => {

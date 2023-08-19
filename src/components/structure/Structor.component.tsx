@@ -19,7 +19,8 @@ const Structor = ({ children }: StructorProps) => {
   const menuBottomClass = !widthSize && 'flex-col-reverse'
   return (
     <>
-      <div
+      <section
+        data-testid="structor"
         className={`${menuBottomClass} m-0-auto flex min-h-screen max-w-screen-xl justify-center`}
       >
         {widthSize ? (
@@ -31,7 +32,7 @@ const Structor = ({ children }: StructorProps) => {
           <Header />
           {children}
         </main>
-      </div>
+      </section>
     </>
   )
 }

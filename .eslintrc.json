@@ -92,7 +92,7 @@
     ],
     "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": ["error", "always"],
-    "no-multi-spaces": "error",
+
     "no-console": "error" ,
     
     "no-restricted-syntax": [

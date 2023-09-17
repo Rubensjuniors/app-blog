@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start-local": "PORT=3009 next dev",
-    "start-serve-local": "json-server server.json -p 3333 -w -d 500",
+    "start-serve-local": "json-server server.json -p 4039 -w -d 500",
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",

@@ -1,31 +1,35 @@
 'use client'
-import { ReactNode, createContext, useContext } from 'react'
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState
+} from 'react'
+
+import { getGithubRepos, getGithubUser } from '@/services/services'
 
 import { UserContextDate } from './types'
-
-const defaultValue = {
-  userInfos: {
-    avatar_url: '',
-    url: '',
-    name: 'Rubens Junio',
-    bio: ''
-  },
-  repositorys: {
-    id: 12,
-    name: 'string',
-    private: false,
-    description: '',
-    url: '',
-    owner: {
-      login: 'Eorubis'
-    }
-  }
-}
 
 const userContext = createContext<UserContextDate>({} as UserContextDate)
 
 export const useUserContext = () => useContext(userContext)
 
-export const UserProvider = ({ children }: { children: ReactNode }) => (
-  <userContext.Provider value={defaultValue}>{children}</userContext.Provider>
-)
+export const UserProvider = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<UserContextDate>({} as UserContextDate)
+
+  useEffect(() => {
+    const loadUser = async () => {
+      const userGithub = await getGithubUser()
+      const repositorys = await getGithubRepos()
+
+      return setUser({
+        userInfos: userGithub,
+        repositorys
+      })
+    }
+    loadUser()
+  }, [])
+
+  return <userContext.Provider value={user}>{children}</userContext.Provider>
+}

@@ -28,17 +28,17 @@ const About = () => (
           <div></div>
           <ul className="flex items-center gap-3 sm:mr-6 sm:gap-4">
             <li>
-              <a href="https://www.instagram.com/eorubis">
+              <a href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
                 <Icon id="instagram_icon-phosphor" iconSize={36} />
               </a>
             </li>
             <li>
-              <a href="https://github.com/Rubensjuniors">
+              <a href={process.env.NEXT_PUBLIC_LINK_GITHUB}>
                 <Icon id="github_icon-phosphor" iconSize={36} />
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/rubens-junio-603979250">
+              <a href={process.env.NEXT_PUBLIC_LINK_LINKEDIN}>
                 <Icon id="linkedin_icon-phosphor" iconSize={36} />
               </a>
             </li>

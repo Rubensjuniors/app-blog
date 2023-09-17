@@ -4,9 +4,10 @@ import {
   Roboto_Flex as Roboto,
   Bai_Jamjuree as BaiJamjuree
 } from 'next/font/google'
-import { ReactNode, Suspense } from 'react'
+import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site/site'
+import { UserProvider } from '@/context/userContext'
 
 import Structor from '@/components/structure/Structor.component'
 
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => (
   <html lang="pt-br" suppressHydrationWarning>
     <body className={`${roboto.variable} ${baiJamjuree.variable}`}>
-      <Suspense fallback={<p>Loading...</p>}>
+      <UserProvider>
         <Structor>{children}</Structor>
-      </Suspense>
+      </UserProvider>
     </body>
   </html>
 )

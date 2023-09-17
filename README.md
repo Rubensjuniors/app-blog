@@ -31,8 +31,8 @@ Se você deseja contribuir com meu blog pessoal, você pode:
 
 Se você deseja entrar em contato comigo ou acompanhar mais de perto o meu progresso, você pode me encontrar nas seguintes plataformas:
 
-- **GitHub**: [https://github.com/seu-usuario](https://github.com/Rubensjuniors)
-- **LinkedIn**: [https://www.linkedin.com/in/seu-nome](https://www.linkedin.com/in/rubens-junio-603979250/)
+- **GitHub**: [https://github.com/Rubensjuniors](https://github.com/Rubensjuniors)
+- **LinkedIn**: [https://www.linkedin.com/in/rubensJunio](https://www.linkedin.com/in/rubens-junio-603979250/)
 - **Instagram**: [@Eorubis](https://www.instagram.com/eorubis)
 
 ## Agradecimentos

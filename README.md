@@ -14,6 +14,12 @@ Este projeto é construído usando as seguintes tecnologias:
 - 🃏 **Jest** - A delightful JavaScript Testing Framework with a focus on simplicity
 - 💅 **Tailwind CSS** - Use the best bits of ES6 and CSS to style your apps without stress
 
+**Libs que usei!**
+- **Axios**
+- **Json-server**
+- **Phosphor icons**
+  
+
 ## Objetivos
 
 - Compartilhar Meu Conhecimento: Este blog é um espaço onde posso compartilhar minhas experiências, tutoriais, dicas e truques relacionados à tecnologia.

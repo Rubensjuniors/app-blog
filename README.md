@@ -33,7 +33,7 @@ Se você deseja entrar em contato comigo ou acompanhar mais de perto o meu progr
 
 - **GitHub**: [https://github.com/seu-usuario](https://github.com/Rubensjuniors)
 - **LinkedIn**: [https://www.linkedin.com/in/seu-nome](https://www.linkedin.com/in/rubens-junio-603979250/)
-- **Instagram**: [@seu-twitter](https://www.instagram.com/eorubis)
+- **Instagram**: [@Eorubis](https://www.instagram.com/eorubis)
 
 ## Agradecimentos
 

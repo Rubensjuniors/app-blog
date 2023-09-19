@@ -1,35 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692467177473" clover="3.2.0">
-  <project timestamp="1692467177473" name="All files">
-    <metrics statements="310" coveredstatements="288" conditionals="33" coveredconditionals="24" methods="12" coveredmethods="11" elements="355" coveredelements="323" complexity="0" loc="310" ncloc="310" packages="9" files="9" classes="9"/>
-    <package name="components.basic.Cards.profile">
-      <metrics statements="18" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/basic/Cards/profile/index.tsx">
-        <metrics statements="18" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.basic.Icons">
-      <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
-      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/basic/Icons/index.tsx">
-        <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+<coverage generated="1695145036804" clover="3.2.0">
+  <project timestamp="1695145036804" name="All files">
+    <metrics statements="391" coveredstatements="318" conditionals="38" coveredconditionals="26" methods="16" coveredmethods="12" elements="445" coveredelements="356" complexity="0" loc="391" ncloc="391" packages="14" files="15" classes="15"/>
+    <package name="components.basic.Card">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/basic/Card/index.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -42,37 +18,54 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="33" type="stmt"/>
-        <line num="19" count="33" type="stmt"/>
-        <line num="20" count="33" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="24" type="stmt"/>
-        <line num="22" count="24" type="stmt"/>
-        <line num="23" count="33" type="stmt"/>
-        <line num="24" count="33" type="stmt"/>
-        <line num="25" count="33" type="stmt"/>
-        <line num="26" count="33" type="stmt"/>
-        <line num="27" count="33" type="stmt"/>
-        <line num="28" count="33" type="stmt"/>
-        <line num="29" count="33" type="stmt"/>
-        <line num="30" count="33" type="stmt"/>
-        <line num="31" count="33" type="stmt"/>
-        <line num="32" count="33" type="stmt"/>
-        <line num="33" count="33" type="stmt"/>
-        <line num="34" count="33" type="stmt"/>
-        <line num="35" count="33" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.basic.Icons">
+      <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/basic/Icons/index.tsx">
+        <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="54" type="stmt"/>
+        <line num="18" count="54" type="stmt"/>
+        <line num="19" count="54" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="44" type="stmt"/>
+        <line num="21" count="44" type="stmt"/>
+        <line num="22" count="54" type="stmt"/>
+        <line num="23" count="54" type="stmt"/>
+        <line num="24" count="54" type="stmt"/>
+        <line num="25" count="54" type="stmt"/>
+        <line num="26" count="54" type="stmt"/>
+        <line num="27" count="54" type="stmt"/>
+        <line num="28" count="54" type="stmt"/>
+        <line num="29" count="54" type="stmt"/>
+        <line num="30" count="54" type="stmt"/>
+        <line num="31" count="54" type="stmt"/>
+        <line num="32" count="54" type="stmt"/>
+        <line num="33" count="54" type="stmt"/>
+        <line num="34" count="54" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.basic.Icons.LibIcon">
-      <metrics statements="29" coveredstatements="29" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="31" coveredstatements="31" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="iconLib.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/basic/Icons/LibIcon/iconLib.tsx">
-        <metrics statements="29" coveredstatements="29" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="31" coveredstatements="31" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -87,21 +80,23 @@
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="24" type="stmt"/>
-        <line num="17" count="24" type="stmt"/>
-        <line num="18" count="24" type="stmt"/>
-        <line num="19" count="24" type="stmt"/>
-        <line num="20" count="24" type="stmt"/>
-        <line num="21" count="24" type="stmt"/>
-        <line num="22" count="24" type="stmt"/>
-        <line num="23" count="24" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="24" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="24" type="stmt"/>
-        <line num="26" count="24" type="stmt"/>
-        <line num="27" count="24" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="44" type="stmt"/>
+        <line num="18" count="44" type="stmt"/>
+        <line num="19" count="44" type="stmt"/>
+        <line num="20" count="44" type="stmt"/>
+        <line num="21" count="44" type="stmt"/>
+        <line num="22" count="44" type="stmt"/>
+        <line num="23" count="44" type="stmt"/>
+        <line num="24" count="44" type="stmt"/>
+        <line num="25" count="44" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="44" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="44" type="stmt"/>
+        <line num="28" count="44" type="stmt"/>
+        <line num="29" count="44" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.basic.NavLink">
@@ -123,82 +118,36 @@
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="32" type="stmt"/>
-        <line num="17" count="32" type="stmt"/>
-        <line num="18" count="32" type="stmt"/>
-        <line num="19" count="32" type="stmt"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="21" count="32" type="stmt"/>
-        <line num="22" count="32" type="stmt"/>
-        <line num="23" count="32" type="stmt"/>
-        <line num="24" count="32" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="32" type="stmt"/>
-        <line num="26" count="32" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="32" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="32" type="stmt"/>
-        <line num="29" count="32" type="stmt"/>
-        <line num="30" count="32" type="stmt"/>
-        <line num="31" count="32" type="stmt"/>
-        <line num="32" count="32" type="stmt"/>
-        <line num="33" count="32" type="stmt"/>
-        <line num="34" count="32" type="stmt"/>
-        <line num="35" count="32" type="stmt"/>
-        <line num="36" count="32" type="stmt"/>
-        <line num="37" count="32" type="stmt"/>
+        <line num="16" count="56" type="stmt"/>
+        <line num="17" count="56" type="stmt"/>
+        <line num="18" count="56" type="stmt"/>
+        <line num="19" count="56" type="stmt"/>
+        <line num="20" count="56" type="stmt"/>
+        <line num="21" count="56" type="stmt"/>
+        <line num="22" count="56" type="stmt"/>
+        <line num="23" count="56" type="stmt"/>
+        <line num="24" count="56" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="56" type="stmt"/>
+        <line num="26" count="56" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="56" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="56" type="stmt"/>
+        <line num="29" count="56" type="stmt"/>
+        <line num="30" count="56" type="stmt"/>
+        <line num="31" count="56" type="stmt"/>
+        <line num="32" count="56" type="stmt"/>
+        <line num="33" count="56" type="stmt"/>
+        <line num="34" count="56" type="stmt"/>
+        <line num="35" count="56" type="stmt"/>
+        <line num="36" count="56" type="stmt"/>
+        <line num="37" count="56" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.structure">
-      <metrics statements="40" coveredstatements="40" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="35" coveredstatements="35" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="Structor.component.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/Structor.component.tsx">
-        <metrics statements="40" coveredstatements="40" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="19" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="30" count="6" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="33" count="6" type="stmt"/>
-        <line num="34" count="6" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
-        <line num="36" count="6" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.structure.menu.header">
-      <metrics statements="50" coveredstatements="46" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
-      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/menu/header/index.tsx">
-        <metrics statements="50" coveredstatements="46" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <metrics statements="35" coveredstatements="35" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -216,98 +165,30 @@
         <line num="15" count="6" type="stmt"/>
         <line num="16" count="6" type="stmt"/>
         <line num="17" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
+        <line num="18" count="6" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="6" type="stmt"/>
-        <line num="20" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="4" type="cond" truecount="0" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="25" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="27" count="12" type="cond" truecount="0" falsecount="1"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="12" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
-        <line num="34" count="6" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
-        <line num="36" count="6" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
-        <line num="39" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="42" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
-        <line num="45" count="6" type="stmt"/>
-        <line num="46" count="6" type="stmt"/>
-        <line num="47" count="6" type="stmt"/>
-        <line num="48" count="6" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.structure.menu.sidemenu">
-      <metrics statements="47" coveredstatements="47" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="sidemenu.component.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/menu/sidemenu/sidemenu.component.tsx">
-        <metrics statements="47" coveredstatements="47" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="12" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-        <line num="27" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="15" type="stmt"/>
-        <line num="29" count="15" type="stmt"/>
-        <line num="30" count="15" type="stmt"/>
-        <line num="31" count="5" type="stmt"/>
-        <line num="32" count="5" type="cond" truecount="0" falsecount="1"/>
-        <line num="33" count="5" type="stmt"/>
-        <line num="34" count="5" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
-        <line num="36" count="5" type="stmt"/>
-        <line num="37" count="5" type="stmt"/>
-        <line num="38" count="5" type="stmt"/>
-        <line num="39" count="5" type="stmt"/>
-        <line num="40" count="5" type="stmt"/>
-        <line num="41" count="5" type="stmt"/>
-        <line num="42" count="5" type="stmt"/>
-        <line num="43" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="45" count="5" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.structure.menu.sidemenu.sidemenu-mobile">
-      <metrics statements="24" coveredstatements="24" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
-      <file name="sidemenu.component.mob.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/menu/sidemenu/sidemenu-mobile/sidemenu.component.mob.tsx">
-        <metrics statements="24" coveredstatements="24" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+    <package name="components.structure.header">
+      <metrics statements="49" coveredstatements="45" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/header/index.tsx">
+        <metrics statements="49" coveredstatements="45" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -319,10 +200,142 @@
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="18" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="18" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="36" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="38" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="10" type="stmt"/>
+        <line num="42" count="10" type="stmt"/>
+        <line num="43" count="10" type="stmt"/>
+        <line num="44" count="10" type="stmt"/>
+        <line num="45" count="10" type="stmt"/>
+        <line num="46" count="10" type="stmt"/>
+        <line num="47" count="10" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.structure.sidemenu">
+      <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/sidemenu/index.tsx">
+        <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.structure.sidemenu.sidemenu-desktop">
+      <metrics statements="46" coveredstatements="46" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="sidemenu.desktop.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/sidemenu/sidemenu-desktop/sidemenu.desktop.tsx">
+        <metrics statements="46" coveredstatements="46" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="9" type="stmt"/>
         <line num="13" count="9" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
         <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="23" count="9" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="27" type="stmt"/>
+        <line num="28" count="27" type="stmt"/>
+        <line num="29" count="27" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="31" count="9" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="9" type="stmt"/>
+        <line num="33" count="9" type="stmt"/>
+        <line num="34" count="9" type="stmt"/>
+        <line num="35" count="9" type="stmt"/>
+        <line num="36" count="9" type="stmt"/>
+        <line num="37" count="9" type="stmt"/>
+        <line num="38" count="9" type="stmt"/>
+        <line num="39" count="9" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="9" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.structure.sidemenu.sidemenu-mobile">
+      <metrics statements="23" coveredstatements="23" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+      <file name="sidemenu.component.mob.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/components/structure/sidemenu/sidemenu-mobile/sidemenu.component.mob.tsx">
+        <metrics statements="23" coveredstatements="23" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
@@ -331,7 +344,70 @@
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="config.site">
+      <metrics statements="17" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="site.ts" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/config/site/site.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="context.userContext">
+      <metrics statements="35" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.tsx" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/context/userContext/index.tsx">
+        <metrics statements="35" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
     <package name="hooks.useWindowSize">
@@ -342,28 +418,66 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="36" type="stmt"/>
-        <line num="6" count="36" type="stmt"/>
-        <line num="7" count="36" type="stmt"/>
-        <line num="8" count="36" type="stmt"/>
-        <line num="9" count="36" type="stmt"/>
-        <line num="10" count="36" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="22" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="22" type="stmt"/>
-        <line num="13" count="22" type="stmt"/>
-        <line num="14" count="22" type="stmt"/>
-        <line num="15" count="22" type="stmt"/>
-        <line num="16" count="22" type="stmt"/>
-        <line num="17" count="22" type="stmt"/>
-        <line num="18" count="22" type="stmt"/>
-        <line num="19" count="22" type="stmt"/>
-        <line num="20" count="22" type="stmt"/>
-        <line num="21" count="22" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="36" type="stmt"/>
-        <line num="23" count="36" type="stmt"/>
-        <line num="24" count="36" type="stmt"/>
+        <line num="5" count="76" type="stmt"/>
+        <line num="6" count="76" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="8" count="76" type="stmt"/>
+        <line num="9" count="76" type="stmt"/>
+        <line num="10" count="76" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="43" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="43" type="stmt"/>
+        <line num="13" count="43" type="stmt"/>
+        <line num="14" count="43" type="stmt"/>
+        <line num="15" count="43" type="stmt"/>
+        <line num="16" count="43" type="stmt"/>
+        <line num="17" count="43" type="stmt"/>
+        <line num="18" count="43" type="stmt"/>
+        <line num="19" count="43" type="stmt"/>
+        <line num="20" count="43" type="stmt"/>
+        <line num="21" count="43" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="76" type="stmt"/>
+        <line num="23" count="76" type="stmt"/>
+        <line num="24" count="76" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="17" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="instances.ts" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/services/instances.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="services.ts" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/services/services.ts">
+        <metrics statements="11" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="ultils">
+      <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+      <file name="constants.ts" path="/Users/rubens.marques/Desenvolvimento/app-blog/src/ultils/constants.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
   </project>

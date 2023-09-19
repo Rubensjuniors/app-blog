@@ -1,12 +1,11 @@
-import Icon from '@/components/basic/Icons'
-import NavLink from '@/components/basic/NavLink'
+import { Icon, NavLink } from '@/components/basic'
 
 import { sidemenuProps } from '../types'
 
 const SidemenuMobile = ({ sidemenuItems }: sidemenuProps) => (
   <nav
     data-testid="sidemenu-mobile"
-    className="sticky bottom-0 left-0 z-10 flex w-full items-center bg-segundary sm:hidden"
+    className="sticky bottom-0 left-0 z-10 flex w-full items-center bg-gray-800 sm:hidden"
   >
     {sidemenuItems &&
       sidemenuItems.map((itensMenu) => (

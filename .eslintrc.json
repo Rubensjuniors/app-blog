@@ -90,8 +90,6 @@
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ],
-    "arrow-body-style": ["error", "as-needed"],
-    "arrow-parens": ["error", "always"],
 
     "no-console": "error" ,
     

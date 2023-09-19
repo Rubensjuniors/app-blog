@@ -21,9 +21,9 @@ const NavLink = ({
   const pathname = usePathname()
   const { width } = useWindowSize()
   const widthSize = width > 576
-  const isActive = pathname === path ? 'text-oragen' : ''
+  const isActive = pathname === path ? 'text-red-300' : ''
   const pathActiveDefault =
-    pathname === '/' && activeDefault ? 'text-oragen' : ''
+    pathname === '/' && activeDefault ? 'text-red-300' : ''
   const hover = widthSize && 'hover:brightness-90 transition-all'
 
   return (

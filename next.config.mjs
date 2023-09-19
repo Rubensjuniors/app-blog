@@ -26,12 +26,6 @@ const nextConfig = {
   staticPageGenerationTimeout: 1000,
   compiler: {
     removeConsole: !isDev
-  },
-  images: {
-    formats: ['image/avif', 'image/webp']
-  },
-  experimental: {
-    swcMinify: true
   }
 }
 

@@ -1,11 +1,10 @@
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
 
-import Icon from '@/components/basic/Icons'
-import NavLink from '@/components/basic/NavLink'
+import { Icon, NavLink } from '@/components/basic'
 
-import { sidemenuProps } from './types'
+import { sidemenuProps } from '../types'
 
-const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
+const SidemenuDesktop = ({ sidemenuItems }: sidemenuProps) => {
   const { width } = useWindowSize()
 
   const widthSize = width > 768
@@ -44,4 +43,4 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
   )
 }
 
-export default Sidemenu
+export default SidemenuDesktop

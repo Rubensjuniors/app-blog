@@ -7,10 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+    outline: 0;
+}
+
 
 body {
-  color: #e1e1e6;
-  background: #1d232a;
   -webkit-font-smoothing: antialised;
   max-width: 100vw;
   max-height: 100vh;

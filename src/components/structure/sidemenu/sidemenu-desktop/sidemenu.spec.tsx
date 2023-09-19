@@ -1,6 +1,6 @@
 import { act, fireEvent, render, screen } from '@testing-library/react'
 
-import Sidemenu from './sidemenu.component'
+import Sidemenu from './sidemenu.desktop'
 
 const MockItemsMenu = [
   {

@@ -1,9 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import {
-  Roboto_Flex as Roboto,
-  Bai_Jamjuree as BaiJamjuree
-} from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site/site'
@@ -13,11 +10,11 @@ import Structor from '@/components/structure/Structor.component'
 
 import LogoDesktop from '../../public/assets/img/icon/gym.svg'
 
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
-const baiJamjuree = BaiJamjuree({
+const roboto = Roboto({
+  weight: ['400', '700'],
   subsets: ['latin'],
-  weight: '700',
-  variable: '--font-bai-jamjuree'
+  display: 'swap',
+  variable: '--font-roboto'
 })
 
 export const metadata: Metadata = {
@@ -53,7 +50,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => (
   <html lang="pt-br" suppressHydrationWarning>
-    <body className={`${roboto.variable} ${baiJamjuree.variable}`}>
+    <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
       <UserProvider>
         <Structor>{children}</Structor>
       </UserProvider>

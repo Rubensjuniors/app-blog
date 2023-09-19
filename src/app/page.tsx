@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 import { useUserContext } from '@/context/userContext'
 
-import Card from '@/components/basic/Cards/profile'
-import Icon from '@/components/basic/Icons'
+import { Icon, Card } from '@/components/basic'
 
 import bannerProfile from '../../public/assets/img/photos/banner.jpeg'
+import photoProfile from '../../public/assets/img/photos/Photo_three.jpg'
 
 const About = () => {
   const { userInfos } = useUserContext()
@@ -22,15 +22,14 @@ const About = () => {
               alt="banner"
             />
             <div className="absolute top-16 ml-3 h-28 w-28 sm:top-14 sm:ml-6 sm:h-40 sm:w-40">
-              <img
+              <Image
                 className="h-full w-full rounded-full object-cover shadow-md"
-                src={userInfos?.avatar_url}
+                src={photoProfile}
                 alt={'my photo of profile'}
               />
             </div>
           </div>
-          <nav className="flex items-center justify-between px-4 pb-1 pt-4">
-            <div></div>
+          <nav className="flex items-center justify-end px-4 pb-1 pt-4">
             <ul className="flex items-center gap-3 sm:mr-6 sm:gap-4">
               <li>
                 <a href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>

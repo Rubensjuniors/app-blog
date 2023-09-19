@@ -1,5 +1,6 @@
 'use client'
 import {
+  Code,
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
@@ -19,6 +20,7 @@ const IconLib = ({ id, iconSize }: iconProps) => {
   icons.set('instagram_icon-phosphor', <InstagramLogo size={iconSize} />)
   icons.set('github_icon-phosphor', <GithubLogo size={iconSize} />)
   icons.set('linkedin_icon-phosphor', <LinkedinLogo size={iconSize} />)
+  icons.set('code_icon-phosphor', <Code size={iconSize} color="#F75A68" />)
 
   const getCorrespondingIconLib = (id: string) =>
     icons.has(id) ? icons.get(id) : ''

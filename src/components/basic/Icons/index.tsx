@@ -7,7 +7,6 @@ const BASE_SRC = '/assets/img/icon'
 const icons = new Map()
 
 icons.set('icon_logo', `${BASE_SRC}/logo-desktop.svg`)
-icons.set('gym', `${BASE_SRC}/gym.svg`)
 
 const regex = /phosphor/
 

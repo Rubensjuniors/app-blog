@@ -2,11 +2,10 @@
 import { ReactNode } from 'react'
 
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
-import itemsMenu from '@/json/itemsMenu.json'
+import { SCRENN_SIZES } from '@/ultils/constants'
 
-import Header from './menu/header'
-import SidemenuMobile from './menu/sidemenu/sidemenu-mobile/sidemenu.component.mob'
-import Sidemenu from './menu/sidemenu/sidemenu.component'
+import Header from './header'
+import Sidemenu from './sidemenu'
 
 interface StructorProps {
   children: ReactNode
@@ -15,24 +14,20 @@ interface StructorProps {
 const Structor = ({ children }: StructorProps) => {
   const { width } = useWindowSize()
 
-  const widthSize = width > 576
+  const widthSize = width > SCRENN_SIZES.SM
   const menuBottomClass = !widthSize && 'flex-col-reverse'
   return (
     <>
-      <section
+      <div
         data-testid="structor"
-        className={`${menuBottomClass} m-0-auto flex min-h-screen max-w-screen-xl justify-center`}
+        className={`${menuBottomClass} m-0-auto flex min-h-screen max-w-screen-lg justify-center`}
       >
-        {widthSize ? (
-          <Sidemenu sidemenuItems={itemsMenu} />
-        ) : (
-          <SidemenuMobile sidemenuItems={itemsMenu} />
-        )}
-        <main className="z-1 min-h-screen w-content border-x border-ultils">
+        <Sidemenu />
+        <main className="z-1 min-h-screen w-content border-x border-gray-600">
           <Header />
           {children}
         </main>
-      </section>
+      </div>
     </>
   )
 }

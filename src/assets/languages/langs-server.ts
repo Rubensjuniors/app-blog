@@ -5,7 +5,7 @@ import { defaultLanguages } from './default-langs'
 
 const getlangsServer = (locale: Locale) => {
   return (
-    defaultLanguages[locale] ?? defaultLanguages[i18n.defaultLang as Locale]
+    defaultLanguages[locale] ?? defaultLanguages[i18n.defaultLocale as Locale]
   )
 }
 

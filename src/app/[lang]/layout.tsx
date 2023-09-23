@@ -3,12 +3,13 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
+import { i18n } from '@/config/i18n/i18m.config'
 import { siteConfig } from '@/config/site/site'
 import { UserProvider } from '@/context/userContext'
 
 import Structor from '@/components/structure/Structor.component'
 
-import LogoDesktop from '../../public/assets/img/icon/gym.svg'
+import LogoDesktop from '../../../public/assets/img/icon/gym.svg'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -48,14 +49,26 @@ export const metadata: Metadata = {
   }
 }
 
-const RootLayout = ({ children }: { children: ReactNode }) => (
-  <html lang="pt-br" suppressHydrationWarning>
-    <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
-      <UserProvider>
-        <Structor>{children}</Structor>
-      </UserProvider>
-    </body>
-  </html>
-)
+export const generateStaticParams = () => {
+  return i18n.locales.map((lang) => ({ lang }))
+}
+
+const RootLayout = async ({
+  children,
+  params
+}: {
+  children: ReactNode
+  params: { lang: string }
+}) => {
+  return (
+    <html lang={params.lang} suppressHydrationWarning>
+      <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
+        <UserProvider>
+          <Structor>{children}</Structor>
+        </UserProvider>
+      </body>
+    </html>
+  )
+}
 
 export default RootLayout

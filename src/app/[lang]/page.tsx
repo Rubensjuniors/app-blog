@@ -1,15 +1,18 @@
 'use client'
 import Image from 'next/image'
 
+import getlangsUseClient from '@/assets/languages/langs-use-client'
+import { Locale } from '@/config/i18n/i18m.config'
 import { useUserContext } from '@/context/userContext'
 
 import { Icon, Card } from '@/components/basic'
 
-import bannerProfile from '../../public/assets/img/photos/banner.jpeg'
-import photoProfile from '../../public/assets/img/photos/Photo_three.jpg'
+import bannerProfile from '../../../public/assets/img/photos/banner.jpeg'
+import photoProfile from '../../../public/assets/img/photos/Photo_three.jpg'
 
-const About = () => {
+const About = ({ params }: { params: { lang: Locale } }) => {
   const { userInfos } = useUserContext()
+  const t = getlangsUseClient(params.lang)
 
   return (
     <>
@@ -50,7 +53,7 @@ const About = () => {
           </nav>
           <div className="flex flex-col gap-1 px-4 pb-4 sm:px-4 sm:pt-6">
             <h1 className="text-2xl font-bold sm:text-4xl">
-              {userInfos?.name}
+              {t.blog.about.name}
             </h1>
             <span className="text-sm sm:text-lg">{userInfos?.bio}</span>
           </div>

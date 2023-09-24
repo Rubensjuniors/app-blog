@@ -1,11 +1,13 @@
+import { useTranslationClient } from '@/hooks/useTransletions/client'
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
 
 import { Icon, NavLink } from '@/components/basic'
 
-import { sidemenuProps } from '../types'
+import { Keystitle, sidemenuProps } from '../types'
 
 const SidemenuDesktop = ({ sidemenuItems }: sidemenuProps) => {
   const { width } = useWindowSize()
+  const t = useTranslationClient()
 
   const widthSize = width > 768
   const widthClassRender = widthSize ? 'min-w-[230px] p-4' : 'min-w-[60px] p-2'
@@ -28,12 +30,13 @@ const SidemenuDesktop = ({ sidemenuItems }: sidemenuProps) => {
               path={itensMenu.path}
               key={itensMenu.id}
               classNames="flex w-full items-center gap-3 p-4"
-              activeDefault={itensMenu.path === '/sobre-mim' ? true : false}
             >
               <>
                 <Icon id={itensMenu.id} />
                 {widthSize && (
-                  <span className="font-bold">{itensMenu.title}</span>
+                  <span className="font-bold">
+                    {t.blog.sidemenu[itensMenu.title as Keystitle]}
+                  </span>
                 )}
               </>
             </NavLink>

@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
 import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
@@ -63,9 +64,11 @@ const RootLayout = async ({
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
-        <UserProvider>
-          <Structor>{children}</Structor>
-        </UserProvider>
+        <NextIntlClientProvider locale={params.lang}>
+          <UserProvider>
+            <Structor>{children}</Structor>
+          </UserProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

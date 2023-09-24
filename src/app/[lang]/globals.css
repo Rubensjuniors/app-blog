@@ -43,3 +43,6 @@ input {
   background: transparent;
 }
 
+.active {
+color: #F75A68;
+}

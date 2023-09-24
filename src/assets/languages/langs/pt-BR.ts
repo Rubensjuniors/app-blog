@@ -9,12 +9,10 @@ export const ptBR = {
       }
     },
     sidemenu: {
+      home: 'Início',
       about_me: 'Sobre mim',
       articles: 'Artigos',
       pings: 'Pings'
-    },
-    header: {
-      default: 'Início'
     }
   }
 }

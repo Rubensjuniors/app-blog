@@ -11,7 +11,7 @@ export const useSidemenuContext = () => useContext(sidemenuContext)
 
 export const SidemenuProvider = ({ children }: { children: ReactNode }) => {
   const t = useTranslationClient()
-  const [title, setTitle] = useState<string>(t.blog.header.default)
+  const [title, setTitle] = useState<string>(t.blog.sidemenu.home)
 
   return (
     <sidemenuContext.Provider value={{ title, setTitle }}>

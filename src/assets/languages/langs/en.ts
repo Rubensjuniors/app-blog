@@ -9,12 +9,10 @@ export const en = {
       }
     },
     sidemenu: {
+      home: 'Home',
       about_me: 'About me',
       articles: 'Articles',
       pings: 'Pings'
-    },
-    header: {
-      default: 'Home'
     }
   }
 }

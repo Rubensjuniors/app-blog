@@ -1,3 +1,4 @@
+import { useSidemenuContext } from '@/context/sidemenuContext'
 import { useTranslationClient } from '@/hooks/useTransletions/client'
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
 
@@ -7,6 +8,7 @@ import { Keystitle, sidemenuProps } from '../types'
 
 const SidemenuDesktop = ({ sidemenuItems }: sidemenuProps) => {
   const { width } = useWindowSize()
+  const { setTitle } = useSidemenuContext()
   const t = useTranslationClient()
 
   const widthSize = width > 768
@@ -30,6 +32,9 @@ const SidemenuDesktop = ({ sidemenuItems }: sidemenuProps) => {
               path={itensMenu.path}
               key={itensMenu.id}
               classNames="flex w-full items-center gap-3 p-4"
+              onClick={() =>
+                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
+              }
             >
               <>
                 <Icon id={itensMenu.id} />

@@ -9,28 +9,17 @@ interface ActiveLinkProps {
   classNames?: string
   activeClassName?: string
   path: string
-  activeDefault?: boolean
 }
 
-const NavLink = ({
-  path,
-  classNames,
-  children,
-  activeDefault = false
-}: ActiveLinkProps) => {
-  const pathname = usePathname()
+const NavLink = ({ path, classNames, children }: ActiveLinkProps) => {
   const { width } = useWindowSize()
+  const pathname = usePathname()
   const widthSize = width > 576
   const isActive = pathname === path ? 'text-red-300' : ''
-  const pathActiveDefault =
-    pathname === '/' && activeDefault ? 'text-red-300' : ''
   const hover = widthSize && 'hover:brightness-90 transition-all'
 
   return (
-    <Link
-      href={path}
-      className={`${classNames} ${isActive} ${pathActiveDefault} ${hover}`}
-    >
+    <Link href={path} className={`${classNames} ${isActive} ${hover}`}>
       {children}
     </Link>
   )

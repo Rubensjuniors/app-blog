@@ -8,3 +8,5 @@ export interface sidemenuProps {
   sidemenuItems: Array<itemsMenuProps>
   classNames?: string
 }
+
+export type Keystitle = 'about_me' | 'articles' | 'pings'

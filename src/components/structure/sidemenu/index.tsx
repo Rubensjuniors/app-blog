@@ -1,7 +1,7 @@
 import useWindowSize from '@/hooks/useWindowSize/useWindowSize'
-import itemsMenu from '@/json/itemsMenu.json'
 import { SCRENN_SIZES } from '@/ultils/constants'
 
+import { sidemenuItems } from './constants'
 import SidemenuDesktop from './sidemenu-desktop/sidemenu.desktop'
 import SidemenuMobile from './sidemenu-mobile/sidemenu.component.mob'
 
@@ -10,9 +10,9 @@ const Sidemenu = () => {
 
   const widthSize = width > SCRENN_SIZES.SM
   return widthSize ? (
-    <SidemenuDesktop sidemenuItems={itemsMenu} />
+    <SidemenuDesktop sidemenuItems={sidemenuItems} />
   ) : (
-    <SidemenuMobile sidemenuItems={itemsMenu} />
+    <SidemenuMobile sidemenuItems={sidemenuItems} />
   )
 }
 

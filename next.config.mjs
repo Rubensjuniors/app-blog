@@ -26,7 +26,8 @@ const nextConfig = {
   staticPageGenerationTimeout: 1000,
   compiler: {
     removeConsole: !isDev
-  }
+  },
+  copyUnmodified: true
 }
 
 export default withPlugins([withPWA], nextConfig)

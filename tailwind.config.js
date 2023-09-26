@@ -28,7 +28,7 @@ export default {
         '0-auto': ['0px', 'auto']
       },
       width: {
-        content: 'min(800px, 100%)'
+        content: 'min(950px, 100%)'
       },
       screens: {
         sm: '576px',
@@ -42,6 +42,15 @@ export default {
 
         xl: '1440px'
         // => @media (min-width: 1440px) { ... }
+      },
+      keyframes: {
+        'slide-enter': {
+          '0%': { transform: 'translateY(-50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '01' }
+        }
+      },
+      animation: {
+        'slide-enter': 'slide-enter .4s'
       }
     }
   },

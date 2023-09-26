@@ -7,7 +7,8 @@ import {
   List,
   NotePencil,
   Paperclip,
-  User
+  User,
+  X
 } from '@phosphor-icons/react'
 
 import { iconProps } from '../types'
@@ -23,6 +24,7 @@ const IconLib = ({ id, iconSize }: iconProps) => {
   icons.set('linkedin_icon-phosphor', <LinkedinLogo size={iconSize} />)
   icons.set('list_icon-phosphor', <List size={iconSize} />)
   icons.set('home_icon-phosphor', <House size={iconSize} />)
+  icons.set('x_icon-phosphor', <X size={iconSize} />)
 
   const getCorrespondingIconLib = (id: string) =>
     icons.has(id) ? icons.get(id) : ''

@@ -26,28 +26,7 @@ export const metadata: Metadata = {
   },
   icons: [{ rel: 'icon', url: LogoDesktop.src }],
   description: siteConfig.description,
-  manifest: '/manifest.json',
-  authors: [{ name: 'Junior Alves' }],
-  metadataBase: new URL(`${siteConfig.url}`),
-  openGraph: {
-    type: 'website',
-    url: `${siteConfig.url}/cover.jpg`,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: 'Eorubis',
-    images: [
-      {
-        url: `${siteConfig.url}/cover.jpg`
-      }
-    ]
-  },
-  robots: 'index, follow',
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/cover.jpg`]
-  }
+  authors: [{ name: 'Rubens Junio' }]
 }
 
 export const generateStaticParams = () => {

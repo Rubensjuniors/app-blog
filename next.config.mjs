@@ -26,6 +26,9 @@ const nextConfig = {
   staticPageGenerationTimeout: 1000,
   compiler: {
     removeConsole: !isDev
+  },
+  images: {
+    domains: []
   }
 }
 

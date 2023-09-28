@@ -14,8 +14,8 @@ const Home = () => {
       </div>
 
       <div>
-        <h1 className="text-5xl font-bold">{t.blog.home.title}</h1>
-        <p className="text-justifys mt-2 font-light">
+        <h1 className="mb-3 text-4xl font-bold">{t.blog.home.title}</h1>
+        <p className="text-md text-justifys mt-2 font-light">
           {t.blog.home.descriptions}
         </p>
       </div>

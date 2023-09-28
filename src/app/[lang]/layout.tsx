@@ -6,7 +6,6 @@ import { ReactNode } from 'react'
 
 import { i18n } from '@/config/i18n/i18m.config'
 import { siteConfig } from '@/config/site/site'
-import { SidemenuProvider } from '@/context/sidemenuContext'
 
 import Structor from '@/components/structure/Structor.component'
 
@@ -44,9 +43,7 @@ const RootLayout = async ({
     <html lang={params.lang} suppressHydrationWarning>
       <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
         <NextIntlClientProvider locale={params.lang}>
-          <SidemenuProvider>
-            <Structor>{children}</Structor>
-          </SidemenuProvider>
+          <Structor>{children}</Structor>
         </NextIntlClientProvider>
       </body>
     </html>

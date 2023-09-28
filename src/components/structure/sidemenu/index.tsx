@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { useSidemenuContext } from '@/context/sidemenuContext'
 import { useTranslationClient } from '@/hooks/useTransletions/client'
 
 import { Icon } from '@/components/basic'
@@ -10,7 +9,6 @@ import { Icon } from '@/components/basic'
 import { Keystitle, sidemenuProps } from './types'
 
 const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
-  const { setTitle } = useSidemenuContext()
   const t = useTranslationClient()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
@@ -40,9 +38,6 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
               flex w-full items-center gap-3 
               p-4 transition-all sm:hover:text-red-300 
               sm:hover:brightness-90`}
-              onClick={() =>
-                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
-              }
             >
               <>
                 <Icon id={itensMenu.id} />

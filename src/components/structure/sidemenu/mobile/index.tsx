@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dispatch, SetStateAction } from 'react'
 
-import { useSidemenuContext } from '@/context/sidemenuContext'
 import { useTranslationClient } from '@/hooks/useTransletions/client'
 import { sidemenuItems } from '@/ultils/constants'
 
@@ -16,7 +15,6 @@ const SidemenuMobile = ({
 }: {
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
 }) => {
-  const { setTitle } = useSidemenuContext()
   const t = useTranslationClient()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
@@ -25,7 +23,7 @@ const SidemenuMobile = ({
   return (
     <nav
       data-testid="sidemenu"
-      className="flex h-full w-full flex-col items-start justify-start gap-4 rounded-lg bg-gray-800 p-3"
+      className="flex h-full w-full flex-col items-start justify-start gap-4 rounded-lg bg-gray-900 p-3"
     >
       <ul className="flex w-full flex-col items-start">
         {sidemenuItems &&
@@ -43,7 +41,6 @@ const SidemenuMobile = ({
               p-4 transition-all sm:hover:text-red-300 
               sm:hover:brightness-90`}
               onClick={() => {
-                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
                 setIsOpenMenu(false)
               }}
             >

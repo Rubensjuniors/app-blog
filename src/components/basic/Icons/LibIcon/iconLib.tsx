@@ -1,5 +1,7 @@
 'use client'
 import {
+  CaretDown,
+  CaretUp,
   GithubLogo,
   House,
   InstagramLogo,
@@ -25,6 +27,8 @@ const IconLib = ({ id, iconSize }: iconProps) => {
   icons.set('list_icon-phosphor', <List size={iconSize} />)
   icons.set('home_icon-phosphor', <House size={iconSize} />)
   icons.set('x_icon-phosphor', <X size={iconSize} />)
+  icons.set('caretUp-phosphor', <CaretUp size={iconSize} />)
+  icons.set('caretDown-phosphor', <CaretDown size={iconSize} />)
 
   const getCorrespondingIconLib = (id: string) =>
     icons.has(id) ? icons.get(id) : ''

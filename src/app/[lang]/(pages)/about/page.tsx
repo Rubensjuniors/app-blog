@@ -17,7 +17,9 @@ const About = () => {
     t.blog.about.about.text.p1,
     t.blog.about.about.text.p2,
     t.blog.about.about.text.p3,
-    t.blog.about.about.text.p4
+    t.blog.about.about.text.p4,
+    t.blog.about.about.text.p5,
+    t.blog.about.about.text.p6
   ]
 
   return (
@@ -75,7 +77,7 @@ const About = () => {
               showMoreText && (
                 <p
                   key={text}
-                  className="text-lg-xl mb-2 text-justify text-lg font-normal"
+                  className="text-lg-xl mb-2 text-justify text-lg font-light"
                 >
                   {text}
                 </p>

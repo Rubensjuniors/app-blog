@@ -28,7 +28,7 @@ const About = () => {
         <Card>
           <div className="relative flex w-full justify-start">
             <Image
-              className="h-32 w-[748px] object-cover sm:h-36 sm:rounded-t-lg"
+              className="h-32 w-[948px] object-cover sm:h-36 sm:rounded-t-lg"
               src={bannerProfile}
               alt="banner"
             />

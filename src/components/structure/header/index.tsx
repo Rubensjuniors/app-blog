@@ -1,8 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
-
-import { useTranslationClient } from '@/hooks/useTransletions/client'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 import { Icon } from '@/components/basic'
 
@@ -11,16 +9,19 @@ import SidemenuMobile from '../sidemenu/mobile'
 const headerClass =
   'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'
 
-const Header = () => {
-  const t = useTranslationClient()
+const Header = ({
+  title,
+  setTitle
+}: {
+  title: string
+  setTitle: Dispatch<SetStateAction<string>>
+}) => {
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
 
   return (
     <>
       <header className={headerClass} data-testid="header">
-        <span className="hidden font-bold sm:inline">
-          {t.blog.sidemenu.home}
-        </span>
+        <span className="hidden font-bold sm:inline">{title}</span>
         <div className="flex w-full items-center justify-between sm:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />
@@ -39,7 +40,10 @@ const Header = () => {
             <Icon id="x_icon-phosphor" iconSize={38} />
           </button>
 
-          <SidemenuMobile setIsOpenMenu={setIsOpenSidemenu} />
+          <SidemenuMobile
+            setIsOpenMenu={setIsOpenSidemenu}
+            setTitle={setTitle}
+          />
         </div>
       )}
     </>

@@ -11,9 +11,11 @@ import { Icon } from '@/components/basic'
 import { Keystitle } from '../types'
 
 const SidemenuMobile = ({
-  setIsOpenMenu
+  setIsOpenMenu,
+  setTitle
 }: {
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
+  setTitle: Dispatch<SetStateAction<string>>
 }) => {
   const t = useTranslationClient()
   const pathname = usePathname()
@@ -42,6 +44,7 @@ const SidemenuMobile = ({
               sm:hover:brightness-90`}
               onClick={() => {
                 setIsOpenMenu(false)
+                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
               }}
             >
               <>

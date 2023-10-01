@@ -3,12 +3,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dispatch, SetStateAction } from 'react'
 
-import { useTranslationClient } from '@/hooks/useTransletions/client'
-import { sidemenuItems } from '@/ultils/constants'
+import { Keystitle, sidemenuItems } from '@/ultils/constantes'
 
 import { Icon } from '@/components/basic'
 
-import { Keystitle } from '../types'
+import { useTranslationClient } from '@/assets/languages/use-client'
 
 const SidemenuMobile = ({
   setIsOpenMenu,
@@ -34,11 +33,10 @@ const SidemenuMobile = ({
               href={itensMenu.path}
               key={itensMenu.id}
               className={`
-              ${
-                (filterPath || filterDefaultPath || pathname) === itensMenu.path
+              ${(filterPath || filterDefaultPath || pathname) === itensMenu.path
                   ? 'text-red-300'
                   : ''
-              }
+                }
               flex w-full items-center gap-3 
               p-4 transition-all sm:hover:text-red-300 
               sm:hover:brightness-90`}

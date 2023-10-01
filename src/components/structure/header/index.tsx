@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 
 import { Icon } from '@/components/basic'
 
-import SidemenuMobile from '../sidemenu/mobile'
+import SidemenuMobile from '../Sidemenu/Mobile'
 
 const headerClass =
   'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'

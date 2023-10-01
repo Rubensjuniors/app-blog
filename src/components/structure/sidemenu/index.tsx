@@ -2,11 +2,12 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { useTranslationClient } from '@/hooks/useTransletions/client'
 
 import { Icon } from '@/components/basic'
 
-import { Keystitle, sidemenuProps } from './types'
+import { useTranslationClient } from '@/assets/languages/use-client'
+import { sidemenuProps } from './types'
+import { Keystitle } from '@/ultils/constantes'
 
 const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
   const t = useTranslationClient()

@@ -2,7 +2,7 @@ import nextJest from 'next/jest.js'
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
-  dir: './'
+  dir: './',
 })
 
 // Add any custom config to be passed to Jest
@@ -29,7 +29,7 @@ const config = {
     '!src/types/**',
     '!src/models/**',
     '!src/**/types.ts',
-    '!src/**/styles.ts'
+    '!src/**/styles.ts',
   ],
   // Define the test coverage threshold minimum for this project
   // coverageThreshold: {
@@ -45,15 +45,15 @@ const config = {
   moduleDirectories: ['node_modules', '<rootDir>'],
   testMatch: [
     '<rootDir>/src/**/*.test.{ts,tsx}',
-    '<rootDir>/src/**/*.spec.{ts,tsx}'
+    '<rootDir>/src/**/*.spec.{ts,tsx}',
   ],
   moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1'
+    'src/(.*)': '<rootDir>/src/$1',
   },
   transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest']
+    '^.+\\.(t|j)sx?$': ['@swc/jest'],
   },
-  testEnvironment: 'jest-environment-jsdom'
+  testEnvironment: 'jest-environment-jsdom',
 }
 
 export default createJestConfig(config)

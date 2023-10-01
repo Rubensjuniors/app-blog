@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom'
 
 const { defineProperty } = Object;
 Object.defineProperty = function (object, name, meta) {
@@ -9,5 +9,5 @@ Object.defineProperty = function (object, name, meta) {
     });
   }
 
-  return defineProperty(object, name, meta);
-};
+  return defineProperty(object, name, meta)
+}

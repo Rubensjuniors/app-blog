@@ -1,7 +1,6 @@
 'use client'
 import { ReactNode, useState } from 'react'
 
-import { useTranslationClient } from '@/hooks/useTransletions/client'
 import { sidemenuItems } from '@/ultils/constants'
 
 import Header from './header'
@@ -12,9 +11,7 @@ interface StructorProps {
 }
 
 const Structor = ({ children }: StructorProps) => {
-  const t = useTranslationClient()
-
-  const [title, setTitle] = useState<string>(t.blog.sidemenu.home)
+  const [title, setTitle] = useState<string>('')
   return (
     <>
       <div

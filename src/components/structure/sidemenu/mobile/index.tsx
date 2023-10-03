@@ -3,12 +3,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dispatch, SetStateAction } from 'react'
 
-import { useTranslationClient } from '@/hooks/useTransletions/client'
 import { sidemenuItems } from '@/ultils/constants'
 
 import { Icon } from '@/components/basic'
-
-import { Keystitle } from '../types'
 
 const SidemenuMobile = ({
   setIsOpenMenu,
@@ -17,7 +14,6 @@ const SidemenuMobile = ({
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
   setTitle: Dispatch<SetStateAction<string>>
 }) => {
-  const t = useTranslationClient()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
   const filterDefaultPath = pathname === '/pt-BR' && '/'
@@ -44,15 +40,13 @@ const SidemenuMobile = ({
               sm:hover:brightness-90`}
               onClick={() => {
                 setIsOpenMenu(false)
-                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
+                setTitle(itensMenu.title)
               }}
             >
               <>
                 <Icon id={itensMenu.id} />
 
-                <li className="font-bold">
-                  {t.blog.sidemenu[itensMenu.title as Keystitle]}
-                </li>
+                <li className="font-bold"></li>
               </>
             </Link>
           ))}

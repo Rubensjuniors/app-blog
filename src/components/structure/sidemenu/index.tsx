@@ -2,14 +2,11 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { useTranslationClient } from '@/hooks/useTransletions/client'
-
 import { Icon } from '@/components/basic'
 
-import { Keystitle, sidemenuProps } from './types'
+import { sidemenuProps } from './types'
 
 const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
-  const t = useTranslationClient()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
   const filterDefaultPath = pathname === '/pt-BR' && '/'
@@ -38,16 +35,12 @@ const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
               flex w-full items-center gap-3 
               p-4 transition-all sm:hover:text-red-300 
               sm:hover:brightness-90`}
-              onClick={() =>
-                setTitle(t.blog.sidemenu[itensMenu.title as Keystitle])
-              }
+              onClick={() => setTitle(itensMenu.title)}
             >
               <>
                 <Icon id={itensMenu.id} />
 
-                <li className="hidden font-bold lg:inline">
-                  {t.blog.sidemenu[itensMenu.title as Keystitle]}
-                </li>
+                <li className="hidden font-bold lg:inline"></li>
               </>
             </Link>
           ))}

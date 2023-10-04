@@ -5,8 +5,10 @@ import { usePathname } from 'next/navigation'
 import { Icon } from '@/components/basic'
 
 import { sidemenuProps } from './types'
+import { KeySidemenu, getCopies } from '@/ultils/constants'
 
 const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
+  const t = getCopies()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
   const filterDefaultPath = pathname === '/pt-BR' && '/'
@@ -27,20 +29,21 @@ const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
               href={itensMenu.path}
               key={itensMenu.id}
               className={`
-              ${
-                (filterPath || filterDefaultPath || pathname) === itensMenu.path
+              ${(filterPath || filterDefaultPath || pathname) === itensMenu.path
                   ? 'text-red-300'
                   : ''
-              }
+                }
               flex w-full items-center gap-3 
               p-4 transition-all sm:hover:text-red-300 
               sm:hover:brightness-90`}
-              onClick={() => setTitle(itensMenu.title)}
+              onClick={() => setTitle(t.sidemenu[itensMenu.title as KeySidemenu])}
             >
               <>
                 <Icon id={itensMenu.id} />
 
-                <li className="hidden font-bold lg:inline"></li>
+                <li className="hidden font-bold lg:inline">
+                  {t.sidemenu[itensMenu.title as KeySidemenu]}
+                </li>
               </>
             </Link>
           ))}

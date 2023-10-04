@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode, useState } from 'react'
 
-import { sidemenuItems } from '@/ultils/constants'
+import { getCopies, sidemenuItems } from '@/ultils/constants'
 
 import Header from './header'
 import Sidemenu from './sidemenu'
@@ -11,7 +11,8 @@ interface StructorProps {
 }
 
 const Structor = ({ children }: StructorProps) => {
-  const [title, setTitle] = useState<string>('')
+  const t = getCopies()
+  const [title, setTitle] = useState<string>(t.sidemenu.home)
   return (
     <>
       <div

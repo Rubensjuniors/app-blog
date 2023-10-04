@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import IconLib from './LibIcon/iconLib'
+import PhosphorIcons from './PhosphorIcons'
 import { iconProps } from './types'
+import Logo from 'public/assets/img/icon/Logo.svg'
 
-const BASE_SRC = '/assets/img/icon'
 const icons = new Map()
 
-icons.set('icon_logo', `${BASE_SRC}/logo-desktop.svg`)
+icons.set('icon_logo', Logo)
 
 const regex = /phosphor/
 
@@ -17,7 +17,7 @@ const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => {
   const iconLib = regex.test(id)
 
   return iconLib ? (
-    <IconLib id={id} iconSize={iconSize} />
+    <PhosphorIcons id={id} iconSize={iconSize} />
   ) : (
     <Image
       alt={id}

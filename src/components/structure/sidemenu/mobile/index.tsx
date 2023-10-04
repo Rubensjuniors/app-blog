@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dispatch, SetStateAction } from 'react'
 
-import { sidemenuItems } from '@/ultils/constants'
+import { KeySidemenu, getCopies, sidemenuItems } from '@/ultils/constants'
 
 import { Icon } from '@/components/basic'
 
@@ -14,6 +14,7 @@ const SidemenuMobile = ({
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
   setTitle: Dispatch<SetStateAction<string>>
 }) => {
+  const t = getCopies()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
   const filterDefaultPath = pathname === '/pt-BR' && '/'
@@ -40,13 +41,15 @@ const SidemenuMobile = ({
               sm:hover:brightness-90`}
               onClick={() => {
                 setIsOpenMenu(false)
-                setTitle(itensMenu.title)
+                setTitle(t.sidemenu[itensMenu.title as KeySidemenu])
               }}
             >
               <>
                 <Icon id={itensMenu.id} />
 
-                <li className="font-bold"></li>
+                <li className="font-bold">
+                  {t.sidemenu[itensMenu.title as KeySidemenu]}
+                </li>
               </>
             </Link>
           ))}

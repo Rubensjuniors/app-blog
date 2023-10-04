@@ -10,14 +10,15 @@ import {
   NotePencil,
   Paperclip,
   User,
-  X
+  X,
+  Link
 } from '@phosphor-icons/react'
 
 import { iconProps } from '../types'
 
 const icons = new Map()
 
-const IconLib = ({ id, iconSize }: iconProps) => {
+const PhosphorIcons = ({ id, iconSize = 24 }: iconProps) => {
   icons.set('artigos_icon-phosphor', <NotePencil size={iconSize} />)
   icons.set('sobre_icon-phosphor', <User size={iconSize} />)
   icons.set('pings_icon-phosphor', <Paperclip size={iconSize} />)
@@ -29,11 +30,12 @@ const IconLib = ({ id, iconSize }: iconProps) => {
   icons.set('x_icon-phosphor', <X size={iconSize} />)
   icons.set('caretUp-phosphor', <CaretUp size={iconSize} />)
   icons.set('caretDown-phosphor', <CaretDown size={iconSize} />)
+  icons.set('links-phosphor', <Link size={iconSize} />)
 
-  const getCorrespondingIconLib = (id: string) =>
+  const getCorrespondingPhosphorIcons = (id: string) =>
     icons.has(id) ? icons.get(id) : ''
 
-  return <>{getCorrespondingIconLib(id)}</>
+  return <>{getCorrespondingPhosphorIcons(id)}</>
 }
 
-export default IconLib
+export default PhosphorIcons

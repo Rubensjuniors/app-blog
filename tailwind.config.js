@@ -28,7 +28,7 @@ export default {
         '0-auto': ['0px', 'auto']
       },
       width: {
-        content: 'min(950px, 100%)'
+        content: 'min(850px, 100%)'
       },
       screens: {
         sm: '576px',

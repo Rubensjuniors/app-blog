@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Desenvolvedor Front-end e Gymrat",
+    "descriptions": "Bem vindo ao meu blog! Eu sou Rubens Junio, apaixonado por tecnologia e Academia, sempre buscando aprender algo novo todos os dias, Junte-se a mim nesta jornada emocionante!"
+  },
+  "about": {
+    "name": "Rubens junio",
+    "bio": "Front End - HTML | CSS, SASS E TAILWIND | JAVASCRIPT | TYPESCRIPT | REACT",
+    "about": {
+      "title": "Sobre mim",
+      "text": {
+        "p1": "Olá, eu sou Rubens, tenho 20 anos e sou apaixonado pelo mundo da tecnologia e da academia. Desde pequeno, sempre fui fascinado pelo funcionamento de sites e aplicativos, e como eles eram feitos. Sou apaixonado por Frontend, especialmente pela parte visual de um site ou aplicativo, trabalhar com fontes, cores e interatividade - acho isso muito maneiro.",
+        "p2": "Tive meu primeiro contato com a programação aos 17 anos quando decidi entrar em um curso de informática, onde aprendi HTML e CSS.",
+        "p3": "Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e fazendo estágio na Hotmart como desenvolvedor front-end.",
+        "p4": "Gosto de trabalhar com outras pessoas, aprender coisas novas e ensinar também. Ainda sou jovem na área, então ensinar é uma forma de aprender para mim. Por isso, estou criando este blog onde quero compartilhar meus conhecimentos tanto na área tech quanto na área fitness.",
+        "p5": "Quando não estou codando, gosto de praticar atividades físicas como musculação, jogar bola, correr ao ar livre e muito mais. Adoro brincar com animais; tenho um gato, mas pretendo ter muitos mais quando tiver minha casa. Além disso, amo ler, tanto livros técnicos quanto de histórias. Sou fã de animais, especialmente de One Piece e Dragon Ball Z.",
+        "p6": "Minha jornada como programador está apenas começando. Estou animado para ver para onde ela me levará e ansioso para continuar criando e aprendendo a cada dia. Isso me inspira a acordar todas as manhãs pronto para enfrentar um novo dia de descobertas."
+      },
+      "showMore": "Mostrar Mais",
+      "showsLess": "Mostrar Menos"
+    }
+  },
+  "sidemenu": {
+    "home": "Início",
+    "about_me": "Sobre mim",
+    "links": "Links"
+  }
+}

@@ -4,7 +4,7 @@ import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site/site'
-
+import favicon from '../../public/assets/img/icon/gym.svg'
 import Structor from '@/components/structure/Structor.component'
 
 const roboto = Roboto({
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: '%s | Rubens Junio',
     default: 'Rubens Junio'
   },
-  // icons: [{ rel: 'icon', url: LogoDesktop.src }],
+  icons: [{ rel: 'icon', url: favicon.src }],
   description: siteConfig.description,
   authors: [{ name: 'Rubens Junio' }]
 }

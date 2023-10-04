@@ -1,9 +1,13 @@
+import ptBRCopies from '../../public/laguages/pt-BR.json'
+
 export enum SCRENN_SIZES {
   SM = 576,
   MD = 768,
   LG = 960,
   XL = 1440
 }
+
+export type KeySidemenu = 'about_me' | 'links' 
 
 export const sidemenuItems = [
   {
@@ -17,13 +21,10 @@ export const sidemenuItems = [
     path: '/about'
   },
   {
-    id: 'artigos_icon-phosphor',
-    title: 'articles',
-    path: '/articles'
-  },
-  {
-    id: 'pings_icon-phosphor',
-    title: 'pings',
-    path: '/pings'
+    id: 'links-phosphor',
+    title: 'links',
+    path: '/links'
   }
 ]
+
+export const getCopies = () => ptBRCopies

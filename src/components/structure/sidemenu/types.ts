@@ -12,4 +12,3 @@ export interface sidemenuProps {
   setTitle: Dispatch<SetStateAction<string>>
 }
 
-export type Keystitle = 'about_me' | 'articles' | 'pings'

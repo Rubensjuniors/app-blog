@@ -7,7 +7,7 @@ import { siteConfig } from '@/config/site'
 
 import { LayoutProps } from './types'
 
-import './globals.css'
+import './globals.scss'
 
 const roboto = Roboto({
   weight: ['400', '700'],

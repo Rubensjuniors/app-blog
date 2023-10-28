@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 * {
   margin: 0;
@@ -8,9 +8,8 @@
   box-sizing: border-box;
 }
 *:focus {
-    outline: 0;
+  outline: 0;
 }
-
 
 body {
   -webkit-font-smoothing: antialised;

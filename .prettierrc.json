@@ -4,5 +4,8 @@
   "singleQuote": true,
   "tailwindConfig": "./tailwind.config.js",
   "plugins": ["prettier-plugin-tailwindcss"],
-  "pluginSearchDirs": false
+  "pluginSearchDirs": false,
+  "endOfLine": "lf",
+  "printWidth": 80,
+  "tabWidth": 2
 }

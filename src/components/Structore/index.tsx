@@ -17,7 +17,7 @@ const Structor = ({ children }: StructorProps) => {
     <>
       <div
         data-testid="structor"
-        className={`m-0-auto flex min-h-screen max-w-screen-xl justify-center`}
+        className={'m-0-auto flex min-h-screen max-w-screen-xl justify-center'}
       >
         <Sidemenu sidemenuItems={sidemenuItems} setTitle={setTitle} />
         <main className="z-1 min-h-screen w-content border-x border-gray-600">

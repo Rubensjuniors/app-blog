@@ -1,3 +1,128 @@
 {
-  "extends": ["next/core-web-vitals", "@rocketseat/eslint-config/react"]
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "eslint-plugin-import-helpers",
+    "prettier",
+    "jest",
+    "jest-dom",
+    "testing-library"
+  ],
+  "rules": {
+    // react
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line"
+      }
+    ],
+
+    /* Jest Rules */
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+
+    // typescript
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/no-var-requires": 0,
+
+    /* App Rules */
+    "no-multi-spaces": "error",
+    "no-duplicate-imports": ["warn", { "includeExports": true }],
+    "no-dupe-args": "error",
+    "no-dupe-keys": "warn",
+    "no-empty": "warn",
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-console": "error",
+    "quotes": ["error", "single"],
+    "object-curly-spacing": ["warn", "always"],
+    "semi": ["error", "never"],
+    "indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": ["TemplateLiteral"],
+        "SwitchCase": 1
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/", "/^next/"],
+          "module",
+          "/^@shared/",
+          "absolute",
+          "/^components/",
+          "/^pages/",
+          "/utils/",
+          "/constants/",
+          "/^store/",
+          "/^styles/",
+          "/^templates/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
+  }
 }

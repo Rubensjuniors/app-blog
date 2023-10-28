@@ -1,11 +1,11 @@
-import Structor from '@/components/Structore'
-
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { siteConfig } from '@/config/site'
-import { LayoutProps } from './types'
 
 import favicon from '@/assets/icons/Favicon.svg'
+import Structor from '@/components/Structore'
+import { siteConfig } from '@/config/site'
+
+import { LayoutProps } from './types'
 
 import './globals.css'
 

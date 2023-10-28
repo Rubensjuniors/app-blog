@@ -1,8 +1,9 @@
 import Image from 'next/image'
 
+import Logo from '@/assets/icons/Logo.svg'
+
 import PhosphorIcons from './PhosphorIcons'
 import { iconProps } from './types'
-import Logo from '@/assets/icons/Logo.svg'
 
 const icons = new Map()
 

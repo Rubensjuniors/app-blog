@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import { getCopies } from '@/ultils/constants'
-
 import photo from '@/assets/imagens/Photo_two.jpg'
+
+import { getCopies } from '@/ultils/constants'
 
 const Home = () => {
   const t = getCopies()

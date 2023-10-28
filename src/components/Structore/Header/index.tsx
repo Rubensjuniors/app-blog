@@ -7,7 +7,8 @@ import { Icon } from '@/components/basic'
 import SidemenuMobile from '../Sidemenu/Mobile'
 
 const headerClass =
-  'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'
+'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'
+const sidemenuClass = 'fixed left-0 top-0 z-30 flex min-h-screen w-full animate-slide-enter flex-col gap-10 overflow-hidden p-4 pt-6 backdrop-blur-lg transition-all duration-300 ease-in-out sm:hidden'
 
 const Header = ({
   title,
@@ -32,7 +33,7 @@ const Header = ({
         </div>
       </header>
       {isOpenSidemenu && (
-        <div className=" fixed left-0 top-0 z-30 flex min-h-screen w-full animate-slide-enter flex-col gap-10 overflow-hidden p-4 pt-6 backdrop-blur-lg transition-all duration-300 ease-in-out sm:hidden">
+        <div className={sidemenuClass}>
           <button
             className="self-end"
             onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}

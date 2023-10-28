@@ -15,10 +15,10 @@ Este projeto é construído usando as seguintes tecnologias:
 - 💅 **Tailwind CSS** - Use the best bits of ES6 and CSS to style your apps without stress
 
 **Libs que usei!**
+
 - **Axios**
 - **Json-server**
 - **Phosphor icons**
-  
 
 ## Objetivos
 
@@ -45,4 +45,4 @@ Se você deseja entrar em contato comigo ou acompanhar mais de perto o meu progr
 
 Agradeço por visitar meu blog pessoal e fazer parte da minha jornada de aprendizado. Espero que você encontre conteúdo útil e inspirador aqui. Sinta-se à vontade para deixar comentários e sugestões. Vamos aprender juntos!
 
-*Este README foi criado com ❤️ por Rubens Junio*
+_Este README foi criado com ❤️ por Rubens Junio_

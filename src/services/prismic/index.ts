@@ -1,13 +1,3 @@
-// import * as prismic from '@prismicio/client'
-
-// export default function getPrismicClient(req?: unknown) {
-//   const prismica = prismic.client(process.env.PRISMIC_API_ENDPOINT!, {
-//     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-//     req,
-//   })
-//   return prismica
-// }
-
 import * as prismic from '@prismicio/client'
 import * as prismicNext from '@prismicio/next'
 
@@ -17,7 +7,10 @@ export function getPrismicClient({
 }: prismicNext.CreateClientConfig = {}) {
   const client = prismic.createClient(process.env.PRISMIC_API_ENDPOINT!, {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-    
+    fetchOptions:
+      process.env.NODE_ENV === 'production'
+        ? { next: { tags: ['prismic'], revalidate: 60 * 60 }, cache: 'force-cache' }
+        : { next: { revalidate: 5 } },
   })
 
   prismicNext.enableAutoPreviews({ client, previewData, req })

@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { getPrismicClient } from '@/services/prismic'
 
-async function getData() {
+async function getHomeData() {
   const prismic = getPrismicClient()
 
   const responseHome = await prismic?.getByType('home', {
@@ -26,7 +26,7 @@ async function getData() {
 }
 
 const Home = async () => {
-  const data = await getData()
+  const data = await getHomeData()
 
   return (
     <div className="flex w-full flex-col gap-4 p-5">

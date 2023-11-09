@@ -1,6 +1,6 @@
 {
   "id": "about_me",
-  "label": "About_me",
+  "label": "aboutMe",
   "format": "page",
   "repeatable": true,
   "status": true,

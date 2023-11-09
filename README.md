@@ -12,12 +12,12 @@ Este projeto é construído usando as seguintes tecnologias:
 - 💖 **Prettier** - Opinionated Code Formatter
 - 🐙 **React Testing Library (RTL)** - Builds by adding APIs for working with React components
 - 🃏 **Jest** - A delightful JavaScript Testing Framework with a focus on simplicity
-- 💅 **Tailwind CSS** - Use the best bits of ES6 and CSS to style your apps without stress
+- 💅 **Tailwind CSS and SASS** - Use the best bits of ES6 and CSS to style your apps without stress
 
 **Libs que usei!**
 
 - **Axios**
-- **Json-server**
+- **Prismic**
 - **Phosphor icons**
 
 ## Objetivos

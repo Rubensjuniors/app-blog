@@ -26,18 +26,19 @@
           "placeholder": ""
         }
       },
-      "created_date": {
-        "type": "Date",
-        "config": {
-          "label": "created_date",
-          "placeholder": ""
-        }
-      },
       "author": {
         "type": "Text",
         "config": {
           "label": "author",
           "placeholder": ""
+        }
+      },
+      "cover": {
+        "type": "Image",
+        "config": {
+          "label": "cover",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "banner": {
@@ -48,26 +49,11 @@
           "thumbnails": []
         }
       },
-      "banner_two": {
-        "type": "Image",
-        "config": {
-          "label": "banner_two",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "content": {
         "type": "Group",
         "config": {
           "label": "content",
           "fields": {
-            "heading": {
-              "type": "Text",
-              "config": {
-                "label": "heading",
-                "placeholder": ""
-              }
-            },
             "body": {
               "type": "StructuredText",
               "config": {

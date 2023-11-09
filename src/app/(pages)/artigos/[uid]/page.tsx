@@ -1,6 +1,6 @@
-const ArticlesPost = () => {
+const ArticlesPost = ({ params }: { params: { uid: number }}) => {
   return (
-    <>Artigos post</>
+    <>{params.uid}</>
   )
 }
 

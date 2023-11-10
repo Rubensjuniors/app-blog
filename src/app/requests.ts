@@ -1,0 +1,24 @@
+import { getPrismicClient } from '@/services/prismic'
+
+export async function getHomeData() {
+  const prismic = getPrismicClient()
+
+  const responseHome = await prismic?.getByType('home', {
+    fetch: ['home.photo_profile', 'home.title', 'home.description'],
+    pageSize: 100,
+  })
+  const { results } = responseHome
+  const home = {
+    photoProfile:{
+      url:  results[0].data.photo_profile.url,
+      width:  results[0].data.photo_profile.dimensions.width,
+      heigth:  results[0].data.photo_profile.dimensions.heigth
+    },
+    title: results[0].data.title,
+    description: results[0].data.description
+  }
+
+  return {
+    home
+  }
+}

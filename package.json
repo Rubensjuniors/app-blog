@@ -24,8 +24,7 @@
     "prismic-dom": "^2.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5",
-    "swr": "^2.2.4"
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.23",

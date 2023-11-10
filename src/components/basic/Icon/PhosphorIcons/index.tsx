@@ -13,6 +13,8 @@ import {
   X,
   Link,
   Article,
+  Star,
+  LinkSimple,
 } from '@phosphor-icons/react'
 
 import { iconProps } from '../types'
@@ -33,6 +35,8 @@ const PhosphorIcons = ({ id, iconSize = 24 }: iconProps) => {
   icons.set('x_icon-phosphor', <X size={iconSize} />)
   icons.set('caretUp-phosphor', <CaretUp size={iconSize} />)
   icons.set('caretDown-phosphor', <CaretDown size={iconSize} />)
+  icons.set('star-phosphor', <Star size={iconSize} weight="fill" color="#FBFF00" />)
+  icons.set('linkSimples-phosphor', <LinkSimple size={iconSize}/>)
 
   const getCorrespondingPhosphorIcons = (id: string) =>
     icons.has(id) ? icons.get(id) : ''

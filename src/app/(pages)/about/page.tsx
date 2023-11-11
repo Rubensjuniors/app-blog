@@ -15,7 +15,7 @@ const About = async () => {
 
   return (
     <section className="-mt-5 flex flex-col items-center gap-4 sm:mt-3 sm:px-4">
-      <Card classNames="w-full">
+      <Card classNames="card-spacing w-full">
         <div className="relative flex w-full justify-start">
           <Image
             className="h-32 w-[948px] object-cover sm:h-36 sm:rounded-t-lg"
@@ -76,7 +76,7 @@ const About = async () => {
 
       <Card
         title="Repositories"
-        classNames="w-full p-4 flex flex-col items-start gap-2"
+        classNames="card-spacing w-full p-4 flex flex-col items-start gap-2"
       >
         <Repositories />
       </Card>

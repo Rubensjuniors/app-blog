@@ -33,3 +33,10 @@ stargazers_count: number
 visibility: string
 language: string
 }
+
+export interface ShowMoreListProps {
+  list: [{
+    title: string
+    body: string[]
+}]
+}

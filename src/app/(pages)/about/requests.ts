@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
-import { GITHUB_API } from '@/services/axiosInstaces'
 import { getPrismicClient } from '@/services/prismic'
 
-import { AboutData, GithubRepos } from './types'
+import { AboutData } from './types'
 
 export async function getAboutMeData() {
   try {
@@ -54,23 +53,4 @@ export async function getAboutMeData() {
   } finally {
     console.log('Success')
   }
-}
-
-export async function getGithubUser() {
-  const response = await GITHUB_API('/repos')
-
-  const repos: GithubRepos[] = response.data.map((repo: GithubRepos) => {
-    return {
-      id: repo?.id,
-      name: repo?.name,
-      description: repo?.description,
-      visibility: repo?.visibility,
-      stargazers_count: repo?.stargazers_count,
-      updated_at: repo?.updated_at,
-      html_url: repo.html_url,
-      language: repo?.language
-    }
-  })
-
-  return repos
 }

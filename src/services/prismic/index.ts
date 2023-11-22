@@ -10,7 +10,7 @@ export function getPrismicClient({
     fetchOptions:
       process.env.NODE_ENV === 'production'
         ? { next: { tags: ['prismic'], revalidate: 60 * 60 }, cache: 'force-cache' }
-        : { next: { revalidate: 5 } },
+        : { next: { revalidate: 50 * 5 } },
   })
 
   prismicNext.enableAutoPreviews({ client, previewData, req })

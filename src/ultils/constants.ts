@@ -24,12 +24,7 @@ export const sidemenuItems = [
     id: 'artigos_icon-phosphor',
     title: 'artigos',
     path: '/artigos',
-  },
-  {
-    id: 'links_icon-phosphor',
-    title: 'links',
-    path: '/links',
-  },
+  }
 ]
 
 export const getCopies = () => ptBRCopies

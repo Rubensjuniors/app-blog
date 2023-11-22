@@ -18,7 +18,7 @@ const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => {
   const iconLib = regex.test(id)
 
   return iconLib ? (
-    <PhosphorIcons id={id} iconSize={iconSize} />
+    <PhosphorIcons id={id} iconSize={iconSize} classIcon={classIcon} />
   ) : (
     <Image
       alt={id}

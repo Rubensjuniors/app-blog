@@ -5,3 +5,9 @@ export interface PrismicImagemData {
   width: number
   heigth: number
 }
+
+export enum PostTypes {
+  GYM = 'gym',
+  PROGRAMMER = 'programmer',
+  DEFAULT = 'default'
+}

@@ -1,6 +1,6 @@
 {
   "id": "artigos",
-  "label": "artigos",
+  "label": "post",
   "format": "page",
   "repeatable": true,
   "status": true,
@@ -12,6 +12,13 @@
         },
         "type": "UID"
       },
+      "type_post": {
+        "type": "Text",
+        "config": {
+          "label": "type_post",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "Text",
         "config": {
@@ -19,7 +26,7 @@
           "placeholder": ""
         }
       },
-      "subtitle": {
+      "description": {
         "type": "Text",
         "config": {
           "label": "description",

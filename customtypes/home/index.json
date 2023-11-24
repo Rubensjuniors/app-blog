@@ -34,6 +34,13 @@
           "placeholder": ""
         }
       },
+      "latest_articles": {
+        "type": "Text",
+        "config": {
+          "label": "latest_articles",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

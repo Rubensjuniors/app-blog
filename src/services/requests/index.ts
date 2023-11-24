@@ -2,8 +2,11 @@
 import { getPrismicClient } from '@/services/prismic'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import moment from 'moment'
 
-export async function getPosts() {
+import { GetPostProps } from './types'
+
+export async function getPosts({ pageSize = 5, }: GetPostProps) {
   try {
     const prismic = getPrismicClient()
 
@@ -15,7 +18,7 @@ export async function getPosts() {
         'artigos.type_post',
       ],
       page: 1 ,
-      pageSize: 5,
+      pageSize: pageSize,
     })
     const { results, next_page, prev_page, total_pages, total_results_size, page } = response
 
@@ -34,7 +37,11 @@ export async function getPosts() {
       }
     })
 
-    return { posts, next_page, prev_page, total_pages, total_results_size, page }
+    const latestPosts = posts.sort((post, b) => {
+      return moment(b.publicationDate).diff(moment(post.publicationDate))
+    })
+
+    return { posts, next_page, prev_page, total_pages, total_results_size, page, latestPosts }
   } catch (err) {
     console.error('Ocorreu um erro:', err)
   } finally {

@@ -4,7 +4,12 @@ export async function getHomeData() {
   const prismic = getPrismicClient()
 
   const responseHome = await prismic?.getByType('home', {
-    fetch: ['home.photo_profile', 'home.title', 'home.description'],
+    fetch: [
+      'home.photo_profile',
+      'home.title',
+      'home.description',
+      'home.latest_articles',
+    ],
     pageSize: 100,
   })
   const { results } = responseHome
@@ -15,7 +20,8 @@ export async function getHomeData() {
       heigth:  results[0].data.photo_profile.dimensions.heigth
     },
     title: results[0].data.title,
-    description: results[0].data.description
+    description: results[0].data.description,
+    latest_articles: results[0].data.latest_articles
   }
 
   return {

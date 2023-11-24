@@ -6,7 +6,7 @@ import { getPosts } from '@/services/requests'
 import { getArticlesData, getTagsData } from './request'
 
 const Articles = async () => {
-  const dataPost = await getPosts()
+  const dataPost = await getPosts({ pageSize: 5 })
   const articlesData = await getArticlesData()
   const tagsData = await getTagsData()
 

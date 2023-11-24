@@ -21,6 +21,7 @@
     "@prismicio/react": "^2.7.3",
     "axios": "^1.6.1",
     "date-fns": "^2.30.0",
+    "moment": "^2.29.4",
     "next": "14.0.0",
     "prismic-dom": "^2.2.7",
     "react": "^18",

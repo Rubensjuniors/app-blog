@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import moment from 'moment'
 
-import { GetPostProps } from './types'
+import { GetPostProps, Post } from './types'
 
 export async function getPosts({ pageSize = 5, }: GetPostProps) {
   try {
@@ -20,9 +20,16 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
       page: 1 ,
       pageSize: pageSize,
     })
-    const { results, next_page, prev_page, total_pages, total_results_size, page } = response
+    const {
+      results,
+      next_page,
+      prev_page,
+      total_pages,
+      total_results_size,
+      page
+    } = response
 
-    const posts = results?.map(post => {
+    const posts: Post[] = results?.map(post => {
       return {
         id: post.id,
         typePost: post.data.type_post,
@@ -41,7 +48,15 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
       return moment(b.publicationDate).diff(moment(post.publicationDate))
     })
 
-    return { posts, next_page, prev_page, total_pages, total_results_size, page, latestPosts }
+    return {
+      posts,
+      next_page,
+      prev_page,
+      total_pages,
+      total_results_size,
+      page,
+      latestPosts
+    }
   } catch (err) {
     console.error('Ocorreu um erro:', err)
   } finally {

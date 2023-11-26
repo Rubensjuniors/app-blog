@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Roboto, Marck_Script } from 'next/font/google'
 
 import favicon from '@/assets/icons/Favicon.svg'
 import Structor from '@/components/Structore'
@@ -15,6 +15,12 @@ const roboto = Roboto({
   display: 'swap',
   variable: '--font-roboto',
 })
+const MarckScript = Marck_Script({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-marck-script',
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +35,7 @@ export const metadata: Metadata = {
 const RootLayout = async ({ children }: LayoutProps) => {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${roboto.variable} bg-gray-800 text-gray-100`}>
+      <body className={`${roboto.variable} ${MarckScript.variable} bg-gray-800 text-gray-100`}>
         <Structor>{children}</Structor>
       </body>
     </html>

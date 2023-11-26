@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: 'var(--font-roboto)',
+        'marck-script': 'var(--font-marck-script)',
       },
       colors: {
         'gray-100': '#E1E1E6',

@@ -6,7 +6,7 @@ import { Icon } from '../basic'
 import { PostProps, TYPES_POST_ICON } from './types'
 
 const flexCenter = 'flex items-center'
-const contentClass = 'flex flex-col gap-1 border-2 border-transparent border-b-gray-750 py-4 last:border-0 md:hover:brightness-75 transition-all'
+const contentClass = 'flex flex-col gap-1 border-2 border-transparent border-b-gray-750 py-4 last:border-0 md:hover:brightness-75 transition-all w-full'
 
 const Post = ({
   author,
@@ -29,7 +29,7 @@ const Post = ({
 
   return (
     <Link href={path ?? `/artigos/${uid}`} className={contentClass}>
-      <div className={`${flexCenter} justify-between`}>
+      <div className={`${flexCenter} justify-between w-full`}>
         <h1 className="text-xl sm:text-2xl font-bold line-clamp-1">{title}</h1>
         {getIconType()}
       </div>

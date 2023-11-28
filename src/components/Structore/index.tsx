@@ -24,7 +24,9 @@ const Structor = ({ children }: StructorProps) => {
         <main className="z-1 w-content border-x border-gray-600">
           <Header title={title} setTitle={setTitle} />
           <div className="flex flex-col justify-between min-h-[95vh]">
-            {children}
+            <div>
+              {children}
+            </div>
             <Footer/>
           </div>
         </main>

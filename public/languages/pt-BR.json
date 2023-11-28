@@ -4,6 +4,11 @@
     "about_me": "Sobre mim",
     "artigos": "Artigos" ,
     "links": "Links"
+  },
+  "footer": {
+    "name": "Rubens Junio",
+    "description": "Desenvolvedor Front-end e Gymrat",
+    "copyright": "Todos os direitos reseverdos © Rubens junio 2023"
   }
-  
+
 }

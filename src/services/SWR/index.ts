@@ -10,10 +10,10 @@ type useFetchProps = {
   method?: Method
   swrOptions?: SWRConfiguration
   api: AxiosInstance
-  params?: unknown
+  params?: any
 }
 
-export default function useFetch<Data = unknown, Erro = unknown>({
+export default function useFetch<Data = any, Erro = any>({
   path,
   method = 'get',
   swrOptions = DefaultOptions,

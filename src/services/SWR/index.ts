@@ -1,17 +1,6 @@
-import { AxiosInstance, Method } from 'axios'
-import useSWR, { SWRConfiguration } from 'swr'
+import useSWR from 'swr'
 
-const DefaultOptions: SWRConfiguration = {
-  revalidateOnFocus: false
-}
-
-type useFetchProps = {
-  path: string
-  method?: Method
-  swrOptions?: SWRConfiguration
-  api: AxiosInstance
-  params?: any
-}
+import { DefaultOptions, useFetchProps } from './types'
 
 export default function useFetch<Data = any, Erro = any>({
   path,

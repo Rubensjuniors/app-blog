@@ -9,7 +9,7 @@ function generatePagesArray(from: number, to: number) {
     .filter(page => page > 0)
 }
 
-export function Pagination({
+export default function Pagination({
   totalCountOfRegisters = 0,
   registersPerPage = 3,
   currentPage = 1,

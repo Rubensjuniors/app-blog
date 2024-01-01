@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Icon } from '@/components/basic'
-import Post from '@/components/Post'
+import { Icon, Post } from '@/components/basic'
 import { getPosts } from '@/services/requests'
 
 import { getHomeData } from './requests'

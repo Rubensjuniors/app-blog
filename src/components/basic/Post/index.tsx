@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { PostTypes } from '@/ultils/types'
 
-import { Icon } from '../basic'
+import { Icon } from '..'
 import { PostProps, TYPES_POST_ICON } from './types'
 
 const flexCenter = 'flex items-center'

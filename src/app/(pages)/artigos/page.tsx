@@ -1,5 +1,4 @@
-// import { Pagination } from '@/components/Pagination'
-import Post from '@/components/Post'
+import { Post } from '@/components/basic'
 import Search from '@/components/Search'
 import { getPosts } from '@/services/requests'
 

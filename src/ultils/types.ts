@@ -11,3 +11,8 @@ export enum PostTypes {
   PROGRAMMER = 'programmer',
   DEFAULT = 'default'
 }
+
+export enum DEV {
+  PRODUCTION = 'production',
+  DEVELOPEMENT = 'development',
+}

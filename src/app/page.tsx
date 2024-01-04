@@ -13,22 +13,22 @@ const Home = async () => {
     <div className="flex w-full flex-col gap-4 p-5">
       <div className="h-16 w-16">
         <Image
-          src={data.home.photoProfile.url}
-          width={data.home.photoProfile.width}
-          height={data.home.photoProfile.width}
+          src={data?.home.photoProfile.url}
+          width={data?.home.photoProfile.width}
+          height={data?.home.photoProfile.width}
           alt=""
           className="w-full rounded-full shadow-sm" />
       </div>
 
       <div>
-        <h1 className="mb-3 text-4xl font-bold">{data.home.title}</h1>
+        <h1 className="mb-3 text-4xl font-bold">{data?.home.title}</h1>
         <p className="text-md text-justifys mt-2 font-light">
-          {data.home.description}
+          {data?.home.description}
         </p>
       </div>
 
       <section className="mt-4 flex items-start flex-col">
-        <h1 className="titlePages text-2xl md:text-3xl font-bold">{data.home.latest_articles}</h1>
+        <h1 className="titlePages text-2xl md:text-3xl font-bold">{data?.home.latest_articles}</h1>
 
         <div>
           {dataPost?.latestPosts?.map((post) => {

@@ -4,25 +4,36 @@ import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 export async function getArticlesData() {
-  const prismic = getPrismicClient()
+  try {
+    const prismic = getPrismicClient()
 
-  const response = await prismic?.getByType('page_articles', {
-    fetch: ['page_articles.my_articles', 'page_articles.search_tags'],
-    pageSize: 100,
-  })
-  const { results } = response
-  const articles = {
-    title_my_articles: results[0].data.my_articles,
-    search_tags: results[0].data.search_tags
+    const response = await prismic?.getByType('page_articles', {
+      fetch: ['page_articles.my_articles', 'page_articles.search_tags'],
+      pageSize: 100,
+    })
+    const { results } = response
+    const articles = {
+      title_my_articles: results[0].data.my_articles,
+      search_tags: results[0].data.search_tags
+    }
+
+    return articles
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed fetching Articles', error)
   }
-
-  return articles
 }
-export async function getTagsData() {
-  const prismic = getPrismicClient()
 
-  const tags = await prismic?.getTags()
-  return tags
+export async function getTagsData() {
+  try{
+    const prismic = getPrismicClient()
+
+    const tags = await prismic?.getTags()
+    return tags
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed fetching tags', error)
+  }
 }
 
 export async function getPost(uid: string){
@@ -71,9 +82,8 @@ export async function getPost(uid: string){
     }
 
     return post
-  } catch (err) {
-    console.error('Ocorreu um erro:', err)
-  } finally {
-    console.log('Success')
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed fetching Posts', error)
   }
 }

@@ -1,11 +1,9 @@
-/* eslint-disable no-console */
 import { getPrismicClient } from '@/services/prismic'
 
 import { AboutData } from './types'
 
 export async function getAboutMeData() {
   try {
-
     const prismic = getPrismicClient()
 
     const responseAboutMe = await prismic?.getByType('about_me', {
@@ -48,9 +46,8 @@ export async function getAboutMeData() {
     }
 
     return aboutMe
-  } catch (err) {
-    console.error('Ocorreu um erro:', err)
-  } finally {
-    console.log('Success')
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed fetching About', error)
   }
 }

@@ -13,10 +13,10 @@ const Articles = async () => {
       <Search />
 
       <div className="self-start flex flex-col items-start gap-3">
-        <h1 className="text-xl md:text-2xl font-bold">{articlesData.search_tags}</h1>
+        <h1 className="text-xl md:text-2xl font-bold">{articlesData?.search_tags}</h1>
         <ul className="flex items-center flex-wrap gap-4 w-full">
           {
-            tagsData.map(tag => {
+            tagsData?.map(tag => {
               return (
                 <li key={tag}>
                   <button className="bg-gray-750 p-1 px-5 rounded-full text-sm hover:text-red-300 transition-all">{tag}</button>
@@ -28,7 +28,7 @@ const Articles = async () => {
       </div>
 
       <div className="self-start">
-        <h1 className="titlePages text-2xl md:text-3xl font-bold">{articlesData.title_my_articles}</h1>
+        <h1 className="titlePages text-2xl md:text-3xl font-bold">{articlesData?.title_my_articles}</h1>
         {dataPost?.posts?.map((post) => {
           return (
             <Post

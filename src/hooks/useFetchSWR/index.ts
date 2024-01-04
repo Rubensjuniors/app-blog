@@ -12,12 +12,17 @@ export default function useFetch<Data = any, Erro = any>({
   const { data, isLoading, error } = useSWR<Data, Erro>(
     path,
     async (url: string) => {
-      const response = await api.request({
-        method,
-        url,
-        params
-      })
-      return response.data
+      try {
+        const response = await api.request({
+          method,
+          url,
+          params
+        })
+        return response.data
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Failed fetching', error)
+      }
     },
     swrOptions
   )

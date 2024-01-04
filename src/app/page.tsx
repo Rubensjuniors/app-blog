@@ -2,9 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Icon, Post } from '@/components/basic'
-import { getPosts } from '@/services/requests'
-
-import { getHomeData } from './requests'
+import { getHomeData } from '@/services/prismic/Home/requests'
+import { getPosts } from '@/services/prismic/Posts/request'
 
 const Home = async () => {
   const data = await getHomeData()

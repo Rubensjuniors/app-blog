@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
 import { Icon, Card } from '@/components/basic'
+import { getAboutMeData } from '@/services/prismic/About/requests'
 import { RichText } from 'prismic-dom'
 
 import { SOCIAIS } from '@/ultils/constants'
 
 import Repositories from './repositories'
-import { getAboutMeData } from './requests'
 
 import './style.scss'
 

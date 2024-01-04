@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-const url = 'https://api.github.com/users/rubensjuniors'
-
 export const GITHUB_API = axios.create({
-  baseURL: url,
+  baseURL: process.env.NEXT_PUBLIC_URL_API_GITHUB,
   method: 'get',
 })

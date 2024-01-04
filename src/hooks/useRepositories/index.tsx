@@ -1,6 +1,6 @@
 import { GithubRepos } from '@/app/(pages)/about/types'
-import { GITHUB_API } from '@/services/axiosInstaces'
-import useFetch from '@/services/SWR'
+import { GITHUB_API } from '@/config/requestRegister'
+import useFetch from '@/hooks/useFetchSWR'
 
 export default function useRepositories (page?:number) {
 

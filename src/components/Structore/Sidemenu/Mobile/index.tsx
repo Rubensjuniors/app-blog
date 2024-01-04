@@ -36,8 +36,8 @@ const SidemenuMobile = ({
                   ? 'text-red-300'
                   : ''
               }
-              flex w-full items-center gap-3 
-              p-4 transition-all sm:hover:text-red-300 
+              flex w-full items-center gap-3
+              p-4 transition-all sm:hover:text-red-300
               sm:hover:brightness-90`}
               onClick={() => {
                 setIsOpenMenu(false)

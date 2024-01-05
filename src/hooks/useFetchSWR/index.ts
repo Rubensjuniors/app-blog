@@ -20,8 +20,7 @@ export default function useFetch<Data = any, Erro = any>({
         })
         return response.data
       } catch (error) {
-        // eslint-disable-next-line no-console
-        console.error('Failed fetching', error)
+        throw new Error('Failed fetching')
       }
     },
     swrOptions

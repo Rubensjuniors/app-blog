@@ -46,8 +46,7 @@ export async function getAboutMeData() {
     }
 
     return aboutMe
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching About', error)
+  } catch {
+    throw new Error('Failed fetching About me')
   }
 }

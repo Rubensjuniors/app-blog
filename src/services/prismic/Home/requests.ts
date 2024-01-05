@@ -29,8 +29,7 @@ export async function getHomeData() {
     return {
       home
     }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching Home', error)
+  } catch {
+    throw new Error('Failed fetching Home')
   }
 }

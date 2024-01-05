@@ -56,8 +56,7 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
       page,
       latestPosts
     }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching Posts', error)
+  } catch {
+    throw new Error('Failed fetching Posts')
   }
 }

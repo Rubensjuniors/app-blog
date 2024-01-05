@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { getPrismicClient } from '@/services/prismic'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
@@ -18,9 +17,8 @@ export async function getArticlesData() {
     }
 
     return articles
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching Articles', error)
+  } catch {
+    throw new Error('Failed fetching Articles')
   }
 }
 
@@ -30,9 +28,8 @@ export async function getTagsData() {
 
     const tags = await prismic?.getTags()
     return tags
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching tags', error)
+  } catch {
+    throw new Error('Failed fetching Tags')
   }
 }
 
@@ -82,8 +79,7 @@ export async function getPost(uid: string){
     }
 
     return post
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching Posts', error)
+  } catch {
+    throw new Error('Failed fetching Posts')
   }
 }

@@ -1,7 +1,6 @@
 import { Post } from '@/components/basic'
 import Search from '@/components/Search'
-import { getArticlesData, getTagsData } from '@/services/prismic/Articles/request'
-import { getPosts } from '@/services/prismic/Posts/request'
+import { getArticlesData, getTagsData, getPosts } from '@/services/prismic'
 
 const Articles = async () => {
   const dataPost = await getPosts({ pageSize: 5 })

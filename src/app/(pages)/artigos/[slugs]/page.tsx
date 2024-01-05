@@ -1,4 +1,4 @@
-import { getPost } from '@/services/prismic/Articles/request'
+import { getPost } from '@/services/prismic'
 
 const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
   const post = await getPost(params.slugs)

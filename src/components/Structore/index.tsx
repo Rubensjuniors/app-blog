@@ -3,7 +3,6 @@ import { ReactNode, useState } from 'react'
 
 import { getCopies, sidemenuItems } from '@/ultils/constants'
 
-import Footer from './Footer'
 import Header from './Header'
 import Sidemenu from './Sidemenu'
 
@@ -27,7 +26,6 @@ const Structor = ({ children }: StructorProps) => {
             <div>
               {children}
             </div>
-            <Footer/>
           </div>
         </main>
       </div>

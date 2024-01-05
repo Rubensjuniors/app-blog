@@ -1,4 +1,4 @@
-import { getPrismicClient } from '@/services/prismic'
+import { getPrismicClient } from '@/services/prismic/PrismicRequest'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import moment from 'moment'

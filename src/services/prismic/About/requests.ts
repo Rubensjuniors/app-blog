@@ -1,4 +1,4 @@
-import { getPrismicClient } from '@/services/prismic'
+import { getPrismicClient } from '@/services/prismic/PrismicRequest'
 
 import { AboutData } from './types'
 

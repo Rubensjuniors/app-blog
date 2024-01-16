@@ -3,16 +3,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Dispatch, SetStateAction } from 'react'
 
-import { KeySidemenu, getCopies, sidemenuItems } from '@/ultils/constants'
-
 import { Icon } from '@/components/basic'
+
+import { KeySidemenu, getCopies, sidemenuItems } from '@/ultils/constants'
 
 const SidemenuMobile = ({
   setIsOpenMenu,
-  setTitle,
 }: {
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
-  setTitle: Dispatch<SetStateAction<string>>
 }) => {
   const t = getCopies()
   const pathname = usePathname()
@@ -41,7 +39,6 @@ const SidemenuMobile = ({
               sm:hover:brightness-90`}
               onClick={() => {
                 setIsOpenMenu(false)
-                setTitle(t.sidemenu[itensMenu.title as KeySidemenu])
               }}
             >
               <>

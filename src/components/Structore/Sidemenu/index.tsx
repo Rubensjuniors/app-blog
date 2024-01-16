@@ -8,7 +8,7 @@ import { KeySidemenu, getCopies } from '@/ultils/constants'
 
 import { sidemenuProps } from './types'
 
-const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
+const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
   const t = getCopies()
   const pathname = usePathname()
   const filterPath = pathname.replace(/\/pt-BR/g, '')
@@ -38,9 +38,6 @@ const Sidemenu = ({ sidemenuItems, setTitle }: sidemenuProps) => {
               flex w-full items-center gap-3
               p-4 transition-all sm:hover:text-red-300
               sm:hover:brightness-90`}
-              onClick={() =>
-                setTitle(t.sidemenu[itensMenu.title as KeySidemenu])
-              }
             >
               <>
                 <Icon id={itensMenu.id} />

@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from 'react'
-
 export interface itemsMenuProps {
   id: string
   title: string
@@ -9,5 +7,4 @@ export interface itemsMenuProps {
 export interface sidemenuProps {
   sidemenuItems: Array<itemsMenuProps>
   classNames?: string
-  setTitle: Dispatch<SetStateAction<string>>
 }

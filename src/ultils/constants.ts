@@ -46,3 +46,9 @@ export const SOCIAIS = [
     url: 'https://www.linkedin.com/in/rubens-junio-603979250',
   },
 ]
+
+export const itemMenuSelected = (path: string) => {
+  const filteredPath = sidemenuItems.find(item => item.path === path)
+
+  return filteredPath?.title
+}

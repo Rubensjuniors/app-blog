@@ -1,4 +1,4 @@
-import { getPrismicClient } from '@/services/prismic'
+import { getPrismicClient } from '@/services/prismic/PrismicRequest'
 import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import moment from 'moment'
@@ -56,8 +56,7 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
       page,
       latestPosts
     }
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('Failed fetching Posts', error)
+  } catch {
+    throw new Error('Failed fetching Posts')
   }
 }

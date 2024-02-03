@@ -1,18 +1,19 @@
 import React from 'react'
 
 import { Icon } from '@/components/basic'
+import { getFooterData } from '@/services/prismic'
 
-import { SOCIAIS, getCopies } from '@/ultils/constants'
+import { SOCIAIS } from '@/ultils/constants'
 
-const Footer = () => {
-  const t = getCopies()
+const Footer = async () => {
+  const footer = await getFooterData()
 
   return (
     <div className="p-4 py-8 flex items-center flex-col w-full border-t border-gray-750 gap-10">
       <div className="flex items-start justify-between w-full">
         <div>
-          <h1 className="text-3xl md:text-4xl font-marck-script">{t.footer.name}</h1>
-          <p className="font-light mt-2 text-sm md:text-md">{t.footer.description}</p>
+          <h1 className="text-3xl md:text-4xl font-marck-script">{footer.name}</h1>
+          <p className="font-light mt-2 text-sm md:text-md">{footer.description}</p>
         </div>
 
         <ul className="flex items-center gap-3 sm:mr-6 sm:gap-4">
@@ -28,7 +29,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <p className="text-sm md:text-md">{t.footer.copyright}</p>
+      <p className="text-sm md:text-md">{footer.copyright}</p>
     </div>
   )
 }

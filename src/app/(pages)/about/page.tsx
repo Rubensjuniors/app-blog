@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { Icon, Card } from '@/components/basic'
-import { getAboutMeData } from '@/services/prismic/About/requests'
+import { getAboutMeData } from '@/services/prismic'
 import { RichText } from 'prismic-dom'
 
 import { SOCIAIS } from '@/ultils/constants'

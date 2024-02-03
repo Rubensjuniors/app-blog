@@ -1,20 +1,19 @@
-import { DEV } from '@/ultils/types'
-import * as prismic from '@prismicio/client'
-import * as prismicNext from '@prismicio/next'
+import { getAboutMeData } from './About/requests'
+import { getArticlesData, getTagsData, getPost } from './Articles/request'
+import { getFooterData } from './Footer/request'
+import { getGeneralData } from './General/request'
+import { getHomeData } from './Home/requests'
+import { getPosts } from './Posts/request'
+import { getPrismicClient } from './PrismicRequest'
 
-export function getPrismicClient({
-  previewData,
-  req
-}: prismicNext.CreateClientConfig = {}) {
-  const client = prismic.createClient(process.env.PRISMIC_API_ENDPOINT!, {
-    accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-    fetchOptions:
-      process.env.NODE_ENV === DEV.PRODUCTION
-        ? { next: { tags: ['prismic'], revalidate: 60 * 60 }, cache: 'force-cache' }
-        : { next: { revalidate: 50 * 5 } },
-  })
-
-  prismicNext.enableAutoPreviews({ client, previewData, req })
-
-  return client
+export {
+  getAboutMeData,
+  getArticlesData,
+  getTagsData,
+  getPost,
+  getFooterData,
+  getGeneralData,
+  getHomeData,
+  getPosts,
+  getPrismicClient
 }

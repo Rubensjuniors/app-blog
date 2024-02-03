@@ -1,8 +1,11 @@
 'use client'
 import Link from 'next/link'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 import { Icon } from '@/components/basic'
+
+import { KeySidemenu, getCopies, itemMenuSelected } from '@/ultils/constants'
 
 import SidemenuMobile from '../Sidemenu/Mobile'
 
@@ -10,19 +13,15 @@ const headerClass =
 'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'
 const sidemenuClass = 'fixed left-0 top-0 z-30 flex min-h-screen w-full animate-slide-enter flex-col gap-10 overflow-hidden p-4 pt-6 backdrop-blur-lg transition-all duration-300 ease-in-out sm:hidden'
 
-const Header = ({
-  title,
-  setTitle,
-}: {
-  title: string
-  setTitle: Dispatch<SetStateAction<string>>
-}) => {
+const Header = () => {
+  const t = getCopies()
+  const pathname = usePathname()
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
 
   return (
     <>
       <header className={headerClass} data-testid="header">
-        <span className="hidden font-bold sm:inline">{title}</span>
+        <span className="hidden font-bold sm:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu]}</span>
         <div className="flex w-full items-center justify-between sm:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />
@@ -43,7 +42,6 @@ const Header = ({
 
           <SidemenuMobile
             setIsOpenMenu={setIsOpenSidemenu}
-            setTitle={setTitle}
           />
         </div>
       )}

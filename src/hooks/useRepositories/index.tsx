@@ -18,7 +18,7 @@ export default function useRepositories (page?:number) {
       stargazers_count: repo?.stargazers_count,
       updated_at: repo?.updated_at,
       html_url: repo.html_url,
-      language: repo?.language
+      language: repo?.language,,,
     }
   })
 

@@ -17,9 +17,9 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
   return (
     <nav
       data-testid="sidemenu"
-      className="sticky left-0 top-0 hidden max-h-screen  min-w-[60px] flex-col items-center justify-start gap-4 p-3 sm:flex lg:min-w-[230px] lg:items-start lg:p-5"
+      className="sticky left-0 top-0 hidden max-h-screen w-[73px] overflow-hidden flex-col items-center justify-start gap-4 p-3 pt-5 sm:flex lg:hover:w-56 lg:items-start lg:p-1 lg:pt-5 duration-500 ease-in-out"
     >
-      <Link href="/" className="lg:pl-3">
+      <Link href="/" className="lg:pl-2">
         <Icon id="icon_logo" iconSize={42} />
       </Link>
 
@@ -35,12 +35,14 @@ const Sidemenu = ({ sidemenuItems }: sidemenuProps) => {
                   ? 'text-red-300'
                   : ''
               }
-              flex w-full items-center gap-3
+              flex w-full items-center gap-7
               p-4 transition-all sm:hover:text-red-300
-              sm:hover:brightness-90`}
+              sm:hover:brightness-90 whitespace-nowrap`}
             >
               <>
-                <Icon id={itensMenu.id} />
+                <div className="min-w-24">
+                  <Icon id={itensMenu.id} iconSize={26}/>
+                </div>
 
                 <li className="hidden font-bold lg:inline">
                   {t.sidemenu[itensMenu.title as KeySidemenu]}

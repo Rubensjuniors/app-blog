@@ -12,8 +12,8 @@ const Footer = async () => {
     <div className="p-4 py-8 flex items-center flex-col w-full border-t border-gray-750 gap-10">
       <div className="flex items-start justify-between w-full">
         <div>
-          <h1 className="text-3xl md:text-4xl font-marck-script">{footer.name}</h1>
-          <p className="font-light mt-2 text-sm md:text-md">{footer.description}</p>
+          <h1 className="text-3xl md:text-4xl font-marck-script">{footer?.name}</h1>
+          <p className="font-light mt-2 text-sm md:text-md">{footer?.description}</p>
         </div>
 
         <ul className="flex items-center gap-3 sm:mr-6 sm:gap-4">
@@ -29,7 +29,7 @@ const Footer = async () => {
         </ul>
       </div>
 
-      <p className="text-sm md:text-md">{footer.copyright}</p>
+      <p className="text-sm md:text-md">{footer?.copyright}</p>
     </div>
   )
 }

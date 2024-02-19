@@ -22,8 +22,8 @@ const Header = () => {
   return !isInPost && (
     <>
       <header className={headerClass} data-testid="header">
-        <span className="hidden font-bold sm:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
-        <div className="flex w-full items-center justify-between sm:hidden">
+        <span className="hidden font-bold sm1:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
+        <div className="flex w-full items-center justify-between sm1:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />
           </button>

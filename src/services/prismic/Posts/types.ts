@@ -4,6 +4,15 @@ export type GetPostProps = {
   pageSize?: number
 }
 
+export interface coverPhoto {
+    url: string
+    dimensions: {
+      width: number
+      height:number
+    }
+    alt: string
+}
+
 export interface Post {
   id: string
   typePost: PostTypes
@@ -13,6 +22,7 @@ export interface Post {
   description: string
   author: string
   tags: string[]
+  coverPhoto: coverPhoto
 }
 
 export interface GetPostData {

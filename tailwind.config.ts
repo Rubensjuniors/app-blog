@@ -36,6 +36,9 @@ export default {
         sm: '576px',
         // => @media (min-width: 576px) { ... }
 
+        sm1: '663px',
+        // => @media (min-width: 576px) { ... }
+
         md: '768px',
         // => @media (min-width: 768px) { ... }
 

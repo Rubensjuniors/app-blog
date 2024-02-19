@@ -11,6 +11,7 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
 
     const response = await prismic?.getByType('artigos', {
       fetch: [
+        'artigos.cover',
         'artigos.title',
         'artigos.description',
         'artigos.author',
@@ -37,6 +38,13 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
           locale: ptBR,
         }),
         title: post.data.title,
+        coverPhoto: {
+          url: post.data.cover.url,
+          dimensions: {
+            ...post.data.cover.dimensions
+          },
+          alt: post.data.cover.alt
+        },
         description: post.data.description,
         author: post.data.author,
         tags: post.tags

@@ -1,7 +1,9 @@
+import { coverPhoto } from '@/services/prismic/Posts/types'
 import { PostTypes } from '@/ultils/types'
 
 export interface PostProps {
   type?: PostTypes
+  coverPhoto: coverPhoto
   maximumToShow?: number
   title: string
   description: string

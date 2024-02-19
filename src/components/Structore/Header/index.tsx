@@ -17,11 +17,12 @@ const Header = () => {
   const t = getCopies()
   const pathname = usePathname()
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
+  const isInPost = /^\/artigos\//.test(pathname)
 
-  return (
+  return !isInPost && (
     <>
       <header className={headerClass} data-testid="header">
-        <span className="hidden font-bold sm:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu]}</span>
+        <span className="hidden font-bold sm:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
         <div className="flex w-full items-center justify-between sm:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />

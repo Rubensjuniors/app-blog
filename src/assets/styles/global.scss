@@ -42,6 +42,12 @@ input {
   background: transparent;
 }
 
+img {
+  vertical-align: middle;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 .active {
 color: #F75A68;
 }

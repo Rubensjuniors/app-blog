@@ -1,4 +1,4 @@
-import { Post } from '@/components/basic'
+import { Post, Tag } from '@/components/basic'
 import Search from '@/components/Search'
 import { getArticlesData, getTagsData, getPosts } from '@/services/prismic'
 
@@ -18,7 +18,7 @@ const Articles = async () => {
             tagsData?.map(tag => {
               return (
                 <li key={tag}>
-                  <button className="bg-gray-750 p-1 px-5 rounded-full text-sm hover:text-red-300 transition-all">{tag}</button>
+                  <Tag title={tag} />
                 </li>
               )
             })

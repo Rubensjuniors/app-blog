@@ -29,14 +29,14 @@ const config: Config = {
     '!src/**/types.ts',
     '!src/**/styles.ts'
   ],
-  // coverageThreshold: {
-  //   global: {
-  //     branches: 80,
-  //     functions: 80,
-  //     lines: 80,
-  //     statements: 80
-  //   }
-  // },
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  },
   testPathIgnorePatterns: ['/node_modules', '/.next/'],
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',

@@ -1,16 +1,15 @@
 import nextJest from 'next/jest.js'
 
+import type { Config } from 'jest'
+
 const createJestConfig = nextJest({
-  dir: './'
+  dir: './',
 })
 
-// Add any custom config to be passed to Jest
-/** @type {import('jest').Config} */
-const config = {
-  setupFilesAfterEnv: ['<rootDir>/config/.jest/setup.ts'],
+const config: Config = {
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.ts'],
   collectCoverage: true,
   coverageDirectory: './coverage/',
-  coverageProvider: 'v8',
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/index.ts',
@@ -30,17 +29,18 @@ const config = {
     '!src/**/types.ts',
     '!src/**/styles.ts'
   ],
-  // Define the test coverage threshold minimum for this project
-  // coverageThreshold: {
-  //   global: {
-  //     branches: 80,
-  //     functions: 80,
-  //     lines: 80,
-  //     statements: 80
-  //   }
-  // },
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  },
   testPathIgnorePatterns: ['/node_modules', '/.next/'],
-  modulePaths: ['<rootDir>/src/', '<rootDir>/config/.jest'],
+  coverageProvider: 'v8',
+  testEnvironment: 'jsdom',
+  modulePaths: ['<rootDir>/src/', '<rootDir>/config/jest'],
   moduleDirectories: ['node_modules', '<rootDir>'],
   testMatch: [
     '<rootDir>/src/**/*.test.{ts,tsx}',
@@ -50,9 +50,8 @@ const config = {
     'src/(.*)': '<rootDir>/src/$1'
   },
   transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest']
+    '^.+\\.(t|j)sx?$': '@swc/jest'
   },
-  testEnvironment: 'jest-environment-jsdom'
 }
 
 export default createJestConfig(config)

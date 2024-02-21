@@ -9,7 +9,7 @@ const Footer = async () => {
   const footer = await getFooterData()
 
   return (
-    <div className="p-4 py-8 flex items-center flex-col w-full border-t border-gray-750 gap-10">
+    <footer data-testid="footer-componente" className="p-4 py-8 flex items-center flex-col w-full border-t border-gray-750 gap-10">
       <div className="flex items-start justify-between w-full">
         <div>
           <h1 className="text-3xl md:text-4xl font-marck-script">{footer?.name}</h1>
@@ -30,7 +30,7 @@ const Footer = async () => {
       </div>
 
       <p className="text-sm md:text-md">{footer?.copyright}</p>
-    </div>
+    </footer>
   )
 }
 

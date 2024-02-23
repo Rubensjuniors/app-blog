@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 import { Icon } from '@/components/basic'
+import useWindowSize from '@/hooks/use-window-size'
 
 import { KeySidemenu, getCopies, itemMenuSelected } from '@/ultils/constants'
 
@@ -16,14 +17,16 @@ const sidemenuClass = 'fixed left-0 top-0 z-30 flex min-h-screen w-full animate-
 const Header = () => {
   const t = getCopies()
   const pathname = usePathname()
+  const { width } = useWindowSize()
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
   const isInPost = /^\/artigos\//.test(pathname)
+  const isDesktopAndIsInPost = isInPost && width >= 661
 
-  return !isInPost && (
+  return !isDesktopAndIsInPost && (
     <>
       <header className={headerClass} data-testid="header">
-        <span data-testid="header-title" className="hidden font-bold sm:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
-        <div className="flex w-full items-center justify-between sm:hidden">
+        <span data-testid="header-title" className="hidden font-bold sm1:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
+        <div className="flex w-full items-center justify-between sm1:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />
           </button>

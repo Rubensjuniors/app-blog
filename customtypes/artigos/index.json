@@ -48,14 +48,6 @@
           "thumbnails": []
         }
       },
-      "banner": {
-        "type": "Image",
-        "config": {
-          "label": "banner",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "content": {
         "type": "Group",
         "config": {

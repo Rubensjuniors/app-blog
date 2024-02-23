@@ -41,6 +41,7 @@ const Home = async () => {
                 publicationDate={post.publicationDate}
                 uid={post.slug ?? ''}
                 type={post.typePost}
+                coverPhoto={post?.coverPhoto}
               />
             )
           })}

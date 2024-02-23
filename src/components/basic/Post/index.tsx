@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { PostTypes } from '@/ultils/types'
 
-import { Icon } from '..'
+import { Icon, Tag } from '..'
+
 import { PostProps, TYPES_POST_ICON } from './types'
 
 const flexCenter = 'flex items-center'
-const contentClass = 'flex flex-col gap-1 border-2 border-transparent border-b-gray-750 py-4 last:border-0 md:hover:brightness-75 transition-all w-full'
 
 const Post = ({
   author,
@@ -16,7 +17,8 @@ const Post = ({
   title,
   path,
   type,
-  uid
+  uid,
+  coverPhoto
 }: PostProps) => {
   const getIconType = () => {
     if (type === PostTypes.GYM) {
@@ -28,15 +30,30 @@ const Post = ({
   const isTagsClass = tags.length > 0 && 'before:w-[2px] before:h-8 before:bg-gray-750 before:rounded-full'
 
   return (
-    <Link href={path ?? `/artigos/${uid}`} className={contentClass}>
-      <div className={`${flexCenter} justify-between w-full`}>
-        <h1 className="text-xl sm:text-2xl font-bold line-clamp-1">{title}</h1>
-        {getIconType()}
-      </div>
+    <div className="border-2 border-transparent border-b-gray-750 py-4 last:border-0">
+      <Link href={path ?? `/artigos/${uid}`} className="md:hover:brightness-75">
+        <div className="flex flex-col gap-2 sm1:gap-3 sm1:flex-row ">
+          <div className={`${!coverPhoto.url && 'hidden'} h-52 sm1:max-w-[132px] sm1:max-h-[132px]`}>
+            <Image
+              className="h-full rounded-md object-cover object-center"
+              src={coverPhoto?.url}
+              alt={coverPhoto.alt}
+              width={coverPhoto.dimensions.width}
+              height={coverPhoto.dimensions.height}/>
+          </div>
 
-      <p className="mb-4 text-md text-gray-300 font-light line-clamp-1 sm:line-clamp-2">{description}</p>
+          <div className="w-full">
+            <div className={`${flexCenter} justify-between w-full`}>
+              <h1 className="text-xl sm:text-2xl font-bold line-clamp-2">{title}</h1>
+              {getIconType()}
+            </div>
 
-      <div className={`${flexCenter} gap-5 text-gray-300`}>
+            <p className="mb-4 mt-2 sm1:mt-1 text-md text-gray-300 font-light line-clamp-3 sm:line-clamp-2 break-all">{description}</p>
+          </div>
+        </div>
+      </Link>
+
+      <div className={`${flexCenter} gap-5 text-gray-300 mt-2 sm1:mt-3`}>
         <ul className={`${flexCenter} gap-4`}>
           <li className={`${flexCenter} gap-2`}>
             <Icon id="calendarBlank-phosphor" />
@@ -45,26 +62,26 @@ const Post = ({
 
           <li className={`${flexCenter} gap-2`}>
             <Icon id="user-phosphor" />
-            <span>{author}</span>
+            <span>{author ? author : 'Sem Author'}</span>
           </li>
         </ul>
 
         <ul
           className={`
-          ${flexCenter}
-          ${isTagsClass}
-          gap-5 hidden md:flex
-          `}>
+        ${flexCenter}
+        ${isTagsClass}
+        gap-5 hidden sm1:flex
+        `}>
           {tags.map((tag, index) => {
             const limitTags = index < 3
 
-            return limitTags && <li key={tag} className="bg-gray-750 p-1 px-5 rounded-full text-sm">{tag}</li>
+            return limitTags && <li key={tag}><Tag title={tag} /></li>
           }
           )}
         </ul>
 
       </div>
-    </Link>
+    </div>
   )
 }
 

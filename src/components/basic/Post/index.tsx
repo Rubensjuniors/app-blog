@@ -33,9 +33,9 @@ const Post = ({
     <div className="border-2 border-transparent border-b-gray-750 py-4 last:border-0">
       <Link href={path ?? `/artigos/${uid}`} className="md:hover:brightness-75">
         <div className="flex flex-col gap-2 sm1:gap-3 sm1:flex-row ">
-          <div className={`${!coverPhoto.url && 'hidden'} h-44 sm1:w-28 sm1:h-28`}>
+          <div className={`${!coverPhoto.url && 'hidden'} h-52 sm1:max-w-[132px] sm1:max-h-[132px]`}>
             <Image
-              className="h-full rounded-md"
+              className="h-full rounded-md object-cover object-center"
               src={coverPhoto?.url}
               alt={coverPhoto.alt}
               width={coverPhoto.dimensions.width}
@@ -53,7 +53,7 @@ const Post = ({
         </div>
       </Link>
 
-      <div className={`${flexCenter} gap-5 text-gray-300 mt-2`}>
+      <div className={`${flexCenter} gap-5 text-gray-300 mt-2 sm1:mt-3`}>
         <ul className={`${flexCenter} gap-4`}>
           <li className={`${flexCenter} gap-2`}>
             <Icon id="calendarBlank-phosphor" />
@@ -62,7 +62,7 @@ const Post = ({
 
           <li className={`${flexCenter} gap-2`}>
             <Icon id="user-phosphor" />
-            <span>{author}</span>
+            <span>{author ? author : 'Sem Author'}</span>
           </li>
         </ul>
 

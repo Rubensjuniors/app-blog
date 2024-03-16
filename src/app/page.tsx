@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Icon, Post } from '@/components/basic'
+import { Icon, Post, Title } from '@/components/basic'
 import { getHomeData, getPosts } from '@/services/prismic'
 
 const Home = async () => {
@@ -20,7 +20,7 @@ const Home = async () => {
       </div>
 
       <div>
-        <h1 className="mb-3 text-4xl font-bold">{data?.home.title}</h1>
+        <Title level={1} className="mb-3 text-4xl font-bold">{data?.home.title} </Title>
         <p className="text-md text-justifys mt-2 font-light">
           {data?.home.description}
         </p>

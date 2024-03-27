@@ -49,7 +49,7 @@ const Post = ({
               {getIconType()}
             </div>
 
-            <p className="mb-4 mt-2 sm1:mt-1 text-md text-gray-300 font-light line-clamp-3 sm:line-clamp-2 break-all">{description}</p>
+            <p className="mb-4 mt-2 sm1:mt-1 text-md text-gray-300 font-light tracking-wide line-clamp-3 sm:line-clamp-2 break-all">{description}</p>
           </div>
         </div>
       </Link>

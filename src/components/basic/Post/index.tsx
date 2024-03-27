@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import noPhoto from '@/assets/imagens/no-photo.svg'
 import { PostTypes } from '@/ultils/types'
 
 import { Icon, Tag } from '..'
@@ -36,8 +37,8 @@ const Post = ({
           <div className={`${!coverPhoto.url && 'hidden'} h-52 sm1:max-w-[132px] sm1:max-h-[132px]`}>
             <Image
               className="h-full rounded-md object-cover object-center"
-              src={coverPhoto?.url}
-              alt={coverPhoto.alt}
+              src={coverPhoto.url ?? noPhoto}
+              alt={coverPhoto.alt ?? 'no photo in post'}
               width={coverPhoto.dimensions.width}
               height={coverPhoto.dimensions.height}/>
           </div>
@@ -48,7 +49,7 @@ const Post = ({
               {getIconType()}
             </div>
 
-            <p className="mb-4 mt-2 sm1:mt-1 text-md text-gray-300 font-light line-clamp-3 sm:line-clamp-2 break-all">{description}</p>
+            <p className="mb-4 mt-2 sm1:mt-1 text-md text-gray-300 font-light tracking-wide line-clamp-3 sm:line-clamp-2 break-all">{description}</p>
           </div>
         </div>
       </Link>

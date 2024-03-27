@@ -61,12 +61,9 @@ export async function getPost(uid: string){
         title: response.data.title,
         description: response.data.description,
         author: response.data.author,
-        banners: {
-          cover: { ...response.data.cover },
-          banner: { ...response.data.banner }
-        },
+        photoPost: { ...response.data.cover },
         content: response?.data.content.map(
-          (content: { heading: string; body: string[] }) => {
+          (content: { heading: string; body: [{ type: string, text: string, span: [] }] }) => {
             return {
               heading: content.heading,
               body: [...content.body],

@@ -29,7 +29,7 @@ const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
         <div className="p-4 pb-0">
           <div>
             <h1 className="mb-3 text-2xl md:text-4xl font-bold">{post.contentBody.title} </h1>
-            <p className="mb-3 text-gray-300 text-lg leading-6 tracking-widetext-justify">{post.contentBody.description}</p>
+            <p className="mb-3 text-gray-300 text-lg leading-6 tracking-wide break-all text-justify">{post.contentBody.description}</p>
           </div>
 
           <ul className="flex items-center gap-4">

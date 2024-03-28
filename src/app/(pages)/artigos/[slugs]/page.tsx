@@ -2,10 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Icon } from '@/components/basic'
+import { ContentPrismic } from '@/components/Prismic'
 import { getPost } from '@/services/prismic'
-import { RichText } from 'prismic-dom'
-
-import './style.scss'
 
 const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
   const post = await getPost(params.slugs)
@@ -31,7 +29,7 @@ const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
         <div className="p-4 pb-0">
           <div>
             <h1 className="mb-3 text-2xl md:text-4xl font-bold">{post.contentBody.title} </h1>
-            <p className="mb-3 text-gray-300 text-lg leading-6 tracking-[0.105rem] text-justify">{post.contentBody.description}</p>
+            <p className="mb-3 text-gray-300 text-lg leading-6 tracking-widetext-justify">{post.contentBody.description}</p>
           </div>
 
           <ul className="flex items-center gap-4">
@@ -45,19 +43,19 @@ const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
             </li>
           </ul>
         </div>
-        {
-          post.contentBody.content.map((content: any) => (
-            <article key={content.heading}>
-              <h2 className="text-2xl ml-4 font-bold mb-3 mt-5">{content.heading}</h2>
-              <div
-                className="postContent"
-                dangerouslySetInnerHTML={{
-                  __html: RichText.asHtml(content.body),
-                }}
-              />
-            </article>
-          ))
-        }
+
+        <article>
+          {
+            post.contentBody.content.map((content: any) => {
+              return (
+                <div key={content.heading}>
+                  <h2 className="text-2xl ml-4 font-bold mt-5">{content.heading}</h2>
+                  <ContentPrismic data={content.body} />
+                </div>
+              )
+            })
+          }
+        </article>
       </section>
     </>
   )

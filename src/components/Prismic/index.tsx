@@ -1,0 +1,6 @@
+export { default as ContentPrismic } from './content'
+export { default as Heading } from './heading'
+export { default as Paragraph } from './paragraph'
+export { default as Strong } from './strong'
+export { default as Preformatted } from './preformatted'
+export { default as List } from './list'

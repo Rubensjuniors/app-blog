@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 const RootLayout = async ({ children }: LayoutProps) => {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning={true}>
       <body className={`${roboto.variable} ${MarckScript.variable} bg-gray-800 text-gray-100`}>
         <Structor>{children}</Structor>
       </body>

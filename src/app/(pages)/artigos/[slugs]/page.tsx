@@ -1,23 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Icon } from '@/components/basic'
+import { Icon, Tag } from '@/components/basic'
 import { ContentPrismic } from '@/components/Prismic'
 import { getPost } from '@/services/prismic'
 
 const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
   const post = await getPost(params.slugs)
 
+  const isBanner = post.contentBody.photoPost.url
+
   return (
     <>
-      <Link href="/">Voltar </Link>
-
-      <section>
+      <section className="relative">
+        <Link href="/" className={`${isBanner && 'absolute top-2 left-2'}`}>
+          <button className="bg-gray-800 p-2 rounded-full">
+            <Icon id="arrowLeft-phosphor" iconSize={24}/>
+          </button>
+        </Link>
         {
-          post.contentBody.photoPost.url && (
-            <figure>
+          isBanner && (
+            <figure className="h-52 sm1:h-96 w-full sm1:max-h-[384px]">
               <Image
-                className="object-cover object-center"
+                className="h-full object-cover object-center"
                 src={post.contentBody.photoPost.url}
                 alt={post.contentBody.photoPost.alt}
                 width={post.contentBody.photoPost.dimensions.width}
@@ -41,6 +46,15 @@ const ArticlesPost = async ({ params }: { params: { slugs: string }}) => {
               <Icon id="user-phosphor" />
               <span>{post.contentBody.author}</span>
             </li>
+
+            <div className="hidden sm1:flex items-center gap-2">
+              {post.tags.map((tag, index) => {
+                const limitTags = index < 4
+
+                return limitTags && <li key={tag}><Tag title={tag} /></li>
+              }
+              )}
+            </div>
           </ul>
         </div>
 

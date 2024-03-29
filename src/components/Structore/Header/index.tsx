@@ -12,7 +12,7 @@ import SidemenuMobile from '../Sidemenu/Mobile'
 
 const headerClass =
 'z-10 py-4 sm:py-5 px-4 sm:px-8 flex items-center sticky top-0 left-0 backdrop-blur-lg shadow-md'
-const sidemenuClass = 'fixed left-0 top-0 z-30 flex min-h-screen w-full animate-slide-enter flex-col gap-10 overflow-hidden p-4 pt-6 backdrop-blur-lg transition-all duration-300 ease-in-out sm:hidden'
+const sidemenuClass = 'fixed left-0 top-0 z-30 flex min-h-screen w-full animate-slide-enter flex-col gap-10 overflow-hidden p-4 pt-6 backdrop-blur-lg transition-all duration-300 ease-in-out lg:hidden'
 
 const Header = () => {
   const t = getCopies()
@@ -20,13 +20,13 @@ const Header = () => {
   const { width } = useWindowSize()
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
   const isInPost = /^\/artigos\//.test(pathname)
-  const isDesktopAndIsInPost = isInPost && width >= 661
+  const isDesktopAndIsInPost = isInPost && width >= 960
 
   return !isDesktopAndIsInPost && (
     <>
       <header className={headerClass} data-testid="header">
-        <span data-testid="header-title" className="hidden font-bold sm1:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
-        <div className="flex w-full items-center justify-between sm1:hidden">
+        <span data-testid="header-title" className="hidden font-bold lg:inline">{t.sidemenu[itemMenuSelected(pathname) as KeySidemenu] }</span>
+        <div className="flex w-full items-center justify-between lg:hidden">
           <button onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
             <Icon id="list_icon-phosphor" iconSize={33} />
           </button>

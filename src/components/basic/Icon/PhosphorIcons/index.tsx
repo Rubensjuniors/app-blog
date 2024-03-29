@@ -21,6 +21,7 @@ import {
   Code,
   Barbell,
   Copy,
+  ArrowLeft,
 } from '@phosphor-icons/react'
 
 import { iconProps } from '../types'
@@ -50,6 +51,7 @@ const PhosphorIcons = ({ id, iconSize = 24, classIcon }: iconProps) => {
   icons.set('code-phosphor', <Code size={iconSize} color="#00B37E" className={classIcon} />)
   icons.set('barbell-phosphor', <Barbell size={iconSize} color="#F75A68" className={classIcon} />)
   icons.set('copy-phosphor', <Copy size={iconSize} className={classIcon} />)
+  icons.set('arrowLeft-phosphor', <ArrowLeft size={iconSize} className={classIcon} />)
 
   const getCorrespondingPhosphorIcons = (id: string) =>
     icons.has(id) ? icons.get(id) : ''

@@ -18,6 +18,7 @@ export interface Post {
   typePost: PostTypes
   slug: string | null
   publicationDate: string
+  lastDate: string
   title: string
   description: string
   author: string

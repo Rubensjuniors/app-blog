@@ -37,6 +37,9 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
         publicationDate: format(new Date(post.first_publication_date ?? ''), 'dd MMM yyyy', {
           locale: ptBR,
         }),
+        lastDate: format(new Date(post.last_publication_date ?? ''), 'dd MMM yyyy', {
+          locale: ptBR,
+        }),
         title: post.data.title,
         coverPhoto: {
           url: post.data.cover.url,
@@ -52,7 +55,7 @@ export async function getPosts({ pageSize = 5, }: GetPostProps) {
     })
 
     const latestPosts = posts.sort((post, b) => {
-      return moment(b.publicationDate).diff(moment(post.publicationDate))
+      return moment(b.lastDate).diff(moment(post.publicationDate))
     })
 
     return {

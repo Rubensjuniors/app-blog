@@ -6,18 +6,17 @@ Bem-vindo ao meu projeto de blog pessoal, onde compartilho minhas aventuras de a
 
 Este projeto é construído usando as seguintes tecnologias:
 
-**With Next.js 13 & React 18!**
+**With Next.js 14 & React 18!**
 
 - 📏 **ESLint** — Pluggable JavaScript linter
 - 💖 **Prettier** - Opinionated Code Formatter
 - 🐙 **React Testing Library (RTL)** - Builds by adding APIs for working with React components
 - 🃏 **Jest** - A delightful JavaScript Testing Framework with a focus on simplicity
-- 💅 **Tailwind CSS and SASS** - Use the best bits of ES6 and CSS to style your apps without stress
+- 💅 **Tailwind CSS** - Use the best bits of ES6 and CSS to style your apps without stress
 
 **Libs que usei!**
 
 - **Axios**
-- **Prismic**
 - **Phosphor icons**
 
 ## Objetivos
@@ -39,7 +38,7 @@ Se você deseja entrar em contato comigo ou acompanhar mais de perto o meu progr
 
 - **GitHub**: [https://github.com/Rubensjuniors](https://github.com/Rubensjuniors)
 - **LinkedIn**: [https://www.linkedin.com/in/rubensJunio](https://www.linkedin.com/in/rubens-junio-603979250/)
-- **Instagram**: [@Eorubis](https://www.instagram.com/eorubis)
+- **Instagram**: [@Rubs.dev](https://www.instagram.com/rubs.dev)
 
 ## Agradecimentos
 

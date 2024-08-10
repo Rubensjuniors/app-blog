@@ -28,7 +28,7 @@
     "project": "./tsconfig.json",
     "createDefaultProgram": true
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "eslint-plugin-import-helpers"],
   "rules": {
 		"camelcase": "off",
     /* React Rules */
@@ -143,6 +143,29 @@
       "error",
       {
         "max": 9
+      }
+    ],
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/", "/^next/"],
+          // "/^contentlayer/",
+          "module",
+          "/^@shared/",
+          "absolute",
+          "/^@/components/",
+          "/^@/pages/",
+          "/utils/",
+          "/^@/models/",
+          "/^@/store/",
+          "/^@/lib/",
+          "/^@/styles/",
+          "/^@/templates/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   }

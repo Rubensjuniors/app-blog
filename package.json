@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start-local": "next dev",
+    "start-local": "PORT=3009 next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --noEmit",

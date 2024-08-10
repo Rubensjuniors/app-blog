@@ -1,5 +1,6 @@
 import React from 'react'
+import { ButtonStyle } from './styles'
 
-const Button = () => <div></div>
+const Button = () => <ButtonStyle>Opaa</ButtonStyle>
 
 export default Button

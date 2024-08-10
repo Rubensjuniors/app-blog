@@ -12,7 +12,7 @@ const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-roboto'
 })
 const MarckScript = Marck_Script({
   subsets: ['latin'],
@@ -24,21 +24,21 @@ const MarckScript = Marck_Script({
 export const metadata: Metadata = {
   title: {
     template: '%s | Rubens Junio',
-    default: 'Rubens Junio',
+    default: 'Rubens Junio'
   },
   icons: [{ rel: 'icon', url: favicon.src }],
   description: siteConfig.description,
-  authors: [{ name: 'Rubens Junio' }],
+  authors: [{ name: 'Rubens Junio' }]
 }
 
-const RootLayout = async ({ children }: LayoutProps) => {
-  return (
-    <html lang="pt-BR" suppressHydrationWarning={true}>
-      <body className={`${roboto.variable} ${MarckScript.variable} bg-gray-800 text-gray-100`}>
-        {children}
-      </body>
-    </html>
-  )
-}
+const RootLayout = async ({ children }: LayoutProps) => (
+  <html lang="pt-BR" suppressHydrationWarning={true}>
+    <body
+      className={`${roboto.variable} ${MarckScript.variable} bg-gray-800 text-gray-100`}
+    >
+      {children}
+    </body>
+  </html>
+)
 
 export default RootLayout

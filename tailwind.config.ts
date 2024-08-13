@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -6,13 +6,13 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-      }
+        DEFAULT: '1.5rem',
+      },
     },
     extend: {
       fontFamily: {
         sans: 'var(--font-roboto)',
-        'marck-script': 'var(--font-marck-script)',
+        'marck-script': 'var(--font-marck-script)'
       },
       colors: {
         'gray-100': '#E1E1E6',
@@ -31,7 +31,7 @@ const config: Config = {
 
         'red-300': '#F75A68',
         'red-500': '#AB222E',
-        'red-700': '#7A1921',
+        'red-700': '#7A1921'
       },
       screens: {
         sm: '576px',
@@ -43,11 +43,24 @@ const config: Config = {
         lg: '960px',
         // => @media (min-width: 960px) { ... }
 
-        xl: '1440px',
+        lg1: '1124px',
+        // => @media (min-width: 1124px) { ... }
+
+        xl: '1440px'
         // => @media (min-width: 1440px) { ... }
       },
-    },
+      keyframes: {
+        'slide-enter': {
+          '0%': { transform: 'translateY(-50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '01' },
+        },
+      },
+      animation: {
+        'slide-enter': 'slide-enter .4s',
+      },
+    }
   },
-  plugins: [],
-};
-export default config;
+  plugins: []
+}
+
+export default config

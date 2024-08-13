@@ -4,6 +4,8 @@ import { Roboto, Marck_Script } from 'next/font/google'
 import favicon from '@/assets/icons/Favicons.svg'
 import { siteConfig } from '@/configs/site'
 
+import Structor from '@/components/Structuor'
+
 import { LayoutProps } from './types'
 
 import '@/assets/styles/globals.css'
@@ -34,9 +36,9 @@ export const metadata: Metadata = {
 const RootLayout = async ({ children }: LayoutProps) => (
   <html lang="pt-BR" suppressHydrationWarning={true}>
     <body
-      className={`${roboto.variable} ${MarckScript.variable} bg-gray-800 text-gray-100`}
+      className={`${roboto.variable} ${MarckScript.variable} bg-gray-700 text-gray-100`}
     >
-      {children}
+      <Structor>{children}</Structor>
     </body>
   </html>
 )

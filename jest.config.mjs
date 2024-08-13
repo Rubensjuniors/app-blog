@@ -18,10 +18,19 @@ const config = {
     'src/(.*)': '<rootDir>/src/$1'
   },
   transform: {
-    '^.+\\.(t|j)sx?$': ['@swc/jest']
+    '^.+\\.(t|j)sx?$': ['@swc/jest'],
+    '^.+\\.(mjs|js)$': ['@swc/jest'],
   },
 
-  testEnvironment: 'jest-environment-jsdom'
+  testEnvironment: 'jest-environment-jsdom',
+  coverageThreshold: {
+    global: {
+      statements: 60,
+      branches: 40,
+      functions: 38,
+      lines: 61
+    }
+  }
 }
 
 export default createJestConfig(config)

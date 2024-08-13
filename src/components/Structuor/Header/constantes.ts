@@ -10,7 +10,7 @@ export const itemsHeader: Array<itemsHeaderProps> = [
   {
     id: 'about_icon-phosphor',
     title: 'Sobre mim',
-    route: '/sobre-mim',
+    route: '/sobre',
     isShow: true
   },
   {

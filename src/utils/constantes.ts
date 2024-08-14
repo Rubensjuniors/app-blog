@@ -1,6 +1,6 @@
-import { itemsHeaderProps } from './types'
+import { itemsMenuProps } from '../components/Structuor/menu/types'
 
-export const itemsHeader: Array<itemsHeaderProps> = [
+export const itemsMenu: Array<itemsMenuProps> = [
   {
     id: 'home_icon-phosphor',
     title: 'Início',

@@ -5,9 +5,6 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: '1.5rem',
-      },
     },
     extend: {
       fontFamily: {
@@ -32,6 +29,9 @@ const config: Config = {
         'red-300': '#F75A68',
         'red-500': '#AB222E',
         'red-700': '#7A1921'
+      },
+      width: {
+        content: 'min(850px, 100%)',
       },
       screens: {
         sm: '576px',

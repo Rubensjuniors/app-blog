@@ -17,12 +17,12 @@ export function ActiveLink({
   ...rest
 }: ActiveLinkProps) {
   const pathname = usePathname()
-  const className = pathname === rest.href ? activeClassName : classes
+  const className = pathname === rest.href ? activeClassName :  ''
 
   return (
     <Link
       {...rest}
-      className={`${className} sm:hover:text-red-300 sm:hover:brightness-90`}
+      className={`${className} ${classes}`}
     >
       {children}
     </Link>

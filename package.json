@@ -29,6 +29,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.5",
     "@swc/core": "^1.7.9",
     "@swc/jest": "^0.2.36",
     "@testing-library/dom": "^10.4.0",

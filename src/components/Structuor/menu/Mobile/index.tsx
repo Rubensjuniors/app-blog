@@ -13,7 +13,7 @@ const SidemenuMobile = ({
 }: {
   setIsOpenMenu: Dispatch<SetStateAction<boolean>>
 }) => (
-  <NavMobileStyle>
+  <NavMobileStyle data-testid="sidemenu-mobile">
     {itemsMenu.map(
       (item) =>
         item.isShow && (

@@ -4,7 +4,6 @@ import { ReactNode } from 'react'
 import Header from './Header'
 import Sidemenu from './menu'
 import { ContainerStructorStyle, ContainerStyle, StructorStyle } from './style'
-// import Sidemenu from './Sidemenu'
 
 interface StructorProps {
   children: ReactNode

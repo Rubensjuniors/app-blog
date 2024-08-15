@@ -1,10 +1,9 @@
 import { ReactNode } from 'react'
 
 // import Footer from './Footer'
-import Header from './Header'
+import Header from './header'
 import Sidemenu from './menu'
 import { ContainerStructorStyle, ContainerStyle, StructorStyle } from './style'
-// import Sidemenu from './Sidemenu'
 
 interface StructorProps {
   children: ReactNode

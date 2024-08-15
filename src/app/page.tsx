@@ -1,9 +1,5 @@
-function Home() {
-  return (
-    <>
-      <div className="h-full w-full"></div>
-    </>
-  )
-}
+import CardProfile from '@/components/Home/CardProfile'
+
+const Home = () => <CardProfile />
 
 export default Home

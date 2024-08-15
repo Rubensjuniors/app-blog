@@ -16,11 +16,13 @@ describe('<Structor>', () => {
     const structorComponent = screen.getByTestId('structor')
     const headerComponent = screen.getByTestId('header')
     const sidemenuComponent = screen.getByTestId('sidemenu')
+    const footerComponent = screen.getByTestId('footer-componente')
     const children = screen.getByText('teste')
 
     expect(structorComponent).toBeInTheDocument()
     expect(headerComponent).toBeInTheDocument()
     expect(sidemenuComponent).toBeInTheDocument()
+    expect(footerComponent).toBeInTheDocument()
     expect(children).toBeInTheDocument()
 
   })

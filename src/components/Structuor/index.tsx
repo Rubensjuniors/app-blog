@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
-// import Footer from './Footer'
+import Footer from './Footer'
 import Header from './Header'
 import Sidemenu from './menu'
-import { ContainerStructorStyle, ContainerStyle, StructorStyle } from './style'
+import * as S from './style'
 
 interface StructorProps {
   children: ReactNode
@@ -11,16 +11,16 @@ interface StructorProps {
 
 const Structor = ({ children }: StructorProps) => (
   <>
-    <ContainerStyle data-testid="structor">
+    <S.ContainerStyle data-testid="structor">
       <Sidemenu />
-      <StructorStyle>
+      <S.StructorStyle>
         <Header />
-        <ContainerStructorStyle>
+        <S.ContainerStructorStyle>
           <div>{children}</div>
-          {/* <Footer /> */}
-        </ContainerStructorStyle>
-      </StructorStyle>
-    </ContainerStyle>
+          <Footer />
+        </S.ContainerStructorStyle>
+      </S.StructorStyle>
+    </S.ContainerStyle>
   </>
 )
 

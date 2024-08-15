@@ -44,7 +44,10 @@ const Header = () => {
             <Link href="/">
               <Icon id="icon_logo" iconSize={48} />
             </Link>
-            <button data-testid="button-sidemenu" onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}>
+            <button
+              data-testid="button-sidemenu"
+              onClick={() => setIsOpenSidemenu(!isOpenSidemenu)}
+            >
               <Icon id="list_icon-phosphor" iconSize={33} />
             </button>
           </HeaderWrapperStyle>

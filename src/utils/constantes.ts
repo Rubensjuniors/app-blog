@@ -26,3 +26,21 @@ export const itemsMenu: Array<itemsMenuProps> = [
     isShow: false
   }
 ]
+
+export const SOCIAIS = [
+  {
+    id: 'instagram_icon-phosphor',
+    name: 'instagram',
+    url: 'https://www.instagram.com/rubs.dev',
+  },
+  {
+    id: 'github_icon-phosphor',
+    name: 'github',
+    url: 'https://github.com/Rubensjuniors',
+  },
+  {
+    id: 'linkedin_icon-phosphor',
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/rubens-junio-603979250',
+  },
+]

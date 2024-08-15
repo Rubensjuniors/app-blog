@@ -1,39 +1,33 @@
 import Link from 'next/link'
 
 import Icon from '@/components/Basic/Icon'
-import { ActiveLink } from '@/components/Basic/Link'
 
 import { itemsMenu } from '../../../utils/constantes'
 
-import { ItemMenuStyle, ItemMenuWrapperStyle, NavStyle } from './style'
+import ItemMenu from './Item'
+import * as S from './style'
 
 const Sidemenu = () => (
-  <NavStyle data-testid="sidemenu">
+  <S.NavStyle data-testid="sidemenu">
     <Link href="/" className="lg:pl-2">
       <Icon id="icon_logo" iconSize={42} />
     </Link>
 
-    <ItemMenuWrapperStyle>
+    <div>
       {itemsMenu.map(
         (item) =>
           item.isShow && (
-            <ActiveLink
-              href={item.route}
+            <ItemMenu
+              item={item}
               key={item.id}
-              activeClassName="text-red-300"
               classes="flex w-full items-center gap-7
               p-4 transition-all sm:hover:text-red-300
               sm:hover:brightness-90 whitespace-nowrap"
-            >
-              <ItemMenuStyle>
-                <Icon id={item.id} iconSize={26} />
-                {item.title}
-              </ItemMenuStyle>
-            </ActiveLink>
+            />
           )
       )}
-    </ItemMenuWrapperStyle>
-  </NavStyle>
+    </div>
+  </S.NavStyle>
 )
 
 export default Sidemenu

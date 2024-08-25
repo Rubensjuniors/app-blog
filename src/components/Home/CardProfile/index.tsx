@@ -1,25 +1,31 @@
 import Image from 'next/image'
 
+import { allProfiles } from 'contentlayer/generated'
+
 import * as S from './styles'
 
-const CardProfile = () => (
-  <S.WrapperCard>
-    <S.Picture>
-      <Image
-        className="w-full rounded-full shadow-sm"
-        src="https://avatars.githubusercontent.com/u/104171589?v=4"
-        width={44}
-        height={44}
-        alt=""
-        priority
-      />
-    </S.Picture>
+const CardProfile = () => {
+  const contentProfile = allProfiles.map((profile) => profile)[0]
 
-    <S.Title>Rubens Junio</S.Title>
-    <S.Bio>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, dolore?
-    </S.Bio>
-  </S.WrapperCard>
-)
+  return (
+    <S.WrapperCard data-testId="intro-home">
+      <S.Picture>
+        <Image
+          className="w-full rounded-full shadow-sm"
+          src={contentProfile.profile}
+          width="0"
+          height="0"
+          alt="foto de perfil"
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          priority
+        />
+      </S.Picture>
+
+      <S.Title>{contentProfile.name}</S.Title>
+      <S.Bio>{contentProfile.description}</S.Bio>
+    </S.WrapperCard>
+  )
+}
 
 export default CardProfile

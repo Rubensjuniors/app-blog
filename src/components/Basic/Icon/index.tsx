@@ -24,11 +24,13 @@ const Icon = ({ id, iconSize = 24, classIcon }: iconProps) => {
       alt={id}
       width={iconSize}
       height={iconSize}
+      sizes="100vw"
       src={getCorrespondingIcon(id)}
       className={classIcon}
       data-testid={id}
       priority={false}
       placeholder="empty"
+      style={{ width: '100%', height: 'auto' }}
       id="icons"
     />
   )

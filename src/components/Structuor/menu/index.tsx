@@ -9,8 +9,8 @@ import * as S from './style'
 
 const Sidemenu = () => (
   <S.NavStyle data-testid="sidemenu">
-    <Link href="/" className="lg:pl-2">
-      <Icon id="icon_logo" iconSize={42} />
+    <Link href="/" className="lg:pl-1 w-14">
+      <Icon id="icon_logo" iconSize={0} />
     </Link>
 
     <div>

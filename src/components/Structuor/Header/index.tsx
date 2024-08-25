@@ -41,8 +41,8 @@ const Header = () => {
             {titleHeader}
           </span>
           <HeaderWrapperStyle>
-            <Link href="/">
-              <Icon id="icon_logo" iconSize={48} />
+            <Link href="/" className="w-16">
+              <Icon id="icon_logo" iconSize={0} />
             </Link>
             <button
               data-testid="button-sidemenu"

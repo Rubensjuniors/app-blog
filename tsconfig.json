@@ -18,8 +18,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
+    "types": ["jest", "node"],
     "typeRoots": ["node_modules/@types", "node_modules/@testing-library"]
   },
   "include": [
@@ -29,7 +31,8 @@
     ".next/types/**/*.ts",
     "jest.config.mjs",
     "next.config.mjs",
-    "postcss.config.mjs"
+    "postcss.config.mjs",
+    "./.contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

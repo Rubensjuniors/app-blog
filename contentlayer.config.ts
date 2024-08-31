@@ -4,11 +4,11 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 
-import { Post, Profile } from './config/contentLayer/DocumentsTypes'
+import { Post } from './config/contentLayer/DocumentsTypes'
 
 export default makeSource({
-  contentDirPath: './public/content',
-  documentTypes: [Post, Profile],
+  contentDirPath: './public/contents',
+  documentTypes: [Post],
   onExtraFieldData: 'ignore',
   mdx: {
     remarkPlugins: [remarkGfm],

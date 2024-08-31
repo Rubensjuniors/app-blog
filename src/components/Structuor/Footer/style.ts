@@ -31,14 +31,6 @@ text-sm
 font-light
 `
 
-export const List = tw.ul`
-flex
-items-center
-gap-3
-sm:mr-6
-sm:gap-4
-`
-
 export const Copyright = tw.span`
 md:text-md
 text-sm

@@ -26,7 +26,7 @@ type MdxProps = {
   code: string
 }
 
-export const Mdx = ({ code = '' }: MdxProps) => {
+const Mdx = ({ code = '' }: MdxProps) => {
   const Component = useMDXComponent(code)
 
   return (
@@ -35,3 +35,5 @@ export const Mdx = ({ code = '' }: MdxProps) => {
     </div>
   )
 }
+
+export default Mdx

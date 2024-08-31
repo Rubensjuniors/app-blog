@@ -10,12 +10,12 @@ interface ActiveLinkProps extends LinkProps {
   classes?: string
 }
 
-export function ActiveLink({
+const ActiveLink = ({
   children,
   activeClassName,
   classes = '',
   ...rest
-}: ActiveLinkProps) {
+}: ActiveLinkProps) => {
   const pathname = usePathname()
   const className = pathname === rest.href ? activeClassName :  ''
 
@@ -28,3 +28,5 @@ export function ActiveLink({
     </Link>
   )
 }
+
+export default ActiveLink

@@ -1,3 +1,5 @@
+import { siteConfig } from '@/configs/site'
+
 import { itemsMenuProps } from '../components/Structuor/menu/types'
 
 export const itemsMenu: Array<itemsMenuProps> = [
@@ -31,16 +33,16 @@ export const SOCIAIS = [
   {
     id: 'instagram_icon-phosphor',
     name: 'instagram',
-    url: 'https://www.instagram.com/rubs.dev',
+    url: siteConfig.links.instagram
   },
   {
     id: 'github_icon-phosphor',
     name: 'github',
-    url: 'https://github.com/Rubensjuniors',
+    url: siteConfig.links.github
   },
   {
     id: 'linkedin_icon-phosphor',
     name: 'linkedin',
-    url: 'https://www.linkedin.com/in/rubens-junio-603979250',
-  },
+    url: siteConfig.links.linkedin
+  }
 ]

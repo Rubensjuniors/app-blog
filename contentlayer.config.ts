@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm'
 import { Post } from './config/contentLayer/DocumentsTypes'
 
 export default makeSource({
-  contentDirPath: './public/content',
+  contentDirPath: './public/contents',
   documentTypes: [Post],
   onExtraFieldData: 'ignore',
   mdx: {

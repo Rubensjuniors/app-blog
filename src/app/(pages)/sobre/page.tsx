@@ -5,7 +5,8 @@ import { siteConfig } from '@/configs/site'
 import { Card } from '@/components/Basic'
 import LinksSociais from '@/components/Sociais'
 
-import * as S from './page.styles'
+import { aboutMetext } from './constants'
+import * as S from './styles'
 
 const About = () => (
   <S.AboutContainer>
@@ -37,6 +38,17 @@ const About = () => (
         <S.ProfileInfoName>{siteConfig.name}</S.ProfileInfoName>
         <S.ProfileInfoBio>{siteConfig.bio}</S.ProfileInfoBio>
       </S.ProfileInfosWrapper>
+    </Card>
+
+    <Card
+      title={'Sobre Mim'}
+      classNames="w-full p-4 flex flex-col items-start gap-2"
+    >
+      <S.AboutMeWrapper>
+        {aboutMetext.map((text) => (
+          <S.AboutMeText key={text}>{text}</S.AboutMeText>
+        ))}
+      </S.AboutMeWrapper>
     </Card>
   </S.AboutContainer>
 )

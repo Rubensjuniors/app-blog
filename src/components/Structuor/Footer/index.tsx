@@ -1,28 +1,22 @@
-import { allProfiles } from 'contentlayer/generated'
+import { siteConfig } from '@/configs/site'
 
 import LinksSociais from '@/components/Sociais'
 
 import * as S from './style'
 
-const Footer = () => {
-  const { name, work } = allProfiles.map((profile) => profile)[0]
+const Footer = () => (
+  <S.Footer data-testid="footer-componente">
+    <S.Wrapper>
+      <div>
+        <S.Title>{siteConfig.name}</S.Title>
+        <S.Bio>{siteConfig.title}</S.Bio>
+      </div>
 
-  return (
-    <S.Footer data-testid="footer-componente">
-      <S.Wrapper>
-        <div>
-          <S.Title>{name}</S.Title>
-          <S.Bio>{work}</S.Bio>
-        </div>
+      <LinksSociais />
+    </S.Wrapper>
 
-        <LinksSociais />
-      </S.Wrapper>
-
-      <S.Copyright>
-        Todos os direitos reseverdos © Rubens junio 2024
-      </S.Copyright>
-    </S.Footer>
-  )
-}
+    <S.Copyright>{siteConfig.copyright}</S.Copyright>
+  </S.Footer>
+)
 
 export default Footer

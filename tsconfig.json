@@ -19,6 +19,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "baseUrl": ["."],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "types": ["jest", "node"],
@@ -32,7 +33,7 @@
     "jest.config.mjs",
     "next.config.mjs",
     "postcss.config.mjs",
-    "./.contentlayer/generated"
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

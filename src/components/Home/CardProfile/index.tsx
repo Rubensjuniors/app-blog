@@ -5,14 +5,14 @@ import { allProfiles } from 'contentlayer/generated'
 import * as S from './styles'
 
 const CardProfile = () => {
-  const contentProfile = allProfiles.map((profile) => profile)[0]
+  const { profile, name, description } = allProfiles.map((profile) => profile)[0]
 
   return (
     <S.WrapperCard data-testId="intro-home">
       <S.Picture>
         <Image
           className="w-full rounded-full shadow-sm"
-          src={contentProfile.profile}
+          src={profile}
           width="0"
           height="0"
           alt="foto de perfil"
@@ -22,8 +22,8 @@ const CardProfile = () => {
         />
       </S.Picture>
 
-      <S.Title>{contentProfile.name}</S.Title>
-      <S.Bio>{contentProfile.description}</S.Bio>
+      <S.Title>{name}</S.Title>
+      <S.Bio>{description}</S.Bio>
     </S.WrapperCard>
   )
 }

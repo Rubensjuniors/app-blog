@@ -2,8 +2,7 @@
 
 import { SetStateAction } from 'react'
 
-import Icon from '@/components/Basic/Icon'
-import { ActiveLink } from '@/components/Basic/Link'
+import { ActiveLink, Icon } from '@/components/Basic'
 
 import { itemsMenuProps } from '../types'
 import * as S from './style'

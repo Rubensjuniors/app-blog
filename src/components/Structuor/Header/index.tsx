@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 
 import useWindowSize from '@/hooks/use-window-size'
 
-import Icon from '@/components/Basic/Icon'
+import { Icon } from '@/components/Basic'
 
 import { itemsMenu } from '@/utils/constantes'
 import { getTitleWithPath } from '@/utils/header'

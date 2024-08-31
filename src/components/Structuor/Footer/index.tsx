@@ -1,32 +1,28 @@
-import Icon from '@/components/Basic/Icon'
+import { allProfiles } from 'contentlayer/generated'
 
-import { SOCIAIS } from '@/utils/constantes'
+import LinksSociais from '@/components/Sociais'
 
 import * as S from './style'
 
-const Footer = () => (
-  <S.Footer data-testid="footer-componente">
-    <S.Wrapper>
-      <div>
-        <S.Title>Rubens Junio</S.Title>
-        <S.Bio>Software engenieer</S.Bio>
-      </div>
+const Footer = () => {
+  const { name, work } = allProfiles.map((profile) => profile)[0]
 
-      <S.List>
-        {SOCIAIS.map((social) => (
-          <li key={social.name}>
-            <a href={social.url}>
-              <Icon id={social.id} iconSize={32} />
-            </a>
-          </li>
-        ))}
-      </S.List>
-    </S.Wrapper>
+  return (
+    <S.Footer data-testid="footer-componente">
+      <S.Wrapper>
+        <div>
+          <S.Title>{name}</S.Title>
+          <S.Bio>{work}</S.Bio>
+        </div>
 
-    <S.Copyright>
-      Todos os direitos reseverdos © Rubens junio 2024
-    </S.Copyright>
-  </S.Footer>
-)
+        <LinksSociais />
+      </S.Wrapper>
+
+      <S.Copyright>
+        Todos os direitos reseverdos © Rubens junio 2024
+      </S.Copyright>
+    </S.Footer>
+  )
+}
 
 export default Footer

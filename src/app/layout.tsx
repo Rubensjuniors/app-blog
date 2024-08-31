@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: 'Rubens Junio'
   },
   icons: [{ rel: 'icon', url: favicon.src }],
-  description: siteConfig.description,
+  description: siteConfig.subtitle,
   authors: [{ name: 'Rubens Junio' }]
 }
 

@@ -4,9 +4,13 @@
 
 @layer base {
   img {
-      width: auto;
-      height: auto;
+    width: auto;
+    height: auto;
   }
+}
+
+.title {
+  @apply text-4xl font-bold after:block after:h-1 after:w-16 after:rounded-sm after:bg-red-300;
 }
 
 * {

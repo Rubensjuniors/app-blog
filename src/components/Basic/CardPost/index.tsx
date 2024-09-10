@@ -30,7 +30,7 @@ const CardPost = ({
           >
             <Image
               className="h-full rounded-md object-cover object-center"
-              src={`/assets/images/${image}`}
+              src={image}
               width={80}
               height={80}
               alt="foto de perfil"

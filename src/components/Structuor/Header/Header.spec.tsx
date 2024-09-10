@@ -12,6 +12,7 @@ jest.mock('next/navigation', () => ({
   ...jest.requireActual('next/navigation'),
   usePathname: jest.fn(() => '/')
 }))
+
 describe('<Header />', () => {
   afterEach(() => {
     jest.clearAllTimers()

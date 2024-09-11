@@ -1,0 +1,2 @@
+npx husky add .husky/pre-push "yarn quality-check && yarn test"
+

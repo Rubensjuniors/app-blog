@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,9 +18,21 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "baseUrl": ["."],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
+    "typeRoots": ["node_modules/@types", "node_modules/@testing-library"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jest.config.mjs",
+    "next.config.mjs",
+    "postcss.config.mjs",
+    ".contentlayer/generated"
+  ],
   "exclude": ["node_modules"]
 }

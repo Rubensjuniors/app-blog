@@ -1,128 +1,175 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true
+    "node": true,
+    "es2021": true
   },
   "settings": {
     "react": {
+      "pragma": "React",
       "version": "detect"
     }
+  },
+  "globals": {
+    "document": false,
+    "JSX": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
-    "plugin:jest-dom/recommended",
-    "plugin:testing-library/react"
+    "eslint:recommended",
+    "next"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "createDefaultProgram": true
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "react-hooks",
-    "eslint-plugin-import-helpers",
-    "prettier",
-    "jest",
-    "jest-dom",
-    "testing-library"
-  ],
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "eslint-plugin-import-helpers"],
   "rules": {
-    // react
+		"camelcase": "off",
+    /* React Rules */
+    "react/prop-types": "off",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "react/jsx-wrap-multilines": [
-      "error",
-      {
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
-        "arrow": "parens-new-line",
-        "condition": "parens-new-line",
-        "logical": "parens-new-line"
-      }
-    ],
-
-    /* Jest Rules */
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
-
-    // typescript
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    /* Typescript Rules */
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-use-before-define": "error",
     "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-var-requires": 0,
-
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
     /* App Rules */
-    "no-multi-spaces": "error",
-    "no-duplicate-imports": ["warn", { "includeExports": true }],
-    "no-dupe-args": "error",
-    "no-dupe-keys": "warn",
-    "no-empty": "warn",
-    "jsx-quotes": ["error", "prefer-double"],
-    "no-console": "error",
     "quotes": ["error", "single"],
-    "object-curly-spacing": ["warn", "always"],
-    "semi": ["error", "never"],
-    "indent": [
+    "class-methods-use-this": 0,
+    "require-jsdoc": 0,
+    "sort-imports": 0,
+    "newline-after-var": "error",
+    "dot-notation": "error",
+    "prefer-template": "error",
+    "no-loop-func": "error",
+    "no-param-reassign": "error",
+    "guard-for-in": "error",
+    "no-nested-ternary": "error",
+    "no-useless-constructor": "error",
+    "no-array-constructor": "error",
+    "keyword-spacing": ["error"],
+    "eqeqeq": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "max-params": ["error", 4],
+    "init-declarations": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-bitwise": [
       "error",
-      2,
       {
-        "ignoredNodes": ["TemplateLiteral"],
-        "SwitchCase": 1
+        "int32Hint": true
       }
     ],
-    "no-multiple-empty-lines": [
+    "no-use-before-define": 0,
+    "max-lines": [
       "error",
       {
-        "max": 1,
-        "maxEOF": 0
+        "max": 200,
+        "skipComments": true
+      }
+    ],
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
       }
     ],
     "max-len": [
       "error",
       {
         "code": 120,
-        "ignoreComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true
+        "comments": 70,
+        "tabWidth": 4
+      }
+    ],
+    "max-lines-per-function": [
+      "error",
+      {
+        "max": 150,
+        "skipComments": true
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": ["time", "timeEnd", "warn", "error"]
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
+    "no-unused-vars": 0,
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      }
+    ],
+    "semi": ["error", "never"],
+    "complexity": [
+      "error",
+      {
+        "max": 9
       }
     ],
     "import-helpers/order-imports": [
-      "warn",
+      "error",
       {
         "newlinesBetween": "always",
         "groups": [
           ["/^react/", "/^next/"],
+          // "/^contentlayer/",
           "module",
           "/^@shared/",
           "absolute",
-          "/^components/",
-          "/^pages/",
+          "/^@/components/",
+          "/^@/pages/",
           "/utils/",
-          "/constants/",
-          "/^store/",
-          "/^styles/",
-          "/^templates/",
+          "/^@/models/",
+          "/^@/store/",
+          "/^@/lib/",
+          "/^@/styles/",
+          "/^@/templates/",
           ["parent", "sibling", "index"]
         ],
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        }
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
-    ]
+    ],
+    "no-undef": "off"
   }
 }

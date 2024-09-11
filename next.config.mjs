@@ -1,16 +1,11 @@
+import { withContentlayer } from 'next-contentlayer'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        hostname: 'images.prismic.io',
-      },
-      {
-        hostname: 'images.unsplash.com',
-      },
-    ],
-
-  }
+  reactStrictMode: true,
+  experimental: {
+    swcMinify: true
+  },
 }
 
-export default nextConfig
+export default withContentlayer(nextConfig)

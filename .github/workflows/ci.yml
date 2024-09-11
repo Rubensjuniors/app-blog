@@ -30,8 +30,8 @@ jobs:
       - name: upgrade dependencies
         run: yarn upgrade
 
-      - name: type-check
-        run: yarn type-check
+      - name: lint
+        run: yarn lint
 
       - name: Test
         run: yarn test

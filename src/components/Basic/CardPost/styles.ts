@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import tw from 'tailwind-styled-components'
 
 import { PostProps } from './types'

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import tw from 'tailwind-styled-components'
 
 export const HeaderStyles = tw.header`sticky left-0 top-0 z-10 flex items-center px-4 py-4 shadow-md backdrop-blur-lg sm:px-8 sm:py-5`

@@ -28,7 +28,7 @@ const components: MDXComponents = {
       {children}
     </ol>
   ),
-  li:({ className = '', children, ...props }) => (
+  li: ({ className = '', children, ...props }) => (
     <li className={`text-md p-2${className}`} {...props}>
       {children}
     </li>

@@ -15,7 +15,7 @@ const useHeader = () => {
   const isDesktopAndIsInPost = isInPost && width >= 960
 
   const handleToggleSideMenu = useCallback(() => {
-    setIsOpenSidemenu(prevState => !prevState)
+    setIsOpenSidemenu((prevState) => !prevState)
   }, [])
 
   useEffect(() => {

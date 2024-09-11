@@ -6,7 +6,6 @@ export interface PostProps {
   tags: string[]
   publicationDate: string
   uid: string | number
-  path?: string
 }
 
 export enum TYPES_POST_ICON {

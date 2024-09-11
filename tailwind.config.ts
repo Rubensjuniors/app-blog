@@ -4,7 +4,7 @@ const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     container: {
-      center: true,
+      center: true
     },
     extend: {
       fontFamily: {
@@ -31,7 +31,7 @@ const config: Config = {
         'red-700': '#7A1921'
       },
       width: {
-        content: 'min(850px, 100%)',
+        content: 'min(850px, 100%)'
       },
       screens: {
         sm: '576px',
@@ -52,12 +52,12 @@ const config: Config = {
       keyframes: {
         'slide-enter': {
           '0%': { transform: 'translateY(-50px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '01' },
-        },
+          '100%': { transform: 'translateY(0px)', opacity: '01' }
+        }
       },
       animation: {
-        'slide-enter': 'slide-enter .4s',
-      },
+        'slide-enter': 'slide-enter .4s'
+      }
     }
   },
   plugins: []

@@ -6,11 +6,11 @@ export type SiteConfig = {
   title: string
   subtitle: string
   copyright: string
-  url: string;
+  url: string
   links: {
-    youtube?: string;
-    github: string;
-    instagram: string;
-    linkedin: string;
-  };
+    youtube?: string
+    github: string
+    instagram: string
+    linkedin: string
+  }
 }

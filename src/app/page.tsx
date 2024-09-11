@@ -11,7 +11,7 @@ const Home = () => {
       <CardProfile />
 
       <div>
-        <h1 className="title mt-6">Mais recentes</h1>
+        <h1 className="title mt-6">Mais Recentes</h1>
       </div>
 
       {posts.map((p) => (

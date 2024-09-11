@@ -10,7 +10,7 @@
 }
 
 .title {
-  @apply text-4xl font-bold after:block after:h-1 after:w-16 after:rounded-sm after:bg-red-300;
+  @apply text-3xl font-bold after:block after:h-1 after:w-16 after:rounded-sm after:bg-red-300 sm:text-4xl;
 }
 
 * {

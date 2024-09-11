@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     swcMinify: true
-  },
+  }
 }
 
 export default withContentlayer(nextConfig)

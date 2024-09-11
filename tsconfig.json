@@ -22,7 +22,6 @@
       "baseUrl": ["."],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "types": ["jest", "node"],
     "typeRoots": ["node_modules/@types", "node_modules/@testing-library"]
   },
   "include": [

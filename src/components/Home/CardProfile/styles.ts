@@ -5,7 +5,6 @@ flex
 w-full
 flex-col
 gap-4
-p-5
 `
 export const Picture = tw.picture`
 h-16

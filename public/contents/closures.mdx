@@ -1,0 +1,76 @@
+---
+uid: o-que-sao-closures-no-javascript
+title: O que São Closures no JavaScript?
+description: Closures e um conceito fundamental em JavaScript (Não so no JavaScript mas nas maiorias das linguagens de progamação). Conforme o MND , independente do nível de experiência, muitos profissionais ainda possuem dúvidas a respeito do que são closures espero que esse artigo te ajude a entender o que são Closures.
+date: 2024-09-10 09:41:13
+image: /assets/images/posts/closures/closures.png
+tags: [JavaScript, 33ConceitosDoJS]
+---
+
+# O que São Closures?
+Em JavaScript, as Closures são criadas sempre que uma função é criada, onde uma função interna tem acesso às variáveis da função externa, assim criando uma cadeia de escopos, sendo eles: escopo local, que é o seu próprio escopo, o escopo da função externa e o escopo global. Se quiser ver mais sobre cada um dos escopos citados acima, tem este artigo aqui onde falo sobre os [escopos no JavaScript](https://medium.com/@rubensjunio2110/escopos-no-javascript-3a5483a0392e "escopos no JavaScript")
+
+veja alguns exemplos.
+
+# Exemplo 1
+```typescript
+const showName = () => {
+ const name = 'Otavio'
+
+ function fullName() {
+   const lastName = 'Junio'
+  console.log(name  + ' ' + lastName)
+ }
+
+  return fullName
+}
+
+const name = showName()
+name() // 'Otavio Junio'
+```
+
+No exemplo acima, temos duas funções: uma externa (showName) e uma interna (fullName). Dentro da função externa, temos uma variável name declarada em seu escopo local e a função fullName (“uma função que imprime a variável name mais a variável lastName no console”).
+
+A função fullName possui uma variável declarada em seu escopo local, mas podemos ver que ela precisa da variável name que está fora do seu escopo. No entanto, ela também tem acesso às variáveis dentro da função externa showName, que é a função pai da fullName.
+
+Note que ao atribuirmos a função showName à variável name, assim que executarmos a variável name usando (), pois o que está retornando da função showName é uma função, vamos obter ‘Otavio Junio’ no console.
+
+# Exemplo 2
+```typescript
+function count() {
+  let num = 0;
+
+  function increment() {
+    num++;
+    console.log(num);
+  }
+
+   function decrement() {
+    num--;
+    console.log(num);
+  }
+
+  return { increment, decrement }
+}
+
+const activeCount = count()
+
+ativar.increment() // 1
+ativar.decrement() // 0
+```
+
+No exemplo acima, temos um caso clássico de closures. Na função count, temos uma variável num e outras duas funções, increment e decrement. Os próprios nomes das funções já indicam o que elas fazem: uma aumenta e a outra diminui.
+
+Tanto a função increment quanto a decrement não possuem nenhuma variável local própria; no entanto, elas têm acesso às variáveis dentro da função externa count. Portanto, elas podem usar a variável num declarada em count.
+
+Note que retornamos um objeto na função count. Assim, ao atribuirmos a função count à variável activeCount e chamá-la, colocando um ponto (.), podemos ter acesso tanto à função increment quanto à decrement, como se fosse um objeto.
+
+# Como isso e possivel?
+Nos exemplos acima, podemos acessar as variáveis da função externa nas funções internas declaradas. Isso é possível porque o JavaScript procura uma variável primeiro no próprio escopo da função e, se não a encontrar, busca no escopo da função pai, e assim por diante, até alcançar o escopo global.
+
+![Imagem Closures](/assets/images/posts/closures/closures-2.webp)
+
+Note que dentro de fullName usamos duas variáveis para exibir no console: name e lastName. Como não temos essas variáveis no nosso escopo local, o JavaScript passa para o escopo da função pai (showName). Ele encontra lastName, mas name não está no escopo da função pai, então ele passa para o escopo global, onde a variável name está declarada. Isso é um conceito do escopo léxico no JavaScript.
+
+# Observações finais
+Espero que este post tenha sido útil para compreender o que são closures em JavaScript. Como você pode ver, entender os detalhes básicos de como elas funcionam torna muito mais fácil detectar closures em nossos códigos, sem mencionar que evita muita dor de cabeça na hora de depurar.

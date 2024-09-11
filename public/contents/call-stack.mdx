@@ -1,0 +1,72 @@
+---
+uid: pilha-de-chamadas-javaScript-call-stack
+title: Pilha de Chamadas JavaScript Call Stack
+description: Se você já se perguntou como o JavaScript gerencia o fluxo de execução das suas funções, a resposta está na "pilha de chamadas" (call stack). Este mecanismo é fundamental para o entendimento da execução do seu código JavaScript. Vamos explorar o que é a pilha de chamadas, como ela funciona e como isso influencia o comportamento do seu código.
+date: 2024-09-10 08:41:13
+image: /assets/images/posts/callStack/call-stack.webp
+tags: [JavaScript, 33ConceitosDoJS]
+---
+
+# O que é a Pilha de Chamadas (Call Stack)?
+A pilha de chamadas, ou call stack, é uma estrutura de dados que mantém o controle de todas as chamadas de função em execução no seu código JavaScript. Quando você chama uma função, ela é colocada no topo da pilha de chamadas. Pense na pilha de chamadas como uma pilha de pneus. Você tem uma pilha com 5 pneus. Qual pneu você pegaria? O segundo pneu de baixo para cima? Não, você pega o que está no topo da pilha. A call stack segue o conceito de LIFO (Last In, First Out), o que significa que a última função colocada na pilha é a primeira a sair quando a função retorna.
+
+# Exemplo
+```typescript
+function multiply(a, b) {
+  return a * b
+}
+
+function square(n) {
+ return multiply(n, n)
+}
+
+function printSquare(n) {
+ const getSquare = square(n)
+ console.log(getSquare)
+}
+
+printSquare(4) // 8
+```
+
+Temos 3 funções: **multiply, square e printSquare.** Note que chamamos **multiply** dentro de **square** e, dentro de **printSquare**, adicionamos o valor de **square** em uma variável **getSquare** e imprimimos no console essa variável. Assim, quando chamarmos **printSquare** e passarmos um número como parâmetro, vamos obter o valor do quadrado no console.
+
+Mas uma função está dentro da outra. Como o JavaScript vai ler isso? É aí que entra a Call Stack, ou pilha de chamadas. Vamos ver como seria a execução desse trecho de código.
+
+# Execução
+1. **printSquare(4)** é chamada.
+2. A execução entra na função **printSquare** com **n** igual a **4**.
+3. Dentro de **printSquare**, a função **square(n)** é chamada.
+4. A execução entra na função **square** com **n** igual a **4**.
+5. Dentro de **square**, a função **multiply(n, n)** é chamada.
+6. A execução entra na função **multiply** com **a** e **b** ambos iguais a **4**.
+7. A função **multiply** retorna o resultado de **4 * 4**, que é **16**.
+8. A execução sai da função **multiply**.
+9. A função **square** retorna o resultado de **multiply(n, n)**, que é **16**.
+10. A execução sai da função **square**.
+11. Dentro de **printSquare**, o valor retornado de **square(n)** que é **16** é atribuído à constante **getSquare**.
+12. **console.log(getSquare)** é chamado.
+13. O valor de **getSquare**, que é **16**, é impresso no console.
+14. A execução sai da função **printSquare**.
+
+Essa e a ordem de execução do treco de codigo acima agora vamos vemor ilustrar como ficaria na Call Stack.
+
+![Imagem Call Stack](/assets/images/posts/callStack/call-stack-2.webp)
+
+E como tinha citado acima, a Call Stack segue o princípio LIFO (Last-In-First-Out). Como podem ver na foto, primeiro entra a função printSquare, depois a square e, por último, a multiply. A ordem de saída é ao contrário: primeiro sai a multiply, depois a square e, por último, a printSquare. Quando a execução da função atual for concluída, o mecanismo JavaScript removerá automaticamente o contexto da pilha de chamadas e retornará ao seu pai.
+
+Então, assim que a execução de cada função for concluída, ela será removida da pilha de chamadas.
+
+# Contexto de execução
+Na imagem acima, podemos observar uma função global já presente em nossa pilha de chamadas. Esse objeto global faz parte do contexto de execução criado pelo JavaScript. Quando o JavaScript inicia a execução do nosso código, ele estabelece um contexto global e o insere na pilha de execução. Sempre que uma função é chamada, o mecanismo do JavaScript cria um contexto de execução para essa função e o coloca no topo da pilha de chamadas para começar sua execução.
+
+# Qual e o contexto de execução?
+Contexto de execução é um conceito abstrato de um ambiente onde o código JavaScript é avaliado e executado. Sempre que um código é executado, ele é executado dentro de um contexto de execução, contendo informações sobre as variáveis, funções e objetos que estão disponíveis para o código que está sendo executado.
+
+Existem dois tipos principais de contexto de execução no JavaScript: o contexto global e o contexto de função. O contexto global é onde escrevemos o nosso código diretamente, fora de qualquer função específica. Por outro lado, o contexto de função refere-se ao ambiente criado dentro das chaves { } de uma função, onde o código dessa função é executado.
+
+![Imagem Call Stack](/assets/images/posts/callStack/call-stack-3.webp)
+
+Você pode ver mais sobre o contexto de execução nesse artigo aqui ["Artigo referência".](https://medium.com/@nimaab1992/execution-context-and-event-loop-1143d7805981#:~:text=There%20are%20two%20types%20of,representing%20the%20function's%20local%20scope "Artigo referência")
+
+# Conclusão
+Resumindo, a pilha de chamadas em JavaScript é como um organizador que controla a ordem das funções que estão sendo executadas. Seguindo o princípio de “último a entrar, primeiro a sair”, ela garante que cada função seja tratada na hora certa. Entender como isso funciona ajuda não só a escrever código mais fácil de entender, mas também a resolver problemas que possam surgir durante a execução. É um conceito fundamental para qualquer desenvolvedor que queira melhorar a eficiência e o desempenho de seus programas em JavaScript.

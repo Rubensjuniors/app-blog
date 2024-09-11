@@ -11,14 +11,27 @@ const components: MDXComponents = {
     </h1>
   ),
   pre: ({ className = '', children, ...props }) => (
-    <pre className={`text-md mb-4 mt-6 overflow-x-auto rounded-lg py-4 ${className}`} {...props}>
+    <pre
+      className={`text-md mb-4 mt-6 overflow-x-auto rounded-lg py-4 ${className}`}
+      {...props}
+    >
       {children}
     </pre>
   ),
   code: ({ className = '', children, ...props }) => (
-    <code className={`text-md relative rounded   ${className}`} {...props}>
+    <code className={`text-md relative rounded ${className}`} {...props}>
       {children}
     </code>
+  ),
+  ol: ({ className = '', children, ...props }) => (
+    <ol className={`p-4 ${className}`} {...props}>
+      {children}
+    </ol>
+  ),
+  li:({ className = '', children, ...props }) => (
+    <li className={`text-md p-2${className}`} {...props}>
+      {children}
+    </li>
   )
 }
 

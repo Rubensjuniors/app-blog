@@ -16,7 +16,6 @@
     "test:coverage": "yarn test --coverage --detectOpenHandles",
     "test:coverage:text": "yarn test --coverageReporters='text-summary'",
     "quality-check": "yarn run lint && yarn run type-check && yarn run prettier:check",
-    "quality-check-lint": "yarn run lint && yarn run prettier:check",
     "prepare": "husky"
   },
   "dependencies": {

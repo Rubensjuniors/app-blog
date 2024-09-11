@@ -6,8 +6,6 @@ const ArticlesPost = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
   const post = allPosts.find((post) => post.uid === slug)
 
-  // console.log(post)
-
   return (
     <article>
       <h1>{post?.title}</h1>

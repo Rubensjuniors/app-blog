@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto, Marck_Script } from 'next/font/google'
 
-import favicon from '@/assets/icons/Favicons.svg'
 import { siteConfig } from '@/configs/site'
 
 import Structor from '@/components/Structuor'
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     template: '%s | Rubens Junio',
     default: 'Rubens Junio'
   },
-  icons: [{ rel: 'icon', url: favicon.src }],
+  icons: [{ rel: 'icon', url: '/assets/icons/Favicons.svg' }],
   description: siteConfig.subtitle,
   authors: [{ name: 'Rubens Junio' }]
 }

@@ -1,3 +1,3 @@
 jest.mock('next-contentlayer/hooks', () => ({
-  useMDXComponent: () => (props) => <div {...props} />,
+  useMDXComponent: () => (props) => <div {...props} />
 }))

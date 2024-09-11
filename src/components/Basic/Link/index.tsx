@@ -17,13 +17,10 @@ const ActiveLink = ({
   ...rest
 }: ActiveLinkProps) => {
   const pathname = usePathname()
-  const className = pathname === rest.href ? activeClassName :  ''
+  const className = pathname === rest.href ? activeClassName : ''
 
   return (
-    <Link
-      {...rest}
-      className={`${className} ${classes}`}
-    >
+    <Link {...rest} className={`${className} ${classes}`}>
       {children}
     </Link>
   )

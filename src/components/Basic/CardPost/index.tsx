@@ -21,7 +21,7 @@ const CardPost = ({
       <S.CardPostLinkWrapper>
         <S.CardPostImageWrapper image={image}>
           <Image
-            className="w-full h-full rounded-md object-cover object-center"
+            className="h-full w-full rounded-md object-cover object-center"
             src={image}
             width={80}
             height={80}

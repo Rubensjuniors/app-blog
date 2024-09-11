@@ -14,19 +14,20 @@ const config = {
   testPathIgnorePatterns: ['/node_modules', './next/'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/config/.jest'],
   moduleDirectories: ['node_modules', '<rootDir>'],
-  testMatch: ['<rootDir>/src/**/*.test.{ts,tsx}', '<rootDir>/src/**/*.spec.{ts,tsx}'],
+  testMatch: [
+    '<rootDir>/src/**/*.test.{ts,tsx}',
+    '<rootDir>/src/**/*.spec.{ts,tsx}'
+  ],
   moduleNameMapper: {
     'src/(.*)': '<rootDir>/src/$1'
   },
   transform: {
     '^.+\\.(t|j)sx?$': ['@swc/jest'],
-    '^.+\\.(mjs|js)$': ['@swc/jest'],
+    '^.+\\.(mjs|js)$': ['@swc/jest']
   },
 
   testEnvironment: 'jest-environment-jsdom',
-  transformIgnorePatterns: [
-    '/node_modules/(?!(next-contentlayer)/)',
-  ],
+  transformIgnorePatterns: ['/node_modules/(?!(next-contentlayer)/)'],
   coverageThreshold: {
     global: {
       statements: 60,

@@ -10,6 +10,7 @@
     "type-check": "tsc --project tsconfig.json --noEmit",
     "lint": "eslint src --max-warnings=0",
     "prettier:check": "prettier --check .",
+    "prettier:format": "prettier --write .",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "test:coverage": "yarn test --coverage --detectOpenHandles",

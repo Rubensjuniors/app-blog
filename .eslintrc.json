@@ -30,9 +30,14 @@
     "project": "./tsconfig.json",
     "createDefaultProgram": true
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks", "eslint-plugin-import-helpers"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "eslint-plugin-import-helpers"
+  ],
   "rules": {
-		"camelcase": "off",
+    "camelcase": "off",
     /* React Rules */
     "react/prop-types": "off",
     "react/jsx-uses-vars": "error",

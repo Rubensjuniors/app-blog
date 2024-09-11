@@ -24,6 +24,5 @@ describe('<Structor>', () => {
     expect(sidemenuComponent).toBeInTheDocument()
     expect(footerComponent).toBeInTheDocument()
     expect(children).toBeInTheDocument()
-
   })
 })

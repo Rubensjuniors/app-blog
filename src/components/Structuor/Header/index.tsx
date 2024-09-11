@@ -42,10 +42,7 @@ const Header = () => {
         </S.HeaderStyles>
         {isOpenSidemenu && (
           <S.ContainerSidemenuMobileStyle>
-            <button
-              className="self-end"
-              onClick={handleToggleSideMenu}
-            >
+            <button className="self-end" onClick={handleToggleSideMenu}>
               <Icon id="x_icon-phosphor" iconSize={38} />
             </button>
 

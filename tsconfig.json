@@ -23,7 +23,7 @@
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "typeRoots": ["node_modules/@types", "node_modules/@testing-library"],
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",

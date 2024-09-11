@@ -1,1 +1,4 @@
-npx husky add .husky/post-merge "yarn install"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn install

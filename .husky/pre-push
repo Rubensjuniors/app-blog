@@ -1,2 +1,4 @@
-npx husky add .husky/pre-push "yarn quality-check && yarn test"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
+yarn quality-check && yarn test

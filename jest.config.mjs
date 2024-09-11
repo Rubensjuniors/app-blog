@@ -6,6 +6,7 @@ const createJestConfig = nextJest({
 
 /** @type {import('jest').Config} */
 const config = {
+  setupFiles: ['<rootDir>/config/.jest/jest.setup.js'],
   setupFilesAfterEnv: ['<rootDir>/config/.jest/setup.ts'],
   collectCoverage: true,
   coverageDirectory: './coverage/',
@@ -23,6 +24,9 @@ const config = {
   },
 
   testEnvironment: 'jest-environment-jsdom',
+  transformIgnorePatterns: [
+    '/node_modules/(?!(next-contentlayer)/)',
+  ],
   coverageThreshold: {
     global: {
       statements: 60,

@@ -12,7 +12,8 @@ w-16
 `
 
 export const Title = tw.h1`
-text-4xl
+text-3xl
+sm:text-4xl
 font-bold
 `
 export const Bio = tw.p`

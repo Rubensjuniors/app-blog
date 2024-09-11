@@ -1,13 +1,11 @@
 import Image from 'next/image'
 
-import Logo from '@/assets/icons/Logo.svg'
-
 import PhosphorIcons from './PhosporIcons'
 import { iconProps } from './types'
 
 const icons = new Map()
 
-icons.set('icon_logo', Logo)
+icons.set('icon_logo', '/assets/icons/Logo.svg')
 
 const regex = /phosphor/
 

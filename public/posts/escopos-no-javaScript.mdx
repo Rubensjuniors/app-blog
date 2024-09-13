@@ -24,7 +24,7 @@ O escopo Global e o mais comun de nos deparamos no dia a dia, o escopo global e 
 const name = 'Oliver queen'
 
 function showName() {
- console.log(name)
+  console.log(name)
 }
 
 showName() // 'Oliver queen'
@@ -40,9 +40,9 @@ No escopo de função, as variveis declarada dentros do escopo da função so po
 
 ```typescript
 function showFullName() {
- const fullName = 'Rebeca smith Miranda'
+  const fullName = 'Rebeca smith Miranda'
 
- console.log(fullName)
+  console.log(fullName)
 }
 
 showFullName() // 'Rebeca smith Miranda'
@@ -57,9 +57,9 @@ O escopo de bloco se refere à visibilidade e acessibilidade de variáveis dentr
 
 ```typescript
 if (true) {
- let name = 'Rebeca'
+  let name = 'Rebeca'
 
- console.log(name) // 'Rebeca'
+  console.log(name) // 'Rebeca'
 }
 
 console.log(name) // Uncaught ReferenceError: name is not defined
@@ -74,7 +74,7 @@ if (true) {
   console.log(name) // 'Rebeca'
 }
 
-  console.log(name) // 'Rebeca'
+console.log(name) // 'Rebeca'
 ```
 
 Nota que que ao ultilizar a **keyword** **var** a variavel **name** e vazada para fora do escopo da condição, independentemente de onde a variável é declarada (dentro de uma função, um loop, um condicional if, etc…), ela será içada (hoisted) para o topo da função mais próxima em que foi declarada. Esse comportamento é chamado de “hoisting”.
@@ -89,9 +89,9 @@ const functionExter = () => {
 
   const functionInter = () => {
     console.log(obj.toUpperCase())
-    }
+  }
 
-   functionInter()
+  functionInter()
 }
 
 functionExter() // 'FACA'
@@ -104,10 +104,10 @@ const functionExter = () => {
   console.log(obj.toUpperCase())
 
   const functionInter = () => {
-   const obj = 'faca'
- }
+    const obj = 'faca'
+  }
 
-   functionInter()
+  functionInter()
 }
 
 functionExter() // Uncaught ReferenceError: book is not defined

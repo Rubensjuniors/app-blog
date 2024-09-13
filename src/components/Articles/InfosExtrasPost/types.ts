@@ -1,4 +1,4 @@
 export interface InfosExtrasPostProps {
-  publicationDate: string,
+  publicationDate: string
   tags: Array<string>
 }

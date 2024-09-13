@@ -15,7 +15,11 @@ const CardPost = ({
   image
 }: PostProps) => (
   <S.CardPostContainer>
-    <Link prefetch={true} href={`/artigos/${uid}`} className="md:hover:brightness-75">
+    <Link
+      prefetch={true}
+      href={`/artigos/${uid}`}
+      className="md:hover:brightness-75"
+    >
       <S.CardPostLinkWrapper>
         <S.CardPostImageWrapper image={image}>
           <Image

@@ -20,7 +20,7 @@ const ActiveLink = ({
   const className = pathname === rest.href ? activeClassName : ''
 
   return (
-    <Link {...rest} className={`${className} ${classes}`}>
+    <Link {...rest} prefetch className={`${className} ${classes}`}>
       {children}
     </Link>
   )

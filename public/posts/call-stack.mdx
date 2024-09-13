@@ -11,7 +11,7 @@ tags: [JavaScript, 33ConceitosDoJS]
 
 A pilha de chamadas, ou call stack, é uma estrutura de dados que mantém o controle de todas as chamadas de função em execução no seu código JavaScript. Quando você chama uma função, ela é colocada no topo da pilha de chamadas. Pense na pilha de chamadas como uma pilha de pneus. Você tem uma pilha com 5 pneus. Qual pneu você pegaria? O segundo pneu de baixo para cima? Não, você pega o que está no topo da pilha. A call stack segue o conceito de LIFO (Last In, First Out), o que significa que a última função colocada na pilha é a primeira a sair quando a função retorna.
 
-# Exemplo
+## Exemplo
 
 ```typescript
 function multiply(a, b) {
@@ -34,7 +34,7 @@ Temos 3 funções: **multiply, square e printSquare.** Note que chamamos **multi
 
 Mas uma função está dentro da outra. Como o JavaScript vai ler isso? É aí que entra a Call Stack, ou pilha de chamadas. Vamos ver como seria a execução desse trecho de código.
 
-# Execução
+## Execução
 
 1. **printSquare(4)** é chamada.
 2. A execução entra na função **printSquare** com **n** igual a **4**.

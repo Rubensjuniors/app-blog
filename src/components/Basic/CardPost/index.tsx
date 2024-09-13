@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { formatDate } from '@/utils/date'
-
-import { Icon, Tag } from '..'
+import InfosExtrasPost from '@/components/Articles/InfosExtrasPost'
 
 import * as S from './styles'
 import { PostProps } from './types'
@@ -17,7 +15,11 @@ const CardPost = ({
   image
 }: PostProps) => (
   <S.CardPostContainer>
-    <Link href={`/artigos/${uid}`} className="md:hover:brightness-75">
+    <Link
+      prefetch={true}
+      href={`/artigos/${uid}`}
+      className="md:hover:brightness-75"
+    >
       <S.CardPostLinkWrapper>
         <S.CardPostImageWrapper image={image}>
           <Image
@@ -39,20 +41,7 @@ const CardPost = ({
       </S.CardPostLinkWrapper>
     </Link>
 
-    <S.CardPostInfosExtra>
-      <S.CardPostInfosExtraDate>
-        <Icon id="calendarBlank-phosphor" />
-        <span>{formatDate(publicationDate)}</span>
-      </S.CardPostInfosExtraDate>
-
-      <S.CardPostInfosExtraTags tags={tags}>
-        {tags.map((tag, index) => {
-          const limitTags = index < 3
-
-          return limitTags && <Tag title={tag} key={index} />
-        })}
-      </S.CardPostInfosExtraTags>
-    </S.CardPostInfosExtra>
+    <InfosExtrasPost publicationDate={publicationDate} tags={tags} />
   </S.CardPostContainer>
 )
 

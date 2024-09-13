@@ -1,37 +1,69 @@
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import Image from 'next/image'
 
 import { MDXComponents } from 'mdx/types'
+
+import * as S from './styles'
 
 import '@/assets/styles/mdx.css'
 
 const components: MDXComponents = {
   h1: ({ className = '', children, ...props }) => (
-    <h1 className={`text-4xl font-bold ${className}`} {...props}>
+    <S.MdxHeading className={className} {...props}>
       {children}
-    </h1>
+    </S.MdxHeading>
+  ),
+  h2: ({ className = '', children, ...props }) => (
+    <S.MdxHeadingLevel2 className={className} {...props}>
+      {children}
+    </S.MdxHeadingLevel2>
+  ),
+  p: ({ className = '', children, ...props }) => (
+    <S.MdxText className={className} {...props}>
+      {children}
+    </S.MdxText>
+  ),
+  strong: ({ className = '', children, ...props }) => (
+    <S.MdxStrong className={className} {...props}>
+      {children}
+    </S.MdxStrong>
+  ),
+  a: ({ className = '', children, ...props }) => (
+    <S.MdxExternalLink target="_blank" className={className} {...props}>
+      {children}
+    </S.MdxExternalLink>
+  ),
+  img: ({ className = '', ...props }) => (
+    <picture>
+      <Image
+        className={`${className} w-full rounded-sm`}
+        src={props?.src ?? ''}
+        width={1100}
+        height={1100}
+        alt={props?.alt ?? ''}
+        title={props?.alt ?? ''}
+      />
+    </picture>
   ),
   pre: ({ className = '', children, ...props }) => (
-    <pre
-      className={`text-md mb-4 mt-6 overflow-x-auto rounded-lg py-4 ${className}`}
-      {...props}
-    >
+    <S.MdxPre className={className} {...props}>
       {children}
-    </pre>
+    </S.MdxPre>
   ),
   code: ({ className = '', children, ...props }) => (
-    <code className={`text-md relative rounded ${className}`} {...props}>
+    <S.MdxCode className={className} {...props}>
       {children}
-    </code>
+    </S.MdxCode>
   ),
   ol: ({ className = '', children, ...props }) => (
-    <ol className={`p-4 ${className}`} {...props}>
+    <S.MdxListOl className={className} {...props}>
       {children}
-    </ol>
+    </S.MdxListOl>
   ),
   li: ({ className = '', children, ...props }) => (
-    <li className={`text-md p-2${className}`} {...props}>
+    <S.MdxLi className={className} {...props}>
       {children}
-    </li>
+    </S.MdxLi>
   )
 }
 

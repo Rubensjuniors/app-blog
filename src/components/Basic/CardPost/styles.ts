@@ -15,4 +15,4 @@ export const CardPostImageWrapper = tw.div<
 
 export const CardPostTitle = tw.h1`line-clamp-2 text-xl font-bold sm:text-2xl`
 
-export const CardPostDescription = tw.p`text-md mb-4 mt-2 line-clamp-3 break-all font-light tracking-wide text-gray-300 sm:mt-1 sm:line-clamp-2`
+export const CardPostDescription = tw.p`text-md mb-4 mt-2 line-clamp-3 break-all font-light tracking-wide text-gray-300 sm:mt-1 sm:line-clamp-4 lg:line-clamp-5`

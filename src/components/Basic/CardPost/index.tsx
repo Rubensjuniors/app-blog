@@ -25,8 +25,8 @@ const CardPost = ({
           <Image
             className="h-full w-full rounded-md object-cover object-center"
             src={image}
-            width={80}
-            height={80}
+            width={1000}
+            height={1000}
             alt="foto de perfil"
             title="foto de perfil"
             priority

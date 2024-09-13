@@ -1,0 +1,120 @@
+---
+uid: escopos-no-javaScript
+title: Escopos no JavaScript
+description: Você sabe o que são escopos em JavaScript? Provavelmente, você já se deparou com alguns deles no seu dia a dia como desenvolvedor escopos globais, de função, de bloco e léxico. O conceito de escopo é fundamental no JavaScript, e entender cada tipo é essencial para escrever um código eficiente e funcional. Estamos constantemente lidando com escopos enquanto programamos. Neste artigo, vamos explorar cada um deles em detalhes para aprimorar seu conhecimento sobre escopos no JavaScript.
+date: 2024-09-10 09:41:13
+image: /assets/images/posts/escoposNoJs/banner.png
+tags: [JavaScript, 33ConceitosDoJS]
+---
+
+# Escopo Global
+
+O escopo Global e o mais comun de nos deparamos no dia a dia, o escopo global e onde temos as variaveis, Funções e objetos que são acessiveis em qualquer lugar do código. Em JavaScript, qualquer variável ou função declarada fora de outras funções ou blocos pertence ao escopo global.
+
+# Características do Escopo Global
+
+1. **Acessibilidade Universal:** Qualquer variável ou função no escopo global pode ser acessada e modificada em qualquer parte do código, desde que não esteja dentro de outra função ou bloco com seu próprio escopo.
+2. **Objeto Global:** Em ambientes de execução diferentes, o objeto global varia:
+
+> No navegador, o objeto global é **window.**
+
+## Exemplo
+
+```typescript
+const name = 'Oliver queen'
+
+function showName() {
+ console.log(name)
+}
+
+showName() // 'Oliver queen'
+```
+
+Nota que declaramos a variavel **name** no escopo global e criamo uma função **showName** que tem um console que exibe a variavel **name** assim que chamamos a função **showName** e exibido no console do navegador **‘Oliver queen’** o nome que declaramos na variavel **name**, como declaramos a variavel **name** no escopo global conseguimos ter acesso a ela em qualquer lugar do códigoa mesma coisa com a função **showName**.
+
+# Escopo de Função
+
+No escopo de função, as variveis declarada dentros do escopo da função so podem ser acessadas dentro da quele escopo quem esta fora do escopo da função não consegue acessar as coisas dentro da função. No escopo de função, esse comportamento acontece independente da palavra chave usada na criação da variável ou constante, **var, let ou const.**
+
+# Exemplo
+
+```typescript
+function showFullName() {
+ const fullName = 'Rebeca smith Miranda'
+
+ console.log(fullName)
+}
+
+showFullName() // 'Rebeca smith Miranda'
+console.log(fullName) // Uncaught ReferenceError: fullName is not defined
+```
+
+A varaivel **fullName** não esta disponivel fora do escopo da Função **“showFullName”** por isso o erro **“fullName is not defined”** ela fica disponivel apenas dentro do escopo da função **showFullName** e quem esta fora desse escopo não pode acessar assim gerando o erro no console: **Uncaught ReferenceError: fullName is not defined.**
+
+# Escopo de bloco
+
+O escopo de bloco se refere à visibilidade e acessibilidade de variáveis dentro de blocos de código delimitados por chaves. Todo o tipo de bloco cria um novo escopo, e por bloco queremos dizer qualquer estrutura que utilize chaves, como **if, for, while e outras.**
+
+```typescript
+if (true) {
+ let name = 'Rebeca'
+
+ console.log(name) // 'Rebeca'
+}
+
+console.log(name) // Uncaught ReferenceError: name is not defined
+```
+
+A variavel **name** so esta disponível apenas no escopo da condicional sendo possivel ser acessada apenas dentro da estrutura de chaves da condição. Nota que usamos let parar declarar a variavel **name** no exemplo acima essa **keyword** assim como **const** permitem que trabalhemos não só com o escopo de funções, mas também com o escopo dos blocos, diferente de quando usamos **var**.
+
+```typescript
+if (true) {
+  var name = 'Rebeca'
+
+  console.log(name) // 'Rebeca'
+}
+
+  console.log(name) // 'Rebeca'
+```
+
+Nota que que ao ultilizar a **keyword** **var** a variavel **name** e vazada para fora do escopo da condição, independentemente de onde a variável é declarada (dentro de uma função, um loop, um condicional if, etc…), ela será içada (hoisted) para o topo da função mais próxima em que foi declarada. Esse comportamento é chamado de “hoisting”.
+
+# Escopo Léxico
+
+O escopo léxico significa que as funções são capazes de acessar variáveis definidas em seu escopo pai, mesmo que a função seja chamada de outro lugar. Esse acesso é possível porque o JavaScript procura uma variável primeiro no próprio escopo da função e, se não a encontrar, busca no escopo da função pai, e assim por diante, até alcançar o escopo global.
+
+```typescript
+const functionExter = () => {
+  const obj = 'faca'
+
+  const functionInter = () => {
+    console.log(obj.toUpperCase())
+    }
+
+   functionInter()
+}
+
+functionExter() // 'FACA'
+```
+
+A função **“functionInter”** tem acesso a variavel **“obj”** pois ela esta dentro da função **“functionExter”** sendo assim ela tera acesso as variáveis declaradas dentro da **“functionExter”.** Mas esta relação segue somente o fluxo de fora para dentro.
+
+```typescript
+const functionExter = () => {
+  console.log(obj.toUpperCase())
+
+  const functionInter = () => {
+   const obj = 'faca'
+ }
+
+   functionInter()
+}
+
+functionExter() // Uncaught ReferenceError: book is not defined
+```
+
+Esta relação segue somente o fluxo de fora para dentro, se eu declarar uma varivel dentro de **“functionInter”** não consigo acessar ela fora do escopo da função **“functionInter”.**
+
+# Conclusão
+
+Os escopos em javaScript e uma parte essencial da linguagem, compreender os diferentes tipos de escopos é fundamental para escrever código claro, eficiente e livre de erros. Ao dominar esses conceitos, os desenvolvedores podem criar soluções mais robustas e compreender melhor o comportamento de seus programas. Portanto, ao programar em JavaScript, lembre-se sempre de considerar o escopo em que está trabalhando e como ele afeta o seu código.

@@ -10,7 +10,7 @@ const Home = () => {
   const posts = allPosts.map((post) => post)
 
   return (
-    <section className="p-5 flex flex-col">
+    <section className="flex flex-col p-5">
       <CardProfile />
 
       <h1 className="title mt-6">Mais Recentes</h1>

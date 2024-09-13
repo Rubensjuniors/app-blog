@@ -1,5 +1,8 @@
+import Link from 'next/link'
+
 import { allPosts } from 'contentlayer/generated'
 
+import { Icon } from '@/components/Basic'
 import CardPost from '@/components/Basic/CardPost'
 import CardProfile from '@/components/Home/CardProfile'
 
@@ -7,12 +10,10 @@ const Home = () => {
   const posts = allPosts.map((post) => post)
 
   return (
-    <div className="p-5">
+    <section className="p-5 flex flex-col">
       <CardProfile />
 
-      <div>
-        <h1 className="title mt-6">Mais Recentes</h1>
-      </div>
+      <h1 className="title mt-6">Mais Recentes</h1>
 
       {posts.map((p) => (
         <CardPost
@@ -25,7 +26,16 @@ const Home = () => {
           uid={p.uid}
         />
       ))}
-    </div>
+
+      <Link
+        href="/artigos"
+        role="button"
+        className="mt-5 flex items-center gap-2 self-center underline md:hover:text-red-300"
+      >
+        Ver todos
+        <Icon id="arrowSquareOut-phosphor" iconSize={18} />
+      </Link>
+    </section>
   )
 }
 

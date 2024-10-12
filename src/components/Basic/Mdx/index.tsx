@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { MDXComponents } from 'mdx/types'
 
+import { Pre } from './components/pre'
 import * as S from './styles'
 
 import '@/assets/styles/mdx.css'
@@ -17,6 +18,26 @@ const components: MDXComponents = {
     <S.MdxHeadingLevel2 className={className} {...props}>
       {children}
     </S.MdxHeadingLevel2>
+  ),
+  h3: ({ className = '', children, ...props }) => (
+    <S.MdxHeadingLevel3 className={className} {...props}>
+      {children}
+    </S.MdxHeadingLevel3>
+  ),
+  h4: ({ className = '', children, ...props }) => (
+    <S.MdxHeadingLevel4 className={className} {...props}>
+    {children}
+  </S.MdxHeadingLevel4>
+  ),
+  h5: ({ className = '', children, ...props }) => (
+    <S.MdxHeadingLevel5 className={className} {...props}>
+    {children}
+  </S.MdxHeadingLevel5>
+  ),
+  h6: ({ className = '', children, ...props }) => (
+    <S.MdxHeadingLevel6 className={className} {...props}>
+      {children}
+    </S.MdxHeadingLevel6>
   ),
   p: ({ className = '', children, ...props }) => (
     <S.MdxText className={className} {...props}>
@@ -45,10 +66,18 @@ const components: MDXComponents = {
       />
     </picture>
   ),
-  pre: ({ className = '', children, ...props }) => (
-    <S.MdxPre className={className} {...props}>
+  blockquote: ({ className = '', children, ...props }) => (
+    <blockquote
+      className={`mb-4 mt-6 border-l-2 border-slate-50 pl-6 font-normal italic text-gray-200 ${className}`}
+      {...props}
+    >
       {children}
-    </S.MdxPre>
+    </blockquote>
+  ),
+  pre: ({ className = '', children, ...props }) => (
+    <Pre {...props} className={className}>
+      {children}
+    </Pre>
   ),
   code: ({ className = '', children, ...props }) => (
     <S.MdxCode className={className} {...props}>

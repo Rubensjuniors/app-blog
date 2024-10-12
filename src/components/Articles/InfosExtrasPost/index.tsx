@@ -1,11 +1,11 @@
-import { Icon, Tag } from '@/components/Basic'
+import { Icon } from '@/components/Basic'
 
 import { formatDate } from '@/utils/date'
 
 import * as S from './styles'
 import { InfosExtrasPostProps } from './types'
 
-const InfosExtrasPost = ({ publicationDate, tags, readingTime }: InfosExtrasPostProps) => {
+const InfosExtrasPost = ({ publicationDate, readingTime }: InfosExtrasPostProps) => {
   const publicationDateFormat = formatDate(publicationDate)
 
   return (
@@ -15,7 +15,7 @@ const InfosExtrasPost = ({ publicationDate, tags, readingTime }: InfosExtrasPost
         <span>{publicationDateFormat} • {readingTime} minutos de leitura</span>
       </S.CardPostInfosExtraDate>
 
-      <S.CardPostInfosExtraTags tags={tags}>
+      {/* <S.CardPostInfosExtraTags tags={tags}>
         {tags.map((tag, index) => {
           const limitTags = index < 3
 
@@ -27,7 +27,7 @@ const InfosExtrasPost = ({ publicationDate, tags, readingTime }: InfosExtrasPost
             )
           )
         })}
-      </S.CardPostInfosExtraTags>
+      </S.CardPostInfosExtraTags> */}
     </S.CardPostInfosExtra>
   )
 }

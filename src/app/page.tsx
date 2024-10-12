@@ -4,7 +4,7 @@ import { PostService } from '@/services/postServices'
 
 import { Icon } from '@/components/Basic'
 import CardPost from '@/components/Basic/CardPost'
-import CardProfile from '@/components/Home/CardProfile'
+import CardProfile from '@/components/CardProfile'
 
 const Home = () => {
   const { posts } = PostService.getAll()

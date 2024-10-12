@@ -1,4 +1,4 @@
-import { BackButton } from '@/app/(pages)/artigos/components/BackButton'
+import { BackButton } from '@/components/Basic/BackButton'
 
 import { RecommendedPosts, Empty } from '@/components/Basic'
 

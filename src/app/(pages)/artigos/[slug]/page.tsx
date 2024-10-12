@@ -3,10 +3,10 @@ import { notFound } from 'next/navigation'
 
 import { PostService } from '@/services/postServices'
 
-import InfosExtrasPost from '@/components/Articles/InfosExtrasPost'
+import InfosExtrasPost from '@/app/(pages)/artigos/components/InfosExtrasPost'
 import { Mdx } from '@/components/Basic'
 
-import { BackButton } from '../components/BackButton'
+import { BackButton } from '../../../../components/Basic/BackButton'
 import * as S from './styles'
 
 const ArticlesPost = async ({ params }: { params: { slug: string } }) => {

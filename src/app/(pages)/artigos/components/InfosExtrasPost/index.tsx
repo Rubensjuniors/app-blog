@@ -14,20 +14,6 @@ const InfosExtrasPost = ({ publicationDate, readingTime }: InfosExtrasPostProps)
         <Icon id="calendarBlank-phosphor" />
         <span>{publicationDateFormat} • {readingTime} minutos de leitura</span>
       </S.CardPostInfosExtraDate>
-
-      {/* <S.CardPostInfosExtraTags tags={tags}>
-        {tags.map((tag, index) => {
-          const limitTags = index < 3
-
-          return (
-            limitTags && (
-              <Tag size="sm" key={index}>
-                {tag}
-              </Tag>
-            )
-          )
-        })}
-      </S.CardPostInfosExtraTags> */}
     </S.CardPostInfosExtra>
   )
 }

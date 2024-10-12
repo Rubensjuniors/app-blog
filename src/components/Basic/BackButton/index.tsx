@@ -5,7 +5,8 @@ import * as S from './styles'
 export type BackButtonProps = {
   hasImage?: boolean
 }
-const classeNextLink = 'group flex cursor-pointer items-center gap-1 rounded-full bg-gray-700 p-2 text-gray-400'
+const classeNextLink =
+  'group flex cursor-pointer items-center gap-1 rounded-full bg-gray-700 p-2 text-gray-400'
 
 export const BackButton = ({ hasImage }: BackButtonProps) => (
   <Link

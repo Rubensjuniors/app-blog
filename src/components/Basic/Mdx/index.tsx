@@ -26,13 +26,13 @@ const components: MDXComponents = {
   ),
   h4: ({ className = '', children, ...props }) => (
     <S.MdxHeadingLevel4 className={className} {...props}>
-    {children}
-  </S.MdxHeadingLevel4>
+      {children}
+    </S.MdxHeadingLevel4>
   ),
   h5: ({ className = '', children, ...props }) => (
     <S.MdxHeadingLevel5 className={className} {...props}>
-    {children}
-  </S.MdxHeadingLevel5>
+      {children}
+    </S.MdxHeadingLevel5>
   ),
   h6: ({ className = '', children, ...props }) => (
     <S.MdxHeadingLevel6 className={className} {...props}>

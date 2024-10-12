@@ -9,7 +9,7 @@ const Articles = () => {
 
   return (
     <section className="p-4">
-      <h1 className="title mt-6 mb-6">Todos os Artigos</h1>
+      <h1 className="title mb-6 mt-6">Todos os Artigos</h1>
 
       <div>
         {posts.map((p) => (

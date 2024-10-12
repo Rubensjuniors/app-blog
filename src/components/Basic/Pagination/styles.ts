@@ -6,13 +6,7 @@ import tw from 'tailwind-styled-components'
 
 import { ArrowLeftIcon, ArrowRightIcon } from '../Icon/icons'
 
-export const Container = tw.div`
-  flex
-  w-full
-  items-center
-  justify-between
-  pt-7
-`
+export const Container = tw.div`flex w-full items-center justify-between pt-7`
 
 export const PrevPageIcon = tw(ArrowLeftIcon)`
   transition-transform

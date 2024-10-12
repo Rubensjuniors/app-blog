@@ -2,7 +2,7 @@ import { MDX } from 'contentlayer/core'
 
 type formattedPosts = {
   uid: string
-  body: MDX,
+  body: MDX
   readingTime: number
   frontmatter: {
     title: string

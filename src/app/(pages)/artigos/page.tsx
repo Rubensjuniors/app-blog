@@ -1,11 +1,11 @@
-import { allPosts } from 'contentlayer/generated'
+import { PostService } from '@/services/postServices'
 
 import { CardPost } from '@/components/Basic'
 
 import Search from './components/Search'
 
 const Articles = () => {
-  const posts = allPosts.map((post) => post)
+  const { posts } = PostService.getAll()
 
   return (
     <section className="p-4">
@@ -15,12 +15,13 @@ const Articles = () => {
         {posts.map((p) => (
           <CardPost
             key={p.uid}
-            image={p.image}
-            title={p.title}
-            description={p.description}
-            tags={p.tags ?? ['']}
-            publicationDate={p.date}
+            image={p.frontmatter.image}
+            title={p.frontmatter.title}
+            description={p.frontmatter.description}
+            tags={p.frontmatter.tags ?? ['']}
+            publicationDate={p.frontmatter.date}
             uid={p.uid}
+            readingTime={p.readingTime}
           />
         ))}
       </div>

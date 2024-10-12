@@ -12,7 +12,8 @@ const CardPost = ({
   tags,
   title,
   uid,
-  image
+  image,
+  readingTime
 }: PostProps) => (
   <S.CardPostContainer>
     <Link
@@ -41,7 +42,7 @@ const CardPost = ({
       </S.CardPostLinkWrapper>
     </Link>
 
-    <InfosExtrasPost publicationDate={publicationDate} tags={tags} />
+    <InfosExtrasPost publicationDate={publicationDate} tags={tags} readingTime={readingTime} />
   </S.CardPostContainer>
 )
 

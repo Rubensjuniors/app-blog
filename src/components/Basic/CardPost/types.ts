@@ -5,7 +5,8 @@ export interface PostProps {
   description: string
   tags: string[]
   publicationDate: string
-  uid: string | number
+  uid: string | number,
+  readingTime: number
 }
 
 export enum TYPES_POST_ICON {

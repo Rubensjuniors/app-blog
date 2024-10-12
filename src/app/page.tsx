@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-import { allPosts } from 'contentlayer/generated'
+import { PostService } from '@/services/postServices'
 
 import { Icon } from '@/components/Basic'
 import CardPost from '@/components/Basic/CardPost'
 import CardProfile from '@/components/Home/CardProfile'
 
 const Home = () => {
-  const posts = allPosts.map((post) => post)
+  const { posts } = PostService.getAll()
 
   return (
     <section className="flex flex-col p-5">
@@ -18,12 +18,13 @@ const Home = () => {
       {posts.map((p) => (
         <CardPost
           key={p.uid}
-          image={p.image}
-          title={p.title}
-          description={p.description}
-          tags={p.tags ?? ['']}
-          publicationDate={p.date}
+          image={p.frontmatter.image}
+          title={p.frontmatter.title}
+          description={p.frontmatter.description}
+          tags={p.frontmatter.tags ?? ['']}
+          publicationDate={p.frontmatter.date}
           uid={p.uid}
+          readingTime={p.readingTime}
         />
       ))}
 

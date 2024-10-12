@@ -4,14 +4,15 @@ import useArticles from '@/hooks/useArticles'
 
 import { CardPost, Pagination } from '@/components/Basic'
 
-import Search from './components/Search'
+// import Search from './components/Search'
 
 const Articles = () => {
   const { currentPage, prevPage, nextPage, posts, numbPages } = useArticles()
 
   return (
     <section className="p-4">
-      <Search />
+      {/* <Search /> */}
+      <h1 className="title mt-6 mb-6">Todos os Artigos</h1>
 
       <div>
         {posts.map((p) => (

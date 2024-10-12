@@ -1,6 +1,5 @@
-import { BackButton } from '@/components/Basic/BackButton'
-
 import { RecommendedPosts, Empty } from '@/components/Basic'
+import { BackButton } from '@/components/Basic/BackButton'
 
 export default function NotFoundComponent() {
   return (

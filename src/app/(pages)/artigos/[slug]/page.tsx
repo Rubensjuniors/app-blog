@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
+import InfosExtrasPost from '@/app/(pages)/artigos/components/InfosExtrasPost'
 import { PostService } from '@/services/postServices'
 
-import InfosExtrasPost from '@/app/(pages)/artigos/components/InfosExtrasPost'
 import { Mdx } from '@/components/Basic'
 
 import { BackButton } from '../../../../components/Basic/BackButton'

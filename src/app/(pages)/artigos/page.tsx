@@ -1,11 +1,13 @@
-import { PostService } from '@/services/postServices'
+'use client'
 
-import { CardPost } from '@/components/Basic'
+import useArticles from '@/hooks/useArticles'
+
+import { CardPost, Pagination } from '@/components/Basic'
 
 import Search from './components/Search'
 
 const Articles = () => {
-  const { posts } = PostService.getAll()
+  const { currentPage, prevPage, nextPage, posts, numbPages } = useArticles()
 
   return (
     <section className="p-4">
@@ -25,6 +27,13 @@ const Articles = () => {
           />
         ))}
       </div>
+
+      <Pagination
+        currentPage={currentPage}
+        numbPages={numbPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </section>
   )
 }

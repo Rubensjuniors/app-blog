@@ -11,23 +11,28 @@ const useHeader = () => {
   const { width } = useWindowSize()
   const [isOpenSidemenu, setIsOpenSidemenu] = useState<boolean>(false)
   const [titleHeader, setTitleHeader] = useState<string>('Início')
+  const getTitle = getTitleWithPath(itemsMenu, pathname)
+  const isDesktop = width >= 960
   const isInPost = /^\/artigos\//.test(pathname)
-  const isDesktopAndIsInPost = isInPost && width >= 960
+  const isDesktopAndIsInPost = isInPost && isDesktop
+  const hasPathname = Boolean(getTitle)
 
   const handleToggleSideMenu = useCallback(() => {
     setIsOpenSidemenu((prevState) => !prevState)
   }, [])
 
   useEffect(() => {
-    setTitleHeader(getTitleWithPath(itemsMenu, pathname))
-  }, [pathname])
+    setTitleHeader(getTitle)
+  }, [getTitle])
 
   return {
     isOpenSidemenu,
     handleToggleSideMenu,
     setIsOpenSidemenu,
     titleHeader,
-    isDesktopAndIsInPost
+    isDesktopAndIsInPost,
+    hasPathname,
+    isDesktop
   }
 }
 

@@ -16,7 +16,7 @@ const InfosExtrasPost = ({ publicationDate, tags }: InfosExtrasPostProps) => (
       {tags.map((tag, index) => {
         const limitTags = index < 3
 
-        return limitTags && <Tag title={tag} key={index} />
+        return limitTags && <Tag size='sm' key={index}>{tag}</Tag>
       })}
     </S.CardPostInfosExtraTags>
   </S.CardPostInfosExtra>

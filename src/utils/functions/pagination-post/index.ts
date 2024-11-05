@@ -1,6 +1,6 @@
 import { MDX } from 'contentlayer/core'
 
-type formattedPosts = {
+export type formattedPosts = {
   uid: string
   body: MDX
   readingTime: number

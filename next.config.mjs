@@ -4,7 +4,8 @@ import { withContentlayer } from 'next-contentlayer'
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    swcMinify: true
+    swcMinify: true,
+    missingSuspenseWithCSRBailout: false
   }
 }
 

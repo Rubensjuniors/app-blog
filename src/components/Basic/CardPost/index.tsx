@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import InfosExtrasPost from '@/components/Articles/InfosExtrasPost'
+import InfosExtrasPost from '@/app/(pages)/artigos/components/InfosExtrasPost'
 
 import * as S from './styles'
 import { PostProps } from './types'
@@ -12,7 +12,8 @@ const CardPost = ({
   tags,
   title,
   uid,
-  image
+  image,
+  readingTime
 }: PostProps) => (
   <S.CardPostContainer>
     <Link
@@ -41,7 +42,11 @@ const CardPost = ({
       </S.CardPostLinkWrapper>
     </Link>
 
-    <InfosExtrasPost publicationDate={publicationDate} tags={tags} />
+    <InfosExtrasPost
+      publicationDate={publicationDate}
+      tags={tags}
+      readingTime={readingTime}
+    />
   </S.CardPostContainer>
 )
 

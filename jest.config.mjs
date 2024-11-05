@@ -25,9 +25,8 @@ const config = {
     '^.+\\.(t|j)sx?$': ['@swc/jest'],
     '^.+\\.(mjs|js)$': ['@swc/jest']
   },
-
   testEnvironment: 'jest-environment-jsdom',
-  transformIgnorePatterns: ['/node_modules/(?!(next-contentlayer)/)'],
+  transformIgnorePatterns: ['/node_modules/(?!(@contentlayer|next-contentlayer)/)'],
   coverageThreshold: {
     global: {
       statements: 60,

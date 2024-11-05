@@ -15,8 +15,14 @@ const Header = () => {
     handleToggleSideMenu,
     setIsOpenSidemenu,
     titleHeader,
-    isDesktopAndIsInPost
+    isDesktopAndIsInPost,
+    hasPathname,
+    isDesktop
   } = useHeader()
+
+  if (!hasPathname && isDesktop) {
+    return null
+  }
 
   return (
     !isDesktopAndIsInPost && (

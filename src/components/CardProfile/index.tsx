@@ -5,7 +5,7 @@ import { siteConfig } from '@/configs/site'
 import * as S from './styles'
 
 const CardProfile = () => (
-  <S.WrapperCard data-testId="intro-home">
+  <S.WrapperCard data-testid="intro-home">
     <S.Picture>
       <Image
         className="w-full rounded-full shadow-sm"

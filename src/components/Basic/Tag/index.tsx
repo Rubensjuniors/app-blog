@@ -1,18 +1,15 @@
-/* eslint-disable max-len */
 import Link from 'next/link'
-import React from 'react'
 
-interface TagProps {
-  title: string
-  onCLick?: () => void
+import * as S from './style'
+
+export type TagProps = {
+  children: React.ReactNode
+  size?: 'xs' | 'sm' | 'md' | 'lg'
 }
 
-const Tag = ({ title }: TagProps) => (
-  <Link
-    href={`/artigos?topic=${title}`}
-    className="rounded-full bg-gray-750 p-1 px-5 text-sm transition-colors duration-300 hover:text-red-300"
-  >
-    {title}
+const Tag = ({ children, size = 'sm' }: TagProps) => (
+  <Link href={`/artigos?topic=${children}`}>
+    <S.Tag size={size}>{children}</S.Tag>
   </Link>
 )
 

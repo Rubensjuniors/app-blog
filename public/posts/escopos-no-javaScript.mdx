@@ -20,7 +20,7 @@ O escopo Global e o mais comun de nos deparamos no dia a dia, o escopo global e 
 
 ## Exemplo
 
-```typescript
+```javascript
 const name = 'Oliver queen'
 
 function showName() {
@@ -38,7 +38,7 @@ No escopo de função, as variveis declarada dentros do escopo da função so po
 
 # Exemplo
 
-```typescript
+```javascript
 function showFullName() {
   const fullName = 'Rebeca smith Miranda'
 
@@ -55,7 +55,7 @@ A varaivel **fullName** não esta disponivel fora do escopo da Função **“sho
 
 O escopo de bloco se refere à visibilidade e acessibilidade de variáveis dentro de blocos de código delimitados por chaves. Todo o tipo de bloco cria um novo escopo, e por bloco queremos dizer qualquer estrutura que utilize chaves, como **if, for, while e outras.**
 
-```typescript
+```javascript
 if (true) {
   let name = 'Rebeca'
 
@@ -67,7 +67,7 @@ console.log(name) // Uncaught ReferenceError: name is not defined
 
 A variavel **name** so esta disponível apenas no escopo da condicional sendo possivel ser acessada apenas dentro da estrutura de chaves da condição. Nota que usamos let parar declarar a variavel **name** no exemplo acima essa **keyword** assim como **const** permitem que trabalhemos não só com o escopo de funções, mas também com o escopo dos blocos, diferente de quando usamos **var**.
 
-```typescript
+```javascript
 if (true) {
   var name = 'Rebeca'
 
@@ -83,7 +83,7 @@ Nota que que ao ultilizar a **keyword** **var** a variavel **name** e vazada par
 
 O escopo léxico significa que as funções são capazes de acessar variáveis definidas em seu escopo pai, mesmo que a função seja chamada de outro lugar. Esse acesso é possível porque o JavaScript procura uma variável primeiro no próprio escopo da função e, se não a encontrar, busca no escopo da função pai, e assim por diante, até alcançar o escopo global.
 
-```typescript
+```javascript
 const functionExter = () => {
   const obj = 'faca'
 
@@ -99,7 +99,7 @@ functionExter() // 'FACA'
 
 A função **“functionInter”** tem acesso a variavel **“obj”** pois ela esta dentro da função **“functionExter”** sendo assim ela tera acesso as variáveis declaradas dentro da **“functionExter”.** Mas esta relação segue somente o fluxo de fora para dentro.
 
-```typescript
+```javascript
 const functionExter = () => {
   console.log(obj.toUpperCase())
 

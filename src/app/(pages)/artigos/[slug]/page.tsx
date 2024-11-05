@@ -1,32 +1,32 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
-import { allPosts } from 'contentlayer/generated'
+import InfosExtrasPost from '@/app/(pages)/artigos/components/InfosExtrasPost'
+import { PostService } from '@/services/postServices'
 
-import InfosExtrasPost from '@/components/Articles/InfosExtrasPost'
-import { Icon, Mdx } from '@/components/Basic'
+import { Mdx } from '@/components/Basic'
 
+import { BackButton } from '../../../../components/Basic/BackButton'
 import * as S from './styles'
 
 const ArticlesPost = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params
-  const post = allPosts.find((post) => post.uid === slug)
-  const hasImage = Boolean(post?.image)
+  const post = PostService.getByUid(slug)
+  const hasImage = Boolean(post?.frontmatter.image)
+
+  if (!post) {
+    notFound()
+  }
 
   return (
     <S.ArticlesWrapper>
-      <Link
-        href="/"
-        className={`${hasImage && 'absolute left-2 top-2'} rounded-full bg-gray-700 p-2`}
-      >
-        <Icon id="arrowLeft-phosphor" iconSize={24} />
-      </Link>
+      <BackButton hasImage={hasImage} />
       {hasImage && (
         <S.ArticleWrapperBanner data-testid="banner-post">
           <Image
             className="h-full w-full object-cover object-center"
-            src={post?.image ?? ''}
-            alt={`Banner post ${post?.title}`}
+            src={post?.frontmatter.image ?? ''}
+            alt={`Banner post ${post?.frontmatter.title}`}
             width={1000}
             height={1000}
             priority
@@ -35,12 +35,15 @@ const ArticlesPost = async ({ params }: { params: { slug: string } }) => {
       )}
 
       <S.ArticleContentWrapper>
-        <S.ArticleTitle>{post?.title}</S.ArticleTitle>
-        <S.ArticleDescription>{post?.description}</S.ArticleDescription>
+        <S.ArticleTitle>{post?.frontmatter.title}</S.ArticleTitle>
+        <S.ArticleDescription>
+          {post?.frontmatter.description}
+        </S.ArticleDescription>
 
         <InfosExtrasPost
-          publicationDate={post?.date ?? ''}
-          tags={post?.tags ?? ['']}
+          publicationDate={post?.frontmatter.date ?? ''}
+          tags={post?.frontmatter.tags ?? ['']}
+          readingTime={post.readingTime}
         />
 
         <Mdx code={post?.body.code ?? ''} />

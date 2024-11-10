@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   banner: '/assets/images/banner.jpeg',
   name: 'Rubens junio',
   bio: 'Front End - HTML | CSS, SASS E TAILWIND | JAVASCRIPT | TYPESCRIPT | REACT',
-  title: 'Software Engenieer Jr',
+  title: 'Software Engenieer',
   copyright: 'Todos os direitos reseverdos © Rubens junio 2024',
   subtitle:
     'Bem vindo ao meu blog! Eu sou Rubens junio, apaixonado por tecnologia, sempre buscando aprender algo novo todos os dias.',

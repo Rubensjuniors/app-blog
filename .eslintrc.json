@@ -19,7 +19,7 @@
   "plugins": ["react", "@typescript-eslint", "import", "react-hooks"],
   "settings": {
     "react": {
-      "version": "detect"  
+      "version": "detect"
     }
   },
   "rules": {

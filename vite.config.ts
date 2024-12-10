@@ -10,7 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './config/vitest/setupTests.ts',
     transformMode: {
-      web: [/\.tsx$/],
-    },
-  },
+      web: [/\.tsx$/]
+    }
+  }
 } as UserConfigExport)

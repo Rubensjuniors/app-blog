@@ -1,163 +1,158 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:import/recommended"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
+  ],
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "import", "react-hooks"],
+  "rules": {
+    "camelcase": "off",
+    /* React Rules */
+    "react/prop-types": "off",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+
+    /* Typescript Rules */
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    /* App Rules */
+    "quotes": ["error", "single"],
+    "class-methods-use-this": 0,
+    "require-jsdoc": 0,
+    "sort-imports": 0,
+    "newline-after-var": "error",
+    "dot-notation": "error",
+    "prefer-template": "error",
+    "no-loop-func": "error",
+    "no-param-reassign": "error",
+    "guard-for-in": "error",
+    "no-nested-ternary": "error",
+    "no-useless-constructor": "error",
+    "no-array-constructor": "error",
+    "keyword-spacing": ["error"],
+    "eqeqeq": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "max-params": ["error", 4],
+    "init-declarations": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-bitwise": [
+      "error",
+      {
+        "int32Hint": true
+      }
     ],
-
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "import",
-        "react-hooks"
+    "no-use-before-define": 0,
+    "max-lines": [
+      "error",
+      {
+        "max": 200,
+        "skipComments": true
+      }
     ],
-    "rules": {
-        "camelcase": "off",
-        /* React Rules */
-        "react/prop-types": "off",
-        "react/jsx-uses-vars": "error",
-        "react/react-in-jsx-scope": "off",
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
-
-        /* Typescript Rules */
-        "@typescript-eslint/ban-ts-ignore": 0,
-        "@typescript-eslint/ban-types": 0,
-        "@typescript-eslint/no-use-before-define": "error",
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/no-var-requires": 0,
-        "@typescript-eslint/no-explicit-any": "warn",
-        "@typescript-eslint/no-inferrable-types": "error",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-
-        /* App Rules */
-        "quotes": ["error", "single"],
-        "class-methods-use-this": 0,
-        "require-jsdoc": 0,
-        "sort-imports": 0,
-        "newline-after-var": "error",
-        "dot-notation": "error",
-        "prefer-template": "error",
-        "no-loop-func": "error",
-        "no-param-reassign": "error",
-        "guard-for-in": "error",
-        "no-nested-ternary": "error",
-        "no-useless-constructor": "error",
-        "no-array-constructor": "error",
-        "keyword-spacing": ["error"],
-        "eqeqeq": ["error", "always"],
-        "object-curly-spacing": ["error", "always"],
-        "max-params": ["error", 4],
-        "init-declarations": ["error", "always"],
-        "arrow-body-style": ["error", "as-needed"],
-        "no-bitwise": [
-        "error",
-        {
-            "int32Hint": true
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "comments": 70,
+        "tabWidth": 4
+      }
+    ],
+    "max-lines-per-function": [
+      "error",
+      {
+        "max": 150,
+        "skipComments": true
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": ["time", "timeEnd", "warn", "error"]
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
+    "no-unused-vars": 0,
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      }
+    ],
+    "semi": ["error", "never"],
+    "complexity": [
+      "error",
+      {
+        "max": 9
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "parent", "sibling"],
+          ["index"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
         }
-        ],
-        "no-use-before-define": 0,
-        "max-lines": [
-        "error",
-        {
-            "max": 200,
-            "skipComments": true
-        }
-        ],
-        "no-duplicate-imports": [
-        "error",
-        {
-            "includeExports": true
-        }
-        ],
-        "no-plusplus": [
-        "error",
-        {
-            "allowForLoopAfterthoughts": true
-        }
-        ],
-        "max-len": [
-        "error",
-        {
-            "code": 120,
-            "comments": 70,
-            "tabWidth": 4
-        }
-        ],
-        "max-lines-per-function": [
-        "error",
-        {
-            "max": 150,
-            "skipComments": true
-        }
-        ],
-        "no-console": [
-        "error",
-        {
-            "allow": ["time", "timeEnd", "warn", "error"]
-        }
-        ],
-        "no-multiple-empty-lines": [
-        "error",
-        {
-            "max": 1,
-            "maxEOF": 0,
-            "maxBOF": 0
-        }
-        ],
-        "no-unused-vars": 0,
-        "lines-between-class-members": [
-        "error",
-        "always",
-        {
-            "exceptAfterSingleLine": true
-        }
-        ],
-        "padding-line-between-statements": [
-        "error",
-        {
-            "blankLine": "always",
-            "prev": "directive",
-            "next": "*"
-        }
-        ],
-        "semi": ["error", "never"],
-        "complexity": [
-        "error",
-        {
-            "max": 9
-        }
-        ],
-        "import/order": [
-            "error",
-            {
-                "groups": [
-                    ["builtin", "external"],
-                    ["internal", "parent", "sibling"],
-                    ["index"]
-                ],
-                "newlines-between": "always",
-                "alphabetize": {
-                    "order": "asc",
-                    "caseInsensitive": true
-                }
-            }
-        ],
-        "no-var": "error",
-        "prefer-const": "error",
-        "consistent-return": "warn",
-        "import/no-unresolved": "off"
-    }
+      }
+    ],
+    "no-var": "error",
+    "prefer-const": "error",
+    "consistent-return": "warn",
+    "import/no-unresolved": "off"
+  }
 }

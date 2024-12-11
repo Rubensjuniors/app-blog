@@ -92,7 +92,7 @@
       "error",
       {
         "code": 120,
-        "comments": 70,
+        "comments": 110,
         "tabWidth": 4
       }
     ],
@@ -158,6 +158,7 @@
     "no-var": "error",
     "prefer-const": "error",
     "consistent-return": "warn",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "indent": ["error", 2]
   }
 }

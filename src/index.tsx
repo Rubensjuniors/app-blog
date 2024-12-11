@@ -10,7 +10,7 @@ import './assets/styles/global.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <Theme accentColor="ruby"  className="bg-gray-700 text-gray-100">
+      <Theme accentColor="ruby" className="bg-gray-700 text-gray-100">
         <AppRoutes />
       </Theme>
     </BrowserRouter>

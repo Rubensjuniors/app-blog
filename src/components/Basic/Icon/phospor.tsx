@@ -4,7 +4,8 @@ import {
   InstagramLogo,
   LinkedinLogo,
   User,
-  Article } from '@phosphor-icons/react'
+  Article
+} from '@phosphor-icons/react'
 
 import { iconProps } from './types'
 

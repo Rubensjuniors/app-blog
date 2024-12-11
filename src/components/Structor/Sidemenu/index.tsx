@@ -42,26 +42,25 @@ export const Sidemenu = () => (
     width="73px"
     maxHeight="100vh"
     overflow="hidden"
-    className="lg:flex lg:items-start lg:p-1 lg:pt-5 lg:hover:w-56 duration-500 ease-in-out"
+    className="duration-500 ease-in-out lg:flex lg:items-start lg:p-1 lg:pt-5 lg:hover:w-56"
   >
     <Link to="/" className="w-14 lg:pl-1">
       <Icon id="icon_logo" iconSize={44} />
     </Link>
 
     <div>
-      {itemsMenu.map(
-        (item) =>(
-          <NavLink to={item.route} key={item.id} className="flex w-full items-center gap-7
-              p-4 transition-all sm:hover:text-red-300
-              sm:hover:brightness-90 whitespace-nowrap"
-          >
-            <Flex align="center" gap="6" className="font-bold" >
-              <Icon id={item.id} iconSize={26} />
-              {item.title}
-            </Flex>
-          </NavLink>
-        )
-      )}
+      {itemsMenu.map((item) => (
+        <NavLink
+          to={item.route}
+          key={item.id}
+          className="flex w-full items-center gap-7 whitespace-nowrap p-4 transition-all sm:hover:text-red-300 sm:hover:brightness-90"
+        >
+          <Flex align="center" gap="6" className="font-bold">
+            <Icon id={item.id} iconSize={26} />
+            {item.title}
+          </Flex>
+        </NavLink>
+      ))}
     </div>
   </Flex>
 )

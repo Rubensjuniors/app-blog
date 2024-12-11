@@ -8,7 +8,7 @@ interface StructorProps {
 }
 
 export const Structor = ({ children }: StructorProps) => (
-  <Flex justify="center" className="my-0 mx-auto min-h-screen max-w-screen-lg">
+  <Flex justify="center" className="mx-auto my-0 min-h-screen max-w-screen-lg">
     <Sidemenu />
     <main className="z-1 w-content border-x border-gray-600">
       <Skeleton>Header</Skeleton>

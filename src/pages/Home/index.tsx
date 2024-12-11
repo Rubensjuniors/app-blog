@@ -12,8 +12,9 @@ export default function Home() {
         />
         <Heading size="8">Software Engenieer</Heading>
         <Text size="4">
-          Bem vindo ao meu blog! Eu sou Rubens junio, apaixonado por
-          tecnologia, sempre buscando aprender algo novo todos os dias.</Text>
+          Bem vindo ao meu blog! Eu sou Rubens junio, apaixonado por tecnologia,
+          sempre buscando aprender algo novo todos os dias.
+        </Text>
       </Flex>
     </>
   )

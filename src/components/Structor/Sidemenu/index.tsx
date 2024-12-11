@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // sticky left-0 top-0 hidden max-h-screen w-[73px] flex-col
 //items-center
 // justify-start gap-4 overflow-hidden p-3 pt-5 duration-500

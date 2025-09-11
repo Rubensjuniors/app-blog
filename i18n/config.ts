@@ -1,4 +1,5 @@
 import { Pathnames } from 'next-intl/routing'
+
 import { I18nConfig } from './types'
 
 export const defaultLocale: string = 'en'
@@ -10,13 +11,13 @@ export const locales: Array<string> = ['pt-br', 'en']
 export const customRoutes: Pathnames<string[]> = {
   index: {
     'pt-br': '/pt-br',
-    en: '/en'
+    en: '/en',
   },
 }
 
 export const isoCodes: Record<string, string> = {
   'pt-br': 'pt_BR',
-  en: 'en_US'
+  en: 'en_US',
 }
 
 export const i18nNames: Record<string, string> = {

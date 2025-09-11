@@ -5,4 +5,4 @@ const withNextIntl = createNextIntlPlugin('./i18n/index.ts')
 
 const nextConfig: NextConfig = {}
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(nextConfig)

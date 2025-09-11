@@ -1,7 +1,10 @@
-import '../shared/assets/styles/globals.css'
+import '../../shared/assets/styles/globals.css'
 
 import type { Metadata } from 'next'
 import { Marck_Script, Roboto } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site'
 
@@ -11,6 +14,7 @@ const roboto = Roboto({
   display: 'swap',
   variable: '--font-roboto',
 })
+
 const MarckScript = Marck_Script({
   subsets: ['latin'],
   display: 'swap',
@@ -28,18 +32,22 @@ export const metadata: Metadata = {
   authors: [{ name: 'Rubens Junio' }],
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+interface RootLayoutProps {
+  children: ReactNode
+  params: {
+    locale: string
+  }
+}
+
+export default async function RootLayout({ children, params: { locale } }: RootLayoutProps) {
+  const messages = await getMessages()
   return (
-    <html lang="pt-BR" suppressHydrationWarning={true}>
+    <html lang={locale} suppressHydrationWarning={true}>
       <body
         suppressHydrationWarning={true}
         className={`${roboto.variable} ${MarckScript.variable} bg-gray-700 text-gray-100 antialiased`}
       >
-        {children}
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   )

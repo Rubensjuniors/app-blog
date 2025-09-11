@@ -46,7 +46,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
     <html lang={locale} suppressHydrationWarning={true}>
       <body
         suppressHydrationWarning={true}
-        className={`${nunito.variable} ${MarckScript.variable} bg-foreground text-gray-100 antialiased`}
+        className={`${nunito.variable} ${MarckScript.variable} bg-background text-gray-100 antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <Structuor>{children}</Structuor>

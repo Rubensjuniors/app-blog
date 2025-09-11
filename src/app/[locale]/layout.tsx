@@ -7,6 +7,7 @@ import { getMessages } from 'next-intl/server'
 import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site'
+import { Structuor } from '@/layouts/Structor'
 
 const nunito = Nunito({
   weight: ['400', '700'],
@@ -47,7 +48,9 @@ export default async function RootLayout({ children, params: { locale } }: RootL
         suppressHydrationWarning={true}
         className={`${nunito.variable} ${MarckScript.variable} bg-foreground text-gray-100 antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <Structuor>{children}</Structuor>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

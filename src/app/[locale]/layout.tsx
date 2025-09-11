@@ -1,14 +1,14 @@
 import '../../shared/assets/styles/globals.css'
 
 import type { Metadata } from 'next'
-import { Marck_Script, Roboto } from 'next/font/google'
+import { Marck_Script, Nunito } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { ReactNode } from 'react'
 
 import { siteConfig } from '@/config/site'
 
-const roboto = Roboto({
+const nunito = Nunito({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -45,7 +45,7 @@ export default async function RootLayout({ children, params: { locale } }: RootL
     <html lang={locale} suppressHydrationWarning={true}>
       <body
         suppressHydrationWarning={true}
-        className={`${roboto.variable} ${MarckScript.variable} bg-gray-700 text-gray-100 antialiased`}
+        className={`${nunito.variable} ${MarckScript.variable} bg-foreground text-gray-100 antialiased`}
       >
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
